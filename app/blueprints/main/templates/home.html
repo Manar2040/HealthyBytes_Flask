@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Discover Healthy & Delicious Recipes</h1>
+        <p class="hero-subtitle">Fuel your body with nutrient-rich meals that don't compromise on taste</p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('recipes.all_recipes') }}" class="btn-hero">Browse Recipes</a>
+            {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('auth.register') }}" class="btn-hero-outline" id="secondaryButton">Create Account</a>
+            {% else %}
+            <a href="{{ url_for('recipes.my_favorites') }}" class="btn-hero-outline" id="favoritesButton">My Favorites</a>
+            {% endif %}
+        </div>
+
+        <div class="community-badge">
+            <span id="communityText">Join Our Community</span>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/cover.jpg') }}" alt="Healthy food ingredients" />
+    </div>
+</div>
+
+
+{% endblock %}
