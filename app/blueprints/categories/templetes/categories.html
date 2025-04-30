@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center mb-4">Recipe Categories</h1>
+<p class="text-center mb-5">Explore our diverse collection of recipes categorized for your convenience</p>
+
+<div class="text-center mb-4">
+    <span class="badge bg-success">Categories found: {{ categories|length }}</span>
+</div>
+
+<div class="row">
+    {% for category in categories %}
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='images/categories/' + category.name.lower() + '.png') }}" class="card-img-top" alt="{{ category.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ category.name }}</h5>
+                    <p class="card-text">{{ category.description }}</p>
+                    <p class="text-muted">{{ category.recipes_count }} recipes</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{{ url_for('categories.recipes_by_category', category_id=category.id) }}" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
