@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='images/default-profile.png') }}" alt="Profile" class="rounded-circle me-3" width="64">
+                    <div>
+                        <h2 class="mb-0">{{ current_user.username }}</h2>
+                        <p class="text-muted mb-0">{{ current_user.email }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>My Activity</h3>
+            </div>
+           <div class="card-body">
+    <a href="{{ url_for('recipes.my_favorites') }}" class="text-decoration-none">
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="text-dark">Recipes Favorited</span>
+            <span class="badge bg-primary">{{ current_user.favorites|length }}</span>
+        </div>
+    </a>
+</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Account Settings</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('auth.profile') }}">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Update Email</label>
+                        <input type="email" class="form-control" id="email" name="email" value="{{ current_user.email }}">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" name="update_email" class="btn btn-outline-primary">Update Email</button>
+                    </div>
+                </form>
+
+                <hr class="my-4">
+
+                <form method="POST" action="{{ url_for('auth.profile') }}">
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">Change Password</label>
+                        <input type="password" class="form-control" id="new_password" name="new_password" placeholder="New Password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm New Password">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" name="update_password" class="btn btn-outline-primary">Update Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
