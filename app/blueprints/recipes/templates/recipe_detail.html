@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-detail">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="recipe-detail-image-container">
+                <img src="{{ url_for('static', filename='images/recipes/' + recipe.image_file) }}"
+                     alt="{{ recipe.title }}"
+                     class="img-fluid rounded">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1>{{ recipe.title }}</h1>
+            <p>{{ recipe.description }}</p>
+
+            <div class="mb-3">
+                <span class="badge bg-success">{{ recipe.category.name }}</span>
+            </div>
+
+            <div class="mb-3">
+                <div class="rating">
+                    {% for i in range(1, 5) %}
+                        <span class="text-warning">★</span>
+                    {% endfor %}
+                    <span>☆</span>
+                </div>
+            </div>
+
+            {% if current_user.is_authenticated %}
+                {% if recipe in current_user.favorites %}
+                    <span class="text-muted">Added to favorites</span>
+                {% else %}
+                    <form action="{{ url_for('recipes.add_to_favorites', recipe_id=recipe.id) }}" method="POST">
+                        <button type="submit" class="btn btn-primary">Add to Favorites</button>
+                    </form>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2>Nutritional Information</h2>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Calories: {{ recipe.calories }} kcal</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Protein: {{ recipe.protein }} g</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Carbs: {{ recipe.carbs }} g</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Fats: {{ recipe.fats }} g</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2>Reviews ({{ reviews|length }})</h2>
+
+            {% if current_user.is_authenticated %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form action="{{ url_for('recipes.add_review', recipe_id=recipe.id) }}" method="POST">
+                            <div class="mb-3">
+                                <textarea class="form-control" name="content" rows="3" placeholder="Write a review..."></textarea>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <select class="form-select" name="rating">
+                                        <option value="5">5 Stars</option>
+                                        <option value="4">4 Stars</option>
+                                        <option value="3">3 Stars</option>
+                                        <option value="2">2 Stars</option>
+                                        <option value="1">1 Star</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if reviews %}
+                {% for review in reviews %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">{{ review.author.username }}</h5>
+                                <div class="rating">
+                                    {% for i in range(review.rating) %}
+                                        <span class="text-warning">★</span>
+                                    {% endfor %}
+                                    {% for i in range(5 - review.rating) %}
+                                        <span>☆</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <p class="card-text">{{ review.content }}</p>
+                            <p class="text-muted small">{{ review.date_posted.strftime('%B %d, %Y') }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No reviews yet. Be the first to review!</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
