@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">My Favorite Recipes</h1>
+
+{% if favorites %}
+    <div class="row">
+        {% for recipe in favorites %}
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='images/recipes/' + recipe.image_file) }}" class="card-img-top" alt="{{ recipe.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recipe.title }}</h5>
+                        <p class="card-text">{{ recipe.description|truncate(100) }}</p>
+                        <p class="text-muted">{{ recipe.calories }} cal</p>
+                    </div>
+                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                        <a href="{{ url_for('recipes.recipe_detail', recipe_id=recipe.id) }}" class="btn btn-primary">View</a>
+                        <form action="{{ url_for('recipes.remove_from_favorites', recipe_id=recipe.id) }}" method="POST">
+                            <button type="submit" class="btn btn-outline-danger">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">
+        <p class="mb-0">You don't have any favorite recipes yet. Browse our recipes and add some to your favorites!</p>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('recipes.all_recipes') }}" class="btn btn-primary">Browse Recipes</a>
+    </div>
+{% endif %}
+{% endblock %}
