@@ -7,6 +7,7 @@ def all_categories():
     categories_list = Category.query.all()
     return render_template('categories.html', categories=categories_list)
 
+
 @categories.route('/category/<int:category_id>')
 def recipes_by_category(category_id):
     category = Category.query.get_or_404(category_id)

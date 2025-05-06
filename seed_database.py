@@ -174,7 +174,7 @@ def seed_database():
     print("Database seeding completed!")
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     app = create_app()
     with app.app_context():
         seed_database()
