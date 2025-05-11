@@ -76,3 +76,4 @@ def profile():
                 flash('Your password has been updated!', 'success')
             else:
                 flash('Passwords do not match!', 'danger')
+    return render_template('profile.html')
