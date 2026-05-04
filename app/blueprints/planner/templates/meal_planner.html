@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+    .planner-grid {
+        overflow-x: auto;
+    }
+    .planner-table {
+        min-width: 900px;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    .planner-table th {
+        background: linear-gradient(135deg, #7f5af0, #6a48d7);
+        color: white;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 0.9rem;
+        border: none;
+    }
+    .planner-table th:first-child {
+        border-radius: 10px 0 0 0;
+    }
+    .planner-table th:last-child {
+        border-radius: 0 10px 0 0;
+    }
+    .planner-table td {
+        padding: 8px;
+        vertical-align: top;
+        border: 1px solid #eee;
+        min-height: 80px;
+        background: #fff;
+    }
+    .planner-table .meal-type-cell {
+        background: #f8f9fa;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100px;
+        color: #7f5af0;
+    }
+    .meal-entry {
+        background: #f0ebff;
+        border-radius: 8px;
+        padding: 6px 8px;
+        margin-bottom: 4px;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .meal-entry .recipe-name {
+        font-weight: 500;
+        color: #333;
+        flex: 1;
+    }
+    .meal-entry .meal-cal {
+        color: #888;
+        font-size: 0.75rem;
+        margin: 0 6px;
+    }
+    .meal-entry .remove-btn {
+        color: #dc3545;
+        border: none;
+        background: none;
+        padding: 0 4px;
+        cursor: pointer;
+        font-size: 0.75rem;
+    }
+    .meal-entry .remove-btn:hover {
+        color: #a71d2a;
+    }
+    .daily-total {
+        background: #e8f5e9;
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 4px;
+    }
+    .daily-total strong {
+        color: #2e7d32;
+    }
+    .add-meal-cell {
+        text-align: center;
+        padding-top: 4px;
+    }
+    .add-meal-btn {
+        font-size: 0.75rem;
+        padding: 2px 8px;
+        border-radius: 20px;
+    }
+    .planner-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mt-4 mb-5">
+    <div class="planner-header">
+        <h1><i class="fas fa-calendar-alt me-2"></i>Meal Planner</h1>
+        <div>
+            <a href="{{ url_for('planner.shopping_list') }}" class="btn btn-outline-success me-2">
+                <i class="fas fa-shopping-cart me-1"></i> Shopping List
+            </a>
+            <form action="{{ url_for('planner.clear_plan') }}" method="POST" class="d-inline"
+                  onsubmit="return confirm('Clear your entire meal plan?')">
+                <button type="submit" class="btn btn-outline-danger">
+                    <i class="fas fa-trash me-1"></i> Clear Plan
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Meal Form -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-plus-circle me-1"></i> Add Recipe to Plan</h5>
+            <form action="{{ url_for('planner.add_to_plan') }}" method="POST">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label for="recipeSelect" class="form-label">Recipe</label>
+                        <select class="form-select" id="recipeSelect" name="recipe_id" required>
+                            <option value="">Choose a recipe...</option>
+                            {% for cat in categories %}
+                            <optgroup label="{{ cat.name }}">
+                                {% for recipe in all_recipes if recipe.category_id == cat.id %}
+                                <option value="{{ recipe.id }}">{{ recipe.title }} ({{ recipe.calories }} cal)</option>
+                                {% endfor %}
+                            </optgroup>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="daySelect" class="form-label">Day</label>
+                        <select class="form-select" id="daySelect" name="day" required>
+                            {% for day in days %}
+                            <option value="{{ day }}">{{ day }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="mealSelect" class="form-label">Meal</label>
+                        <select class="form-select" id="mealSelect" name="meal_type" required>
+                            {% for mt in meal_types %}
+                            <option value="{{ mt }}">{{ mt|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-plus me-1"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Weekly Grid -->
+    <div class="card">
+        <div class="card-body planner-grid">
+            <table class="planner-table">
+                <thead>
+                    <tr>
+                        <th>Meal</th>
+                        {% for day in days %}
+                        <th>{{ day[:3] }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for meal_type in meal_types %}
+                    <tr>
+                        <td class="meal-type-cell">
+                            {% if meal_type == 'breakfast' %}<i class="fas fa-sun"></i>
+                            {% elif meal_type == 'lunch' %}<i class="fas fa-cloud-sun"></i>
+                            {% elif meal_type == 'dinner' %}<i class="fas fa-moon"></i>
+                            {% else %}<i class="fas fa-apple-alt"></i>
+                            {% endif %}
+                            <br>{{ meal_type|capitalize }}
+                        </td>
+                        {% for day in days %}
+                        <td>
+                            {% for entry in plan_grid[day][meal_type] %}
+                            <div class="meal-entry">
+                                <span class="recipe-name">{{ entry.recipe.title }}</span>
+                                <span class="meal-cal">{{ entry.recipe.calories }}cal</span>
+                                <form action="{{ url_for('planner.remove_from_plan', entry_id=entry.id) }}"
+                                      method="POST" class="d-inline">
+                                    <button type="submit" class="remove-btn" title="Remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            {% endfor %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    <!-- Daily Totals Row -->
+                    <tr>
+                        <td class="meal-type-cell">
+                            <i class="fas fa-calculator"></i><br>Total
+                        </td>
+                        {% for day in days %}
+                        <td>
+                            {% if daily_totals[day]['calories'] > 0 %}
+                            <div class="daily-total">
+                                <strong>{{ daily_totals[day]['calories'] }}</strong> cal<br>
+                                <small>P: {{ daily_totals[day]['protein'] }}g | C: {{ daily_totals[day]['carbs'] }}g | F: {{ daily_totals[day]['fats'] }}g</small>
+                            </div>
+                            {% else %}
+                            <div class="daily-total" style="background: #f5f5f5;">
+                                <span class="text-muted">—</span>
+                            </div>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

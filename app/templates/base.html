@@ -35,6 +35,17 @@
                         <a class="nav-link {% if request.endpoint == 'categories.all_categories' %}active{% endif %}" href="{{ url_for('categories.all_categories') }}">Categories</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'recipes.search' %}active{% endif %}" href="{{ url_for('recipes.search') }}"><i class="fas fa-search me-1"></i>Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'recipes.pantry' %}active{% endif %}" href="{{ url_for('recipes.pantry') }}"><i class="fas fa-kitchen-set me-1"></i>Pantry Chef</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'planner.meal_planner' %}active{% endif %}" href="{{ url_for('planner.meal_planner') }}"><i class="fas fa-calendar-alt me-1"></i>Meal Planner</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
                         <a class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}" href="{{ url_for('main.about') }}">About</a>
                     </li>
                 </ul>
@@ -48,12 +59,17 @@
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                 <div class="user-icon">
-                                    <i class="fas fa-user"></i>
+                                    {% if current_user.profile_image and current_user.profile_image != 'default-profile.png' %}
+                                        <img src="{{ url_for('static', filename='images/profiles/' + current_user.profile_image) }}" alt="Profile" class="rounded-circle" width="32" height="32" style="object-fit: cover;">
+                                    {% else %}
+                                        <i class="fas fa-user"></i>
+                                    {% endif %}
                                 </div>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('auth.profile') }}"><i class="fas fa-user me-2"></i>Profile</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('recipes.my_favorites') }}"><i class="fas fa-heart me-2"></i>Favorites</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('planner.meal_planner') }}"><i class="fas fa-calendar-alt me-2"></i>Meal Planner</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item text-danger" href="{{ url_for('auth.logout') }}">
                                     <i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
@@ -95,6 +111,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

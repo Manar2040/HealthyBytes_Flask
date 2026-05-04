@@ -14,6 +14,8 @@ login_manager.login_message_category = 'info'
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)
+    app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024  # 2MB max upload
+    app.config['UPLOAD_FOLDER'] = 'app/static/images/profiles'
 
     db.init_app(app)
     login_manager.init_app(app)
@@ -23,11 +25,13 @@ def create_app(config_class=Config):
     from app.blueprints.recipes import recipes
     from app.blueprints.categories import categories
     from app.blueprints.main import main
+    from app.blueprints.planner import planner
 
     app.register_blueprint(auth)
     app.register_blueprint(recipes)
     app.register_blueprint(categories)
     app.register_blueprint(main)
+    app.register_blueprint(planner)
 
 
     from flask import render_template

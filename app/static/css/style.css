@@ -344,10 +344,280 @@ body {
     text-align: center;
 }
 
+.nutrition-icon {
+    font-size: 1.5rem;
+}
+
+/* =====================================
+   FAVORITE BUTTON
+   ===================================== */
+.favorite-btn {
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.favorite-btn:hover {
+    background: #fff0f0;
+}
+
+.favorite-btn.favorited {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.favorite-btn.favorited:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+}
+
+/* Heart pulse animation */
+@keyframes heartPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.heart-pulse {
+    animation: heartPulse 0.4s ease-in-out;
+}
+
+/* =====================================
+   SOCIAL SHARE BUTTONS
+   ===================================== */
+.social-share {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.share-btn:hover {
+    transform: scale(1.15);
+}
+
+/* =====================================
+   INGREDIENTS LIST
+   ===================================== */
+.ingredients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 8px;
+}
+
+.ingredient-item {
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.ingredient-item:hover {
+    background: #e8f5e9;
+}
+
+/* =====================================
+   RECIPE OF THE DAY
+   ===================================== */
+.recipe-of-day-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.recipe-of-day-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-of-day-card:hover {
+    transform: translateY(-3px);
+}
+
+.rod-image-container {
+    position: relative;
+    height: 100%;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.rod-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 280px;
+}
+
+.rod-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: linear-gradient(135deg, #7f5af0, #6a48d7);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.rod-content {
+    padding: 30px;
+}
+
+.rod-category {
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.rod-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.rod-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.rod-nutrition {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.rod-nutrition span {
+    background: #f0ebff;
+    color: #7f5af0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.rod-rating {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* =====================================
+   SEARCH FILTER CARD
+   ===================================== */
+.search-filter-card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.search-filter-card .card-body {
+    padding: 24px;
+}
+
+/* =====================================
+   POPULAR RECIPES
+   ===================================== */
+.popular-recipes-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* =====================================
+   PRINT STYLES
+   ===================================== */
+@media print {
+    .navbar,
+    .footer,
+    .favorite-btn,
+    .social-share,
+    .btn,
+    .alert,
+    .card-footer,
+    form,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    .recipe-detail-image-container {
+        height: 250px;
+        box-shadow: none;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+
+    .nutrition-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+    }
+
+    h1, h2, h3 {
+        color: black !important;
+    }
+
+    a {
+        text-decoration: none;
+        color: black !important;
+    }
+
+    .recipe-detail {
+        margin-top: 0;
+    }
+}
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     .recipe-detail-image-container {
         height: 300px;
+    }
+
+    .rod-content {
+        padding: 20px;
+    }
+
+    .rod-title {
+        font-size: 1.4rem;
+    }
+
+    .rod-nutrition {
+        gap: 8px;
     }
 }
 
@@ -358,5 +628,13 @@ body {
 
     .recipe-detail h1 {
         font-size: 1.75rem;
+    }
+
+    .social-share {
+        flex-wrap: wrap;
+    }
+
+    .ingredients-list {
+        grid-template-columns: 1fr;
     }
 }

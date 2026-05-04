@@ -21,9 +21,11 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(150), unique=True, nullable=False)
     email = db.Column(db.String(150), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
+    profile_image = db.Column(db.String(120), nullable=True, default='default-profile.png')
     favorites = db.relationship('Recipe', secondary=favorites,
                                 backref=db.backref('favorited_by', lazy='dynamic'))
     reviews = db.relationship('Review', backref='author', lazy=True)
+    meal_plans = db.relationship('MealPlan', backref='user', lazy=True)
 
     def _repr_(self):
         return f"User('{self.username}', '{self.email}')"
@@ -51,6 +53,17 @@ class Recipe(db.Model):
     image_file = db.Column(db.String(20), nullable=True, default='default_recipe.jpg')
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
     reviews = db.relationship('Review', backref='recipe', lazy=True)
+    ingredients = db.relationship('Ingredient', backref='recipe', lazy=True)
+
+    @property
+    def average_rating(self):
+        if not self.reviews:
+            return 0
+        return sum(r.rating for r in self.reviews) / len(self.reviews)
+
+    @property
+    def review_count(self):
+        return len(self.reviews)
 
     def _repr_(self):
         return f"Recipe('{self.title}')"
@@ -66,3 +79,28 @@ class Review(db.Model):
 
     def _repr_(self):
         return f"Review('{self.rating}')"
+
+
+class Ingredient(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    quantity = db.Column(db.String(50), nullable=True)
+    unit = db.Column(db.String(30), nullable=True)
+    recipe_id = db.Column(db.Integer, db.ForeignKey('recipe.id'), nullable=False)
+
+    def _repr_(self):
+        return f"Ingredient('{self.name}', '{self.quantity} {self.unit}')"
+
+
+class MealPlan(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    recipe_id = db.Column(db.Integer, db.ForeignKey('recipe.id'), nullable=False)
+    day_of_week = db.Column(db.String(10), nullable=False)  # Monday, Tuesday, etc.
+    meal_type = db.Column(db.String(10), nullable=False)  # breakfast, lunch, dinner, snack
+    date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+    recipe = db.relationship('Recipe', backref='meal_plans')
+
+    def _repr_(self):
+        return f"MealPlan('{self.day_of_week}', '{self.meal_type}')"

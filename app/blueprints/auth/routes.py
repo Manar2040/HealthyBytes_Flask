@@ -1,8 +1,29 @@
-from flask import render_template, url_for, flash, redirect, request
+import os
+import secrets
+from flask import render_template, url_for, flash, redirect, request, current_app
 from flask_login import login_user, current_user, logout_user, login_required
 from app import db, bcrypt
 from app.models import User
 from app.blueprints.auth import auth
+from werkzeug.utils import secure_filename
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def save_profile_picture(file):
+    """Save uploaded profile picture with a random filename."""
+    random_hex = secrets.token_hex(8)
+    _, ext = os.path.splitext(file.filename)
+    filename = random_hex + ext
+    upload_dir = os.path.join(current_app.root_path, 'static', 'images', 'profiles')
+    os.makedirs(upload_dir, exist_ok=True)
+    filepath = os.path.join(upload_dir, filename)
+    file.save(filepath)
+    return filename
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -76,4 +97,23 @@ def profile():
                 flash('Your password has been updated!', 'success')
             else:
                 flash('Passwords do not match!', 'danger')
+
+        elif 'update_picture' in request.form:
+            if 'profile_picture' in request.files:
+                file = request.files['profile_picture']
+                if file and file.filename != '' and allowed_file(file.filename):
+                    # Delete old picture if it's not the default
+                    if current_user.profile_image and current_user.profile_image != 'default-profile.png':
+                        old_path = os.path.join(current_app.root_path, 'static', 'images', 'profiles',
+                                                current_user.profile_image)
+                        if os.path.exists(old_path):
+                            os.remove(old_path)
+
+                    filename = save_profile_picture(file)
+                    current_user.profile_image = filename
+                    db.session.commit()
+                    flash('Profile picture updated!', 'success')
+                else:
+                    flash('Invalid file type. Please upload PNG, JPG, JPEG, or GIF.', 'danger')
+
     return render_template('profile.html')
