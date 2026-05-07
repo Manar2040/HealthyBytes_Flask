@@ -6,7 +6,7 @@
         <h1 class="display-1">{{ error_code }}</h1>
         <h2 class="mb-4">{{ error_message }}</h2>
         <p>{{ error_description }}</p>
-        <a href="{{ url_for('main.home') }}" class="btn btn-primary mt-3">Return to Home</a>
+        <a href="{{ url_for('main.home') }}" class="btn btn-primary mt-3">{{ _('Return to Home') }}</a>
     </div>
 </div>
 {% endblock %}

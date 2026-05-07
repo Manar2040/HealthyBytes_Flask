@@ -24,19 +24,19 @@
         <!-- Profile Picture Upload -->
         <div class="card mb-4">
             <div class="card-header">
-                <h3><i class="fas fa-camera me-2"></i>Profile Picture</h3>
+                <h3><i class="fas fa-camera me-2"></i>{{ _('Profile Picture') }}</h3>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ url_for('auth.profile') }}" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="profile_picture" class="form-label">Upload a new profile picture</label>
+                        <label for="profile_picture" class="form-label">{{ _('Upload a new profile picture') }}</label>
                         <input type="file" class="form-control" id="profile_picture" name="profile_picture"
                                accept="image/png, image/jpeg, image/gif">
-                        <small class="text-muted">Accepted formats: PNG, JPG, JPEG, GIF. Max size: 2MB.</small>
+                        <small class="text-muted">{{ _('Accepted formats: PNG, JPG, JPEG, GIF. Max size: 2MB.') }}</small>
                     </div>
                     <div class="d-grid">
                         <button type="submit" name="update_picture" class="btn btn-outline-primary">
-                            <i class="fas fa-upload me-1"></i> Upload Picture
+                            <i class="fas fa-upload me-1"></i> {{ _('Upload Picture') }}
                         </button>
                     </div>
                 </form>
@@ -45,19 +45,19 @@
 
         <div class="card mb-4">
             <div class="card-header">
-                <h3>My Activity</h3>
+                <h3>{{ _('My Activity') }}</h3>
             </div>
             <div class="card-body">
                 <a href="{{ url_for('recipes.my_favorites') }}" class="text-decoration-none">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="text-dark"><i class="fas fa-heart text-danger me-2"></i>Recipes Favorited</span>
-                        <span class="badge bg-primary">{{ current_user.favorites|length }}</span>
+                        <span class="text-dark"><i class="fas fa-heart text-danger me-2"></i>{{ _('Recipes Favorited') }}</span>
+                        <span class="badge bg-primary">{{ ar_nums(current_user.favorites|length) }}</span>
                     </div>
                 </a>
                 <a href="{{ url_for('planner.meal_planner') }}" class="text-decoration-none">
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-dark"><i class="fas fa-calendar-alt text-primary me-2"></i>Meal Plan</span>
-                        <span class="badge bg-success">{{ current_user.meal_plans|length }} meals planned</span>
+                        <span class="text-dark"><i class="fas fa-calendar-alt text-primary me-2"></i>{{ _('Meal Plan') }}</span>
+                        <span class="badge bg-success">{{ ar_nums(current_user.meal_plans|length) }} {{ _('meals planned') }}</span>
                     </div>
                 </a>
             </div>
@@ -65,16 +65,16 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Account Settings</h3>
+                <h3>{{ _('Account Settings') }}</h3>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ url_for('auth.profile') }}">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Update Email</label>
+                        <label for="email" class="form-label">{{ _('Update Email') }}</label>
                         <input type="email" class="form-control" id="email" name="email" value="{{ current_user.email }}">
                     </div>
                     <div class="d-grid">
-                        <button type="submit" name="update_email" class="btn btn-outline-primary">Update Email</button>
+                        <button type="submit" name="update_email" class="btn btn-outline-primary">{{ _('Update Email') }}</button>
                     </div>
                 </form>
 
@@ -82,15 +82,15 @@
 
                 <form method="POST" action="{{ url_for('auth.profile') }}">
                     <div class="mb-3">
-                        <label for="new_password" class="form-label">Change Password</label>
-                        <input type="password" class="form-control" id="new_password" name="new_password" placeholder="New Password">
+                        <label for="new_password" class="form-label">{{ _('Change Password') }}</label>
+                        <input type="password" class="form-control" id="new_password" name="new_password" placeholder="{{ _('New Password') }}">
                     </div>
                     <div class="mb-3">
-                        <label for="confirm_password" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm New Password">
+                        <label for="confirm_password" class="form-label">{{ _('Confirm Password') }}</label>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="{{ _('Confirm New Password') }}">
                     </div>
                     <div class="d-grid">
-                        <button type="submit" name="update_password" class="btn btn-outline-primary">Update Account</button>
+                        <button type="submit" name="update_password" class="btn btn-outline-primary">{{ _('Update Account') }}</button>
                     </div>
                 </form>
             </div>

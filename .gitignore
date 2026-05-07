@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+instance/*.db
+.env
+.venv
+env/
+venv/
+.vscode/
+.idea/
+*.bak
+*.tmp
+*.py~
