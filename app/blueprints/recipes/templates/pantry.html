@@ -98,8 +98,8 @@
 {% block content %}
 <div class="container mt-4 mb-5">
     <div class="pantry-header">
-        <h1><i class="fas fa-kitchen-set me-2"></i>The Pantry Chef</h1>
-        <p class="lead mb-0">Select the ingredients you have, and we'll tell you what you can make!</p>
+        <h1><i class="fas fa-kitchen-set me-2"></i>{{ _('The Pantry Chef') }}</h1>
+        <p class="lead mb-0">{{ _("Select the ingredients you have, and we'll tell you what you can make!") }}</p>
     </div>
 
     <div class="row">
@@ -107,29 +107,29 @@
         <div class="col-lg-4 mb-4">
             <div class="card shadow-sm">
                 <div class="card-header bg-white">
-                    <h5 class="mb-0"><i class="fas fa-carrot me-2"></i>My Pantry</h5>
+                    <h5 class="mb-0"><i class="fas fa-carrot me-2"></i>{{ _('My Pantry') }}</h5>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ url_for('recipes.pantry') }}">
                         <div class="mb-3">
-                            <input type="text" id="ingredientSearch" class="form-control" placeholder="Search ingredients...">
+                             <input type="text" id="ingredientSearch" class="form-control" placeholder="{{ _('Search ingredients...') }}">
                         </div>
                         
                         <div class="ingredient-check-grid" id="ingredientGrid">
                             {% for ingredient in all_ingredients %}
                             <div class="ingredient-item">
                                 <input type="checkbox" name="ingredients" value="{{ ingredient }}" id="ing_{{ loop.index }}" class="ingredient-checkbox" {% if ingredient in user_ingredients %}checked{% endif %}>
-                                <label for="ing_{{ loop.index }}" class="ingredient-label text-capitalize">{{ ingredient }}</label>
+                                <label for="ing_{{ loop.index }}" class="ingredient-label text-capitalize">{{ _(ingredient) }}</label>
                             </div>
                             {% endfor %}
                         </div>
 
                         <div class="d-grid mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                <i class="fas fa-magic me-2"></i>Find Recipes
+                             <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-magic me-2"></i>{{ _('Find Recipes') }}
                             </button>
                             {% if user_ingredients %}
-                            <a href="{{ url_for('recipes.pantry') }}" class="btn btn-outline-secondary mt-2">Clear Selection</a>
+                            <a href="{{ url_for('recipes.pantry') }}" class="btn btn-outline-secondary mt-2">{{ _('Clear Selection') }}</a>
                             {% endif %}
                         </div>
                     </form>
@@ -142,9 +142,9 @@
             {% if request.method == 'POST' %}
                 <h4 class="mb-4">
                     {% if matched_recipes %}
-                        Found {{ matched_recipes|length }} recipe{{ 's' if matched_recipes|length != 1 else '' }} matching your pantry
+                        {{ _('Found') }} {{ ar_nums(matched_recipes|length) }} {{ ngettext('recipe', 'recipes', matched_recipes|length) }} {{ _('matching your pantry') }}
                     {% else %}
-                        No matching recipes found
+                        {{ _('No matching recipes found') }}
                     {% endif %}
                 </h4>
 
@@ -156,15 +156,15 @@
                                 <img src="{{ url_for('static', filename='images/recipes/' + match.recipe.image_file) }}" class="card-img-top" alt="{{ match.recipe.title }}">
                             </div>
                             <div class="card-body pb-0">
-                                <h5 class="card-title">{{ match.recipe.title }}</h5>
+                                <h5 class="card-title">{{ _(match.recipe.title) }}</h5>
                                 
                                 <div class="d-flex justify-content-between align-items-center mt-2">
-                                    <span class="text-muted small">{{ match.match_count }} of {{ match.total_ingredients }} ingredients</span>
+                                    <span class="text-muted small">{{ ar_nums(match.match_count) }} {{ _('of') }} {{ ar_nums(match.total_ingredients) }} {{ _('ingredients') }}</span>
                                     {% set text_color = 'text-danger' %}
                                     {% if match.match_percentage == 100 %}{% set text_color = 'text-success' %}
                                     {% elif match.match_percentage >= 50 %}{% set text_color = 'text-warning' %}{% endif %}
                                     <span class="fw-bold {{ text_color }}">
-                                        {{ match.match_percentage }}% Match
+                                        {{ ar_nums(match.match_percentage) }}% {{ _('Match') }}
                                     </span>
                                 </div>
                                 
@@ -178,19 +178,19 @@
 
                                 {% if match.missing %}
                                 <div class="missing-ingredients">
-                                    <strong>Missing:</strong>
+                                    <strong>{{ _('Missing:') }}</strong>
                                     {% for m in match.missing %}
-                                        <span>{{ m }}</span>
+                                        <span>{{ _(m) }}</span>
                                     {% endfor %}
                                 </div>
                                 {% else %}
                                 <div class="text-success small fw-bold mt-2">
-                                    <i class="fas fa-check-circle me-1"></i>You have everything!
+                                    <i class="fas fa-check-circle me-1"></i>{{ _('You have everything!') }}
                                 </div>
                                 {% endif %}
                             </div>
                             <div class="card-footer bg-transparent border-top-0 pt-3">
-                                <a href="{{ url_for('recipes.recipe_detail', recipe_id=match.recipe.id) }}" class="btn btn-outline-primary w-100">View Recipe</a>
+                                <a href="{{ url_for('recipes.recipe_detail', recipe_id=match.recipe.id) }}" class="btn btn-outline-primary w-100">{{ _('View Recipe') }}</a>
                             </div>
                         </div>
                     </div>
@@ -201,8 +201,8 @@
                     <div class="mb-4">
                         <i class="fas fa-bowl-food fa-4x text-muted" style="opacity: 0.5;"></i>
                     </div>
-                    <h3 class="text-muted">What's in your fridge?</h3>
-                    <p class="text-muted lead px-4">Select the ingredients you currently have on hand from the list, and I'll find recipes you can cook right now.</p>
+                    <h3 class="text-muted">{{ _("What's in your fridge?") }}</h3>
+                    <p class="text-muted lead px-4">{{ _("Select the ingredients you currently have on hand from the list, and I'll find recipes you can cook right now.") }}</p>
                 </div>
             {% endif %}
         </div>

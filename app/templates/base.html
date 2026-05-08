@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ get_locale() }}" dir="{{ 'rtl' if get_locale().language == 'ar' else 'ltr' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Healthy Bytes - Nutritious Recipes{% endblock %}</title>
+    <title>{% block title %}{{ _('Healthy Bytes - Nutritious Recipes') }}{% endblock %}</title>
 
+    {% if get_locale().language == 'ar' %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    {% else %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% endif %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('main.home') }}">
-                <i class="fas fa-star"></i> Healthy Bytes
+                <i class="fas fa-star"></i> {{ _('Healthy Bytes') }}
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -26,27 +30,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'main.home' %}active{% endif %}" href="{{ url_for('main.home') }}">Home</a>
+                        <a class="nav-link {% if request.endpoint == 'main.home' %}active{% endif %}" href="{{ url_for('main.home') }}">{{ _('Home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'recipes.all_recipes' %}active{% endif %}" href="{{ url_for('recipes.all_recipes') }}">Recipes</a>
+                        <a class="nav-link {% if request.endpoint == 'recipes.all_recipes' %}active{% endif %}" href="{{ url_for('recipes.all_recipes') }}">{{ _('Recipes') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'categories.all_categories' %}active{% endif %}" href="{{ url_for('categories.all_categories') }}">Categories</a>
+                        <a class="nav-link {% if request.endpoint == 'categories.all_categories' %}active{% endif %}" href="{{ url_for('categories.all_categories') }}">{{ _('Categories') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'recipes.search' %}active{% endif %}" href="{{ url_for('recipes.search') }}"><i class="fas fa-search me-1"></i>Search</a>
+                        <a class="nav-link {% if request.endpoint == 'recipes.search' %}active{% endif %}" href="{{ url_for('recipes.search') }}"><i class="fas fa-search me-1"></i>{{ _('Search') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'recipes.pantry' %}active{% endif %}" href="{{ url_for('recipes.pantry') }}"><i class="fas fa-kitchen-set me-1"></i>Pantry Chef</a>
+                        <a class="nav-link {% if request.endpoint == 'recipes.pantry' %}active{% endif %}" href="{{ url_for('recipes.pantry') }}"><i class="fas fa-kitchen-set me-1"></i>{{ _('Pantry Chef') }}</a>
                     </li>
                     {% if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'planner.meal_planner' %}active{% endif %}" href="{{ url_for('planner.meal_planner') }}"><i class="fas fa-calendar-alt me-1"></i>Meal Planner</a>
+                        <a class="nav-link {% if request.endpoint == 'planner.meal_planner' %}active{% endif %}" href="{{ url_for('planner.meal_planner') }}"><i class="fas fa-calendar-alt me-1"></i>{{ _('Meal Planner') }}</a>
                     </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}" href="{{ url_for('main.about') }}">About</a>
+                        <a class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}" href="{{ url_for('main.about') }}">{{ _('About') }}</a>
                     </li>
                 </ul>
 
@@ -67,21 +71,33 @@
                                 </div>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item" href="{{ url_for('auth.profile') }}"><i class="fas fa-user me-2"></i>Profile</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('recipes.my_favorites') }}"><i class="fas fa-heart me-2"></i>Favorites</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('planner.meal_planner') }}"><i class="fas fa-calendar-alt me-2"></i>Meal Planner</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('auth.profile') }}"><i class="fas fa-user me-2"></i>{{ _('Profile') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('recipes.my_favorites') }}"><i class="fas fa-heart me-2"></i>{{ _('Favorites') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('planner.meal_planner') }}"><i class="fas fa-calendar-alt me-2"></i>{{ _('Meal Planner') }}</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item text-danger" href="{{ url_for('auth.logout') }}">
-                                    <i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                                    <i class="fas fa-sign-out-alt me-2"></i>{{ _('Logout') }}</a></li>
                             </ul>
                         </div>
                     </div>
                     {% else %}
                     <div class="login-register" id="loginRegisterLinks">
-                        <a href="{{ url_for('auth.login') }}">Login</a>
-                        <a href="{{ url_for('auth.register') }}">Register</a>
+                        <a class="nav-link" href="{{ url_for('auth.login') }}">{{ _('Login') }}</a>
+                        <a class="nav-link" href="{{ url_for('auth.register') }}">{{ _('Register') }}</a>
                     </div>
                     {% endif %}
+
+                    <!-- Language Selector -->
+                    <div class="dropdown ms-3">
+                        <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> {{ get_locale()|upper }}
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,8 +122,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <span>&copy; 2025 - HealthyBytes - </span>
-            <a href="#">Privacy</a>
+            <span>&copy; 2025 - {{ _('HealthyBytes') }} - </span>
+            <a href="#">{{ _('Privacy') }}</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

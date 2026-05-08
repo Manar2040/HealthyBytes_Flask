@@ -8,14 +8,88 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-04 02:11+0300\n"
+"POT-Creation-Date: 2026-05-07 04:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/blueprints/auth/routes.py:45
+msgid "Login unsuccessful. Please check email and password"
+msgstr ""
+
+#: app/blueprints/auth/routes.py:62
+msgid "Email already exists. Please choose a different one."
+msgstr ""
+
+#: app/blueprints/auth/routes.py:68
+msgid "Your account has been created! You can now log in."
+msgstr ""
+
+#: app/blueprints/auth/routes.py:88
+msgid "Your email has been updated!"
+msgstr ""
+
+#: app/blueprints/auth/routes.py:98
+msgid "Your password has been updated!"
+msgstr ""
+
+#: app/blueprints/auth/routes.py:100
+msgid "Passwords do not match!"
+msgstr ""
+
+#: app/blueprints/auth/routes.py:116
+msgid "Profile picture updated!"
+msgstr ""
+
+#: app/blueprints/auth/routes.py:118
+msgid "Invalid file type. Please upload PNG, JPG, JPEG, or GIF."
+msgstr ""
+
+#: app/blueprints/auth/templates/login.html:8
+#: app/blueprints/auth/templates/login.html:25
+#: app/blueprints/auth/templates/register.html:34 app/templates/base.html:81
+msgid "Login"
+msgstr ""
+
+#: app/blueprints/auth/templates/login.html:13
+#: app/blueprints/auth/templates/register.html:17
+msgid "Email address"
+msgstr ""
+
+#: app/blueprints/auth/templates/login.html:17
+#: app/blueprints/auth/templates/register.html:21
+msgid "Password"
+msgstr ""
+
+#: app/blueprints/auth/templates/login.html:22
+msgid "Remember me"
+msgstr ""
+
+#: app/blueprints/auth/templates/login.html:30
+msgid "Don't have an account?"
+msgstr ""
+
+#: app/blueprints/auth/templates/login.html:30
+#: app/blueprints/auth/templates/register.html:8
+#: app/blueprints/auth/templates/register.html:29 app/templates/base.html:82
+msgid "Register"
+msgstr ""
+
+#: app/blueprints/auth/templates/register.html:13
+msgid "Username"
+msgstr ""
+
+#: app/blueprints/auth/templates/register.html:25
+msgid "Confirm Password"
+msgstr ""
+
+#: app/blueprints/auth/templates/register.html:34
+msgid "Already have an account?"
+msgstr ""
 
 #: app/blueprints/categories/templates/categories.html:4
 msgid "Recipe Categories"
@@ -30,8 +104,6 @@ msgid "Categories found:"
 msgstr ""
 
 #: app/blueprints/categories/templates/categories.html:19
-#: app/blueprints/recipes/templates/pantry.html:145
-#: app/blueprints/recipes/templates/search.html:75
 msgid "recipes"
 msgstr ""
 
@@ -40,6 +112,12 @@ msgid "Explore"
 msgstr ""
 
 #: app/blueprints/categories/templates/recipes_by_category.html:19
+#: app/blueprints/main/templates/home.html:53
+#: app/blueprints/main/templates/home.html:95
+#: app/blueprints/planner/templates/meal_planner.html:133
+#: app/blueprints/planner/templates/meal_planner.html:193
+#: app/blueprints/planner/templates/meal_planner.html:215
+#: app/blueprints/planner/templates/shopping_list.html:56
 #: app/blueprints/recipes/templates/my_favorites.html:15
 #: app/blueprints/recipes/templates/recipe_detail.html:222
 #: app/blueprints/recipes/templates/recipes.html:14
@@ -48,6 +126,7 @@ msgid "cal"
 msgstr ""
 
 #: app/blueprints/categories/templates/recipes_by_category.html:22
+#: app/blueprints/main/templates/home.html:98
 #: app/blueprints/recipes/templates/my_favorites.html:18
 #: app/blueprints/recipes/templates/recipe_detail.html:229
 #: app/blueprints/recipes/templates/recipes.html:17
@@ -166,12 +245,140 @@ msgstr ""
 msgid "Join Our Community"
 msgstr ""
 
-#: app/blueprints/recipes/templates/my_favorites.html:4
-msgid "My Favorite Recipes"
+#: app/blueprints/main/templates/home.html:35
+msgid "Recipe of the Day"
 msgstr ""
 
+#: app/blueprints/main/templates/home.html:43
+msgid "Today's Pick"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:54
+msgid "protein"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:55
+msgid "carbs"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:56
+msgid "fats"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:67
+#: app/blueprints/recipes/templates/recipe_detail.html:36
+msgid "reviews"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:71
+#: app/blueprints/recipes/templates/pantry.html:193
+msgid "View Recipe"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:83
+msgid "Popular Recipes"
+msgstr ""
+
+#: app/blueprints/main/templates/home.html:106
+msgid "View All Recipes"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:106
+#: app/templates/base.html:45 app/templates/base.html:72
+msgid "Meal Planner"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:109
+#: app/blueprints/planner/templates/shopping_list.html:6
+msgid "Shopping List"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:114
+msgid "Clear Plan"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:123
+msgid "Add Recipe to Plan"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:127
+msgid "Recipe"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:129
+msgid "Choose a recipe..."
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:140
+msgid "Day"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:148
+#: app/blueprints/planner/templates/meal_planner.html:171
+msgid "Meal"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:157
+msgid "Add"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:196
 #: app/blueprints/recipes/templates/my_favorites.html:20
 msgid "Remove"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:209
+msgid "Total"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:9
+msgid "Print"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:12
+msgid "Back to Planner"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:22
+msgid "Ingredients Needed"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+msgid "Based on"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+#: app/blueprints/recipes/templates/pantry.html:145
+#: app/blueprints/recipes/templates/search.html:75
+msgid "recipe"
+msgid_plural "recipes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+msgid "in your meal plan"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:48
+msgid "Recipes in Plan"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:66
+msgid "No items in your shopping list"
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:67
+msgid ""
+"Add recipes to your meal plan first, and they need to have ingredients "
+"listed."
+msgstr ""
+
+#: app/blueprints/planner/templates/shopping_list.html:68
+msgid "Go to Meal Planner"
+msgstr ""
+
+#: app/blueprints/recipes/templates/my_favorites.html:4
+msgid "My Favorite Recipes"
 msgstr ""
 
 #: app/blueprints/recipes/templates/my_favorites.html:29
@@ -210,11 +417,6 @@ msgid "Found"
 msgstr ""
 
 #: app/blueprints/recipes/templates/pantry.html:145
-#: app/blueprints/recipes/templates/search.html:75
-msgid "recipe"
-msgstr ""
-
-#: app/blueprints/recipes/templates/pantry.html:145
 msgid "matching your pantry"
 msgstr ""
 
@@ -230,27 +432,23 @@ msgstr ""
 msgid "ingredients"
 msgstr ""
 
-#: app/blueprints/recipes/templates/pantry.html:164
+#: app/blueprints/recipes/templates/pantry.html:167
 msgid "Match"
 msgstr ""
 
-#: app/blueprints/recipes/templates/pantry.html:176
+#: app/blueprints/recipes/templates/pantry.html:181
 msgid "Missing:"
 msgstr ""
 
-#: app/blueprints/recipes/templates/pantry.html:183
+#: app/blueprints/recipes/templates/pantry.html:188
 msgid "You have everything!"
 msgstr ""
 
-#: app/blueprints/recipes/templates/pantry.html:188
-msgid "View Recipe"
-msgstr ""
-
-#: app/blueprints/recipes/templates/pantry.html:199
+#: app/blueprints/recipes/templates/pantry.html:204
 msgid "What's in your fridge?"
 msgstr ""
 
-#: app/blueprints/recipes/templates/pantry.html:200
+#: app/blueprints/recipes/templates/pantry.html:205
 msgid ""
 "Select the ingredients you currently have on hand from the list, and I'll"
 " find recipes you can cook right now."
@@ -258,10 +456,6 @@ msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:36
 msgid "review"
-msgstr ""
-
-#: app/blueprints/recipes/templates/recipe_detail.html:36
-msgid "reviews"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:38
@@ -280,10 +474,6 @@ msgstr ""
 msgid "Share:"
 msgstr ""
 
-#: app/blueprints/recipes/templates/recipe_detail.html:60
-msgid "Copy Link"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:79
 msgid "Print Recipe"
 msgstr ""
@@ -298,12 +488,6 @@ msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:94
 msgid "Calories"
-msgstr ""
-
-#: app/blueprints/recipes/templates/recipe_detail.html:102
-#: app/blueprints/recipes/templates/recipe_detail.html:111
-#: app/blueprints/recipes/templates/recipe_detail.html:120
-msgid "g"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:103
@@ -322,44 +506,31 @@ msgstr ""
 msgid "Ingredients"
 msgstr ""
 
-#: app/blueprints/recipes/templates/recipe_detail.html:153
-msgid "Reviews"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:160
 msgid "Write a review..."
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:165
-msgid "5 Stars"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:166
-msgid "4 Stars"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:167
-msgid "3 Stars"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:168
-msgid "2 Stars"
+msgid "Stars"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:169
-msgid "1 Star"
+msgid "Star"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:172
 msgid "Submit Review"
 msgstr ""
 
-#: app/blueprints/recipes/templates/recipe_detail.html:200
-msgid "No reviews yet. Be the first to review!"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:209
 msgid "You Might Also Like"
+msgstr ""
+
+#: app/blueprints/recipes/templates/recipe_detail.html:244
+msgid "Link copied to clipboard!"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipes.html:4
@@ -457,6 +628,14 @@ msgstr ""
 msgid "Use the filters above to find the perfect recipe"
 msgstr ""
 
+#: app/templates/base.html:6
+msgid "Healthy Bytes - Nutritious Recipes"
+msgstr ""
+
+#: app/templates/base.html:18
+msgid "Healthy Bytes"
+msgstr ""
+
 #: app/templates/base.html:29
 msgid "Home"
 msgstr ""
@@ -471,10 +650,6 @@ msgstr ""
 
 #: app/templates/base.html:41
 msgid "Pantry Chef"
-msgstr ""
-
-#: app/templates/base.html:45 app/templates/base.html:72
-msgid "Meal Planner"
 msgstr ""
 
 #: app/templates/base.html:49
@@ -493,11 +668,15 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: app/templates/base.html:81
-msgid "Login"
+#: app/templates/base.html:121
+msgid "HealthyBytes"
 msgstr ""
 
-#: app/templates/base.html:82
-msgid "Register"
+#: app/templates/base.html:122
+msgid "Privacy"
+msgstr ""
+
+#: app/templates/error.html:9
+msgid "Return to Home"
 msgstr ""
 

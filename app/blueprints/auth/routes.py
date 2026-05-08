@@ -1,6 +1,9 @@
 import os
 import secrets
 from flask import render_template, url_for, flash, redirect, request, current_app
+# pyrefly: ignore [missing-import]
+from flask_babel import _
+# pyrefly: ignore [missing-import]
 from flask_login import login_user, current_user, logout_user, login_required
 from app import db, bcrypt
 from app.models import User
@@ -41,7 +44,7 @@ def login():
             next_page = request.args.get('next')
             return redirect(next_page) if next_page else redirect(url_for('main.home'))
         else:
-            flash('Login unsuccessful. Please check email and password', 'danger')
+            flash(_('Login unsuccessful. Please check email and password'), 'danger')
 
     return render_template('login.html')
 
@@ -58,13 +61,13 @@ def register():
 
         user = User.query.filter_by(email=email).first()
         if user:
-            flash('Email already exists. Please choose a different one.', 'danger')
+            flash(_('Email already exists. Please choose a different one.'), 'danger')
         else:
             hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
             new_user = User(username=username, email=email, password=hashed_password)
             db.session.add(new_user)
             db.session.commit()
-            flash('Your account has been created! You can now log in.', 'success')
+            flash(_('Your account has been created! You can now log in.'), 'success')
             return redirect(url_for('auth.login'))
 
     return render_template('register.html')
@@ -84,7 +87,7 @@ def profile():
             email = request.form.get('email')
             current_user.email = email
             db.session.commit()
-            flash('Your email has been updated!', 'success')
+            flash(_('Your email has been updated!'), 'success')
 
         elif 'update_password' in request.form:
             new_password = request.form.get('new_password')
@@ -94,9 +97,9 @@ def profile():
                 hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
                 current_user.password = hashed_password
                 db.session.commit()
-                flash('Your password has been updated!', 'success')
+                flash(_('Your password has been updated!'), 'success')
             else:
-                flash('Passwords do not match!', 'danger')
+                flash(_('Passwords do not match!'), 'danger')
 
         elif 'update_picture' in request.form:
             if 'profile_picture' in request.files:
@@ -112,8 +115,8 @@ def profile():
                     filename = save_profile_picture(file)
                     current_user.profile_image = filename
                     db.session.commit()
-                    flash('Profile picture updated!', 'success')
+                    flash(_('Profile picture updated!'), 'success')
                 else:
-                    flash('Invalid file type. Please upload PNG, JPG, JPEG, or GIF.', 'danger')
+                    flash(_('Invalid file type. Please upload PNG, JPG, JPEG, or GIF.'), 'danger')
 
     return render_template('profile.html')
