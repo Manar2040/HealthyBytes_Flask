@@ -2595,3 +2595,7 @@ msgstr "Rapide et Facile"
 
 msgid "High Protein"
 msgstr "Riche en Protéines"
+
+
+msgid "Fresh mixed greens topped with grilled chicken breast, cherry tomatoes, and vinaigrette."
+msgstr "Salade de crudités fraîches garnie de blanc de poulet grillé, de tomates cerises et de vinaigrette."
