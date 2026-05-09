@@ -29,9 +29,16 @@
             <div class="card-body">
                 <form method="POST" action="{{ url_for('auth.profile') }}" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="profile_picture" class="form-label">{{ _('Upload a new profile picture') }}</label>
-                        <input type="file" class="form-control" id="profile_picture" name="profile_picture"
-                               accept="image/png, image/jpeg, image/gif">
+                        <label class="form-label">{{ _('Upload a new profile picture') }}</label>
+                        <div class="input-group">
+                            <label class="input-group-text btn btn-outline-secondary mb-0" for="profile_picture" style="cursor: pointer;">
+                                <i class="fas fa-image me-1"></i> {{ _('Choose File') }}
+                            </label>
+                            <input type="file" class="form-control d-none" id="profile_picture" name="profile_picture"
+                                   accept="image/png, image/jpeg, image/gif"
+                                   onchange="document.getElementById('fileName').textContent = this.files[0] ? this.files[0].name : '{{ _('No file chosen') }}'">
+                            <span class="form-control bg-light text-muted" id="fileName">{{ _('No file chosen') }}</span>
+                        </div>
                         <small class="text-muted">{{ _('Accepted formats: PNG, JPG, JPEG, GIF. Max size: 2MB.') }}</small>
                     </div>
                     <div class="d-grid">
