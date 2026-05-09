@@ -1224,7 +1224,7 @@ msgid "Grilled Chicken Salad"
 msgstr "Salade de poulet grillé"
 
 msgid "Beef Burger"
-msgstr "Burger au bœuf"
+msgstr "Burger de bœuf"
 
 msgid "Breakfast"
 msgstr "Petit Déjeuner"
@@ -1239,109 +1239,109 @@ msgid "Dessert"
 msgstr "Dessert"
 
 msgid "Eggplant Parmesan"
-msgstr "Aubergine Parmigiana"
+msgstr "Parmigiana d'aubergines"
 
 msgid "Shrimp Scampi Pasta"
-msgstr "Pâtes aux Crevettes à l'Ail"
+msgstr "Pâtes aux crevettes à l'ail"
 
 msgid "Butternut Squash Soup"
-msgstr "Soupe de Courge Musquée"
+msgstr "Soupe de courge musquée"
 
 msgid "Lamb Kebabs"
-msgstr "Kebabs d'Agneau"
+msgstr "Kebabs d'agneau"
 
 msgid "Seafood Paella"
-msgstr "Paella aux Fruits de Mer"
+msgstr "Paella aux fruits de mer"
 
 msgid "Stuffed Bell Peppers"
-msgstr "Poivrons Farcis"
+msgstr "Poivrons farcis"
 
 msgid "Molten Caramel Cake"
-msgstr "Moelleux au Caramel"
+msgstr "Moelleux au caramel"
 
 msgid "Key Lime Pie"
-msgstr "Tarte au Citron Vert"
+msgstr "Tarte au citron vert"
 
 msgid "Red Velvet Cake"
 msgstr "Gâteau Red Velvet"
 
 msgid "Banana Pudding"
-msgstr "Pudding à la Banane"
+msgstr "Pudding à la banane"
 
 msgid "Lemon Tart"
-msgstr "Tarte au Citron"
+msgstr "Tarte au citron"
 
 msgid "Strawberry Cheesecake"
-msgstr "Cheesecake aux Fraises"
+msgstr "Cheesecake aux fraises"
 
 msgid "Greek Yogurt Parfait"
-msgstr "Parfait au Yaourt Grec"
+msgstr "Parfait au yaourt grec"
 
 msgid "Oatmeal with Berries"
-msgstr "Flocons d'Avoine aux Baies"
+msgstr "Flocons d'avoine aux baies"
 
 msgid "Lentil Soup"
-msgstr "Soupe de Lentilles"
+msgstr "Soupe aux lentilles"
 
 msgid "Turkey Wraps"
-msgstr "Wraps à la Dinde"
+msgstr "Wraps à la dinde"
 
 msgid "Chicken Stir Fry"
-msgstr "Wok de Poulet"
+msgstr "Wok de poulet"
 
 msgid "Zucchini Noodles with Pesto"
-msgstr "Noodles de Courgette au Pesto"
+msgstr "Nouilles de courgettes au pesto"
 
 msgid "Frozen Yogurt Bites"
-msgstr "Bouchées de Yaourt Glacé"
+msgstr "Bouchées de yaourt glacé"
 
 msgid "Chia Seed Pudding"
-msgstr "Pudding de Graines de Chia"
+msgstr "Pudding aux graines de chia"
 
 msgid "Teriyaki Salmon"
 msgstr "Saumon Teriyaki"
 
 msgid "Quinoa Salad"
-msgstr "Salade de Quinoa"
+msgstr "Salade de quinoa"
 
 msgid "Caesar Salad"
 msgstr "Salade César"
 
 msgid "Vegetable Curry"
-msgstr "Curry de Légumes"
+msgstr "Curry de légumes"
 
 msgid "Mushroom Risotto"
-msgstr "Risotto aux Champignons"
+msgstr "Risotto aux champignons"
 
 msgid "Protein Brownies"
-msgstr "Brownies Protéinés"
+msgstr "Brownies protéinés"
 
 msgid "Shakshuka"
 msgstr "Chakchouka"
 
 msgid "Pesto Penne Pasta"
-msgstr "Pennes au Pesto"
+msgstr "Pennes au pesto"
 
 msgid "Caprese Salad"
 msgstr "Salade Caprese"
 
 msgid "Baked Ziti"
-msgstr "Ziti au Four"
+msgstr "Ziti au four"
 
 msgid "Minestrone Soup"
 msgstr "Soupe Minestrone"
 
 msgid "Mango Lassi"
-msgstr "Lassi à la Mangue"
+msgstr "Lassi à la mangue"
 
 msgid "BBQ Chicken Pizza"
-msgstr "Pizza au Poulet BBQ"
+msgstr "Pizza au poulet BBQ"
 
 msgid "Breakfast Burrito"
-msgstr "Burrito de Petit-Déjeuner"
+msgstr "Burrito de petit-déjeuner"
 
 msgid "Fruit Salad"
-msgstr "Salade de Fruits"
+msgstr "Salade de fruits"
 
 msgid "Start your day with these nutritious breakfast recipes"
 msgstr "Commencez votre journée avec ces recettes nutritives"
@@ -1356,16 +1356,16 @@ msgid "Healthier versions of your favorite sweet treats"
 msgstr "Versions plus saines de vos douceurs préférées"
 
 msgid "Toasted bread topped with smashed avocado and poached egg"
-msgstr "Pain grillé surmonté d'avocat écrasé et d'un œuf poché"
+msgstr "Pain grillé garni d'avocat écrasé et d'un œuf poché"
 
 msgid "Golden brown French toast with cinnamon and syrup"
 msgstr "Pain perdu doré à la cannelle et au sirop"
 
 msgid "Mixed fruit smoothie topped with granola and fresh fruits"
-msgstr "Smoothie aux fruits mélangés garni de granola et fruits frais"
+msgstr "Smoothie aux fruits mélangés garni de granola et de fruits frais"
 
 msgid "Crispy waffles served with fresh fruits and whipped cream"
-msgstr "Gaufres croustillantes servies avec fruits frais et crème fouettée"
+msgstr "Gaufres croustillantes servies avec des fruits frais et de la crème fouettée"
 
 msgid ""
 #~ "Fresh mixed greens topped with grilled"
@@ -1380,7 +1380,7 @@ msgid ""
 msgstr "Pâté de bœuf juteux servi dans un pain avec fromage et laitue"
 
 msgid "Spaghetti Bolognese"
-msgstr "Spaghettis bolognaise"
+msgstr "Spaghetti Bolognaise"
 
 msgid "Classic Italian pasta with rich tomato and beef sauce"
 msgstr "Pâtes italiennes classiques avec une riche sauce tomate et bœuf"
@@ -1395,118 +1395,118 @@ msgid "Fish Tacos"
 msgstr "Tacos au poisson"
 
 msgid "Soft tortillas filled with crispy fish, slaw, and spicy mayo"
-msgstr "Tortillas souples garnies de poisson croustillant et slaw"
+msgstr "Tortillas souples garnies de poisson croustillant, de salade de chou et de mayonnaise épicée"
 
 msgid "Tuna Melt"
-msgstr "Thon fondu"
+msgstr "Tuna Melt"
 
 msgid "Toasted bread with tuna salad and melted cheddar cheese"
-msgstr "Pain grillé avec salade de thon et cheddar fondu"
+msgstr "Pain grillé avec salade de thon et fromage cheddar fondu"
 
 msgid "Breaded eggplant layered with marinara and melted mozzarella"
-msgstr "Aubergine panée avec sauce marinara et mozzarella fondue"
+msgstr "Aubergines panées avec de la sauce marinara et de la mozzarella fondue"
 
 msgid "Garlicky shrimp tossed with linguine in white wine butter sauce"
-msgstr "Crevettes à l'ail avec linguines sauce beurre et vin blanc"
+msgstr "Crevettes à l'ail mélangées à des linguines dans une sauce au beurre et au vin blanc"
 
 msgid "Velvety soup with roasted squash, sage, and a touch of cream"
-msgstr "Soupe veloutée à la courge rôtie, sauge et crème"
+msgstr "Soupe veloutée à la courge rôtie, sauge et une touche de crème"
 
 msgid "Marinated lamb grilled with bell peppers and onions"
-msgstr "Agneau mariné grillé avec poivrons et oignons"
+msgstr "Agneau mariné grillé avec des poivrons et des oignons"
 
 msgid "Spanish rice dish with shrimp, mussels, and saffron"
-msgstr "Plat de riz espagnol aux crevettes, moules et safran"
+msgstr "Plat de riz espagnol avec crevettes, moules et safran"
 
 msgid "Peppers filled with ground turkey, rice, and tomatoes"
-msgstr "Poivrons farcis à la dinde hachée, riz et tomates"
+msgstr "Poivrons farcis à la dinde hachée, au riz et aux tomates"
 
 msgid "Gooey caramel-filled cake with sea salt garnish"
-msgstr "Gâteau au cœur de caramel fondant et sel de mer"
+msgstr "Gâteau fondant au caramel avec une pincée de sel marin"
 
 msgid "Tangy lime custard in graham cracker crust"
-msgstr "Crème au citron vert acidulée sur croûte de biscuits"
+msgstr "Crème pâtissière au citron vert dans une croûte de biscuits Graham"
 
 msgid "Moist red cake with cream cheese frosting"
-msgstr "Gâteau rouge moelleux avec glaçage au fromage à la crème"
+msgstr "Gâteau rouge moelleux avec un glaçage au fromage à la crème"
 
 msgid "Layered pudding with vanilla wafers and fresh bananas"
-msgstr "Pudding par couches avec gaufrettes vanille et bananes fraîches"
+msgstr "Pudding à étages avec des gaufrettes à la vanille et des bananes fraîches"
 
 msgid "Buttery crust filled with tangy lemon curd"
-msgstr "Croûte beurrée garnie d'une crème au citron acidulée"
+msgstr "Croûte beurrée remplie d'une crème au citron acidulée"
 
 msgid "Creamy cheesecake on graham crust with fresh strawberries"
-msgstr "Cheesecake crémeux sur croûte avec fraises fraîches"
+msgstr "Cheesecake crémeux sur croûte de Graham avec des fraises fraîches"
 
 msgid "Greek yogurt layered with granola and fresh berries"
-msgstr "Yaourt grec avec granola et baies fraîches"
+msgstr "Yaourt grec superposé à du granola et des baies fraîches"
 
 msgid "Warm oatmeal served with mixed berries and honey"
-msgstr "Avoine chaude servie avec baies mélangées et miel"
+msgstr "Flocons d'avoine chauds servis avec des baies mélangées et du miel"
 
 msgid "Comforting and hearty lentil soup with spices"
-msgstr "Soupe de lentilles réconfortante et copieuse aux épices"
+msgstr "Soupe aux lentilles réconfortante et copieuse avec des épices"
 
 msgid "Healthy turkey wraps with veggies and low-fat dressing"
-msgstr "Wraps de dinde sains avec légumes et sauce légère"
+msgstr "Wraps à la dinde sains avec légumes et sauce allégée"
 
 msgid "Quick chicken stir-fry with colorful veggies"
-msgstr "Sauté de poulet rapide avec légumes colorés"
+msgstr "Sauté de poulet rapide avec des légumes colorés"
 
 msgid "Low-carb zucchini noodles tossed with fresh pesto"
-msgstr "Noodles de courgette faibles en glucides au pesto frais"
+msgstr "Nouilles de courgettes à faible teneur en glucides avec du pesto frais"
 
 msgid "Mini frozen yogurt bites with mixed fruits"
-msgstr "Mini bouchées de yaourt glacé aux fruits mélangés"
+msgstr "Mini bouchées de yaourt glacé avec des fruits mélangés"
 
 msgid "Creamy chia pudding topped with fruits"
-msgstr "Pudding au chia crémeux garni de fruits"
+msgstr "Pudding crémeux au chia garni de fruits"
 
 msgid "Glazed salmon fillets with homemade teriyaki sauce"
-msgstr "Filets de saumon glacés sauce teriyaki maison"
+msgstr "Filets de saumon glacés avec une sauce teriyaki maison"
 
 msgid "Light and refreshing quinoa salad with cucumber and feta"
-msgstr "Salade de quinoa légère au concombre et feta"
+msgstr "Salade de quinoa légère et rafraîchissante avec concombre et feta"
 
 msgid "Classic Caesar salad with homemade dressing and croutons"
-msgstr "Salade César classique avec sauce maison et croûtons"
+msgstr "Salade César classique avec vinaigrette maison et croûtons"
 
 msgid "Rich coconut milk vegetable curry with potatoes and carrots"
-msgstr "Curry de légumes au lait de coco avec pommes de terre"
+msgstr "Curry de légumes au lait de coco avec pommes de terre et carottes"
 
 msgid "Creamy arborio rice with wild mushrooms and parmesan"
 msgstr "Riz arborio crémeux aux champignons sauvages et parmesan"
 
 msgid "Fudgy chocolate brownies packed with whey protein"
-msgstr "Brownies au chocolat riches en protéines de lactosérum"
+msgstr "Brownies au chocolat fondants riches en protéines de lactosérum"
 
 msgid "Eggs poached in a sauce of tomatoes, chili peppers, and onions"
-msgstr "Œufs pochés dans une sauce tomate, piments et oignons"
+msgstr "Œufs pochés dans une sauce de tomates, piments et oignons"
 
 msgid "Simple penne pasta tossed in basil pesto sauce"
-msgstr "Pennes simples nappées de sauce pesto au basilic"
+msgstr "Pâtes penne simples mélangées à une sauce pesto au basilic"
 
 msgid "Fresh mozzarella, tomatoes, and sweet basil"
-msgstr "Mozzarella fraîche, tomates et basilic"
+msgstr "Mozzarella fraîche, tomates et basilic doux"
 
 msgid "Cheesy baked ziti with marinara and ground sausage"
-msgstr "Ziti au four au fromage avec marinara et saucisse"
+msgstr "Pâtes Ziti au four avec sauce marinara et saucisse hachée"
 
 msgid "Traditional Italian vegetable soup with beans and pasta"
-msgstr "Soupe de légumes italienne traditionnelle aux haricots"
+msgstr "Soupe de légumes italienne traditionnelle avec haricots et pâtes"
 
 msgid "Refreshing Indian yogurt drink with fresh mango"
-msgstr "Boisson indienne rafraîchissante au yaourt et mangue"
+msgstr "Boisson indienne rafraîchissante au yaourt et à la mangue fraîche"
 
 msgid "Homemade pizza topped with BBQ sauce, chicken, and red unions"
-msgstr "Pizza maison sauce BBQ, poulet et oignons rouges"
+msgstr "Pizza maison garnie de sauce BBQ, de poulet et d'oignons rouges"
 
 msgid "Scrambled eggs, beans, and cheese wrapped in a tortilla"
-msgstr "Œufs brouillés, haricots et fromage dans une tortilla"
+msgstr "Œufs brouillés, haricots et fromage enveloppés dans une tortilla"
 
 msgid "A mix of fresh seasonal fruits"
-msgstr "Un mélange de fruits de saison frais"
+msgstr "Un mélange de fruits frais de saison"
 
 msgid "Snack"
 msgstr "Goûter"
