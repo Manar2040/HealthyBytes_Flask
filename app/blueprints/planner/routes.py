@@ -1,4 +1,6 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify
+from flask_babel import _
+
 from flask_login import login_required, current_user
 from app import db
 from app.models import MealPlan, Recipe, Category
@@ -68,8 +70,9 @@ def add_to_plan():
     meal_type = request.form.get('meal_type')
 
     if not recipe_id or day not in DAYS_OF_WEEK or meal_type not in MEAL_TYPES:
-        flash('Invalid selection.', 'danger')
+        flash(_('Invalid selection.'), 'danger')
         return redirect(url_for('planner.meal_planner'))
+
 
     recipe = Recipe.query.get_or_404(recipe_id)
 
@@ -81,8 +84,9 @@ def add_to_plan():
     )
     db.session.add(entry)
     db.session.commit()
-    flash(f'{recipe.title} added to {day} {meal_type}!', 'success')
+    flash(_('%(title)s added to %(day)s %(meal)s!', title=recipe.title, day=day, meal=meal_type), 'success')
     return redirect(url_for('planner.meal_planner'))
+
 
 
 @planner.route('/meal-planner/remove/<int:entry_id>', methods=['POST'])
@@ -90,13 +94,15 @@ def add_to_plan():
 def remove_from_plan(entry_id):
     entry = MealPlan.query.get_or_404(entry_id)
     if entry.user_id != current_user.id:
-        flash('Unauthorized.', 'danger')
+        flash(_('Unauthorized.'), 'danger')
         return redirect(url_for('planner.meal_planner'))
+
 
     db.session.delete(entry)
     db.session.commit()
-    flash('Recipe removed from plan.', 'success')
+    flash(_('Recipe removed from plan.'), 'success')
     return redirect(url_for('planner.meal_planner'))
+
 
 
 @planner.route('/meal-planner/clear', methods=['POST'])
@@ -104,8 +110,9 @@ def remove_from_plan(entry_id):
 def clear_plan():
     MealPlan.query.filter_by(user_id=current_user.id).delete()
     db.session.commit()
-    flash('Meal plan cleared.', 'success')
+    flash(_('Meal plan cleared.'), 'success')
     return redirect(url_for('planner.meal_planner'))
+
 
 
 @planner.route('/meal-planner/shopping-list')

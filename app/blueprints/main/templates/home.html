@@ -64,7 +64,7 @@
                                 <span class="text-muted">☆</span>
                             {% endif %}
                         {% endfor %}
-                        <span class="text-muted ms-1">({{ recipe_of_day.review_count }} {{ _('reviews') }})</span>
+                        <span class="text-muted ms-1">({{ ar_nums(recipe_of_day.review_count) }} {{ _('reviews') }})</span>
                     </div>
                     {% endif %}
                     <a href="{{ url_for('recipes.recipe_detail', recipe_id=recipe_of_day.id) }}" class="btn btn-primary mt-3">

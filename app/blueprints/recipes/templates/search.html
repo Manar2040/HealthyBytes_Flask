@@ -94,8 +94,9 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="text-muted"><i class="fas fa-fire-alt"></i> {{ ar_nums(recipe.calories) }} {{ _('cal') }}</span>
                             {% if recipe.average_rating > 0 %}
-                            <span class="text-warning">★ {{ "%.1f"|format(recipe.average_rating) }}</span>
+                            <span class="text-warning">★ {{ "%.1f"|format(recipe.average_rating)|ar_nums }}</span>
                             {% endif %}
+
                         </div>
                     </div>
                     <div class="card-footer bg-transparent">
@@ -121,7 +122,8 @@
             {% for page_num in results.iter_pages() %}
                 {% if page_num %}
                     <li class="page-item {% if results.page == page_num %}active{% endif %}">
-                        <a class="page-link" href="{{ url_for('recipes.search', q=query, category=category_id, min_cal=min_cal, max_cal=max_cal, sort=sort_by, page=page_num) }}">{{ page_num }}</a>
+                        <a class="page-link" href="{{ url_for('recipes.search', q=query, category=category_id, min_cal=min_cal, max_cal=max_cal, sort=sort_by, page=page_num) }}">{{ ar_nums(page_num) }}</a>
+
                     </li>
                 {% else %}
                     <li class="page-item disabled"><a class="page-link" href="#">...</a></li>

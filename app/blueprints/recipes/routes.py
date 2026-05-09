@@ -1,4 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request, abort, jsonify
+from flask_babel import _
+
 from flask_login import current_user, login_required
 from app import db
 from app.models import Recipe, Review, User, Category, Ingredient
@@ -87,8 +89,9 @@ def add_review(recipe_id):
     review = Review(rating=rating, content=content, author=current_user, recipe=recipe)
     db.session.add(review)
     db.session.commit()
-    flash('Your review has been added!', 'success')
+    flash(_('Your review has been added!'), 'success')
     return redirect(url_for('recipes.recipe_detail', recipe_id=recipe_id))
+
 
 
 @recipes.route('/favorites')
@@ -109,14 +112,16 @@ def toggle_favorite(recipe_id):
         current_user.favorites.remove(recipe)
         db.session.commit()
         if is_ajax:
-            return jsonify({'status': 'removed', 'message': 'Removed from favorites'})
-        flash('Recipe removed from favorites!', 'success')
+            return jsonify({'status': 'removed', 'message': _('Removed from favorites')})
+        flash(_('Recipe removed from favorites!'), 'success')
+
     else:
         current_user.favorites.append(recipe)
         db.session.commit()
         if is_ajax:
-            return jsonify({'status': 'added', 'message': 'Added to favorites!'})
-        flash('Recipe added to favorites!', 'success')
+            return jsonify({'status': 'added', 'message': _('Added to favorites!')})
+        flash(_('Recipe added to favorites!'), 'success')
+
 
     return redirect(url_for('recipes.recipe_detail', recipe_id=recipe_id))
 
@@ -126,7 +131,8 @@ def toggle_favorite(recipe_id):
 def add_to_favorites(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     if recipe in current_user.favorites:
-        flash('This recipe is already in your favorites!', 'info')
+        flash(_('This recipe is already in your favorites!'), 'info')
+
     else:
         current_user.favorites.append(recipe)
         db.session.commit()

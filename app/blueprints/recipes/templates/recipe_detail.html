@@ -162,12 +162,13 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="star-rating-input">
                                     <select class="form-select" name="rating" style="width: auto;">
-                                        <option value="5">5 {{ _('Stars') }}</option>
-                                        <option value="4">4 {{ _('Stars') }}</option>
-                                        <option value="3">3 {{ _('Stars') }}</option>
-                                        <option value="2">2 {{ _('Stars') }}</option>
-                                        <option value="1">1 {{ _('Star') }}</option>
+                                        <option value="5">{{ ar_nums(5) }} {{ _('Stars') }}</option>
+                                        <option value="4">{{ ar_nums(4) }} {{ _('Stars') }}</option>
+                                        <option value="3">{{ ar_nums(3) }} {{ _('Stars') }}</option>
+                                        <option value="2">{{ ar_nums(2) }} {{ _('Stars') }}</option>
+                                        <option value="1">{{ ar_nums(1) }} {{ _('Star') }}</option>
                                     </select>
+
                                 </div>
                                 <button type="submit" class="btn btn-success">{{ _('Submit Review') }}</button>
                             </div>
@@ -192,7 +193,7 @@
                                 </div>
                             </div>
                             <p class="card-text">{{ review.content }}</p>
-                            <p class="text-muted small">{{ format_date(review.date_posted, format='long') }}</p>
+                            <p class="text-muted small">{{ format_date(review.date_posted, format='long')|ar_nums }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -221,8 +222,9 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="text-muted">{{ ar_nums(r.calories) }} {{ _('cal') }}</span>
                                 {% if r.average_rating > 0 %}
-                                <span class="text-warning">★ {{ "%.1f"|format(r.average_rating) }}</span>
+                                <span class="text-warning">★ {{ "%.1f"|format(r.average_rating)|ar_nums }}</span>
                                 {% endif %}
+
                             </div>
                         </div>
                         <div class="card-footer bg-transparent">

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-07 04:24+0300\n"
+"POT-Creation-Date: 2026-05-09 17:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,41 +17,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/blueprints/auth/routes.py:45
+#: app/blueprints/auth/routes.py:47
 msgid "Login unsuccessful. Please check email and password"
 msgstr ""
 
-#: app/blueprints/auth/routes.py:62
+#: app/blueprints/auth/routes.py:64
 msgid "Email already exists. Please choose a different one."
 msgstr ""
 
-#: app/blueprints/auth/routes.py:68
+#: app/blueprints/auth/routes.py:70
 msgid "Your account has been created! You can now log in."
 msgstr ""
 
-#: app/blueprints/auth/routes.py:88
+#: app/blueprints/auth/routes.py:90
 msgid "Your email has been updated!"
 msgstr ""
 
-#: app/blueprints/auth/routes.py:98
+#: app/blueprints/auth/routes.py:100
 msgid "Your password has been updated!"
 msgstr ""
 
-#: app/blueprints/auth/routes.py:100
+#: app/blueprints/auth/routes.py:102
 msgid "Passwords do not match!"
 msgstr ""
 
-#: app/blueprints/auth/routes.py:116
+#: app/blueprints/auth/routes.py:118
 msgid "Profile picture updated!"
 msgstr ""
 
-#: app/blueprints/auth/routes.py:118
+#: app/blueprints/auth/routes.py:120
 msgid "Invalid file type. Please upload PNG, JPG, JPEG, or GIF."
 msgstr ""
 
 #: app/blueprints/auth/templates/login.html:8
 #: app/blueprints/auth/templates/login.html:25
-#: app/blueprints/auth/templates/register.html:34 app/templates/base.html:81
+#: app/blueprints/auth/templates/register.html:34 app/templates/base.html:85
 msgid "Login"
 msgstr ""
 
@@ -75,16 +75,74 @@ msgstr ""
 
 #: app/blueprints/auth/templates/login.html:30
 #: app/blueprints/auth/templates/register.html:8
-#: app/blueprints/auth/templates/register.html:29 app/templates/base.html:82
+#: app/blueprints/auth/templates/register.html:29 app/templates/base.html:86
 msgid "Register"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:27
+msgid "Profile Picture"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:32
+msgid "Upload a new profile picture"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:35
+msgid "Accepted formats: PNG, JPG, JPEG, GIF. Max size: 2MB."
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:39
+msgid "Upload Picture"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:48
+msgid "My Activity"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:53
+msgid "Recipes Favorited"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:59
+msgid "Meal Plan"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:60
+msgid "meals planned"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:68
+msgid "Account Settings"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:73
+#: app/blueprints/auth/templates/profile.html:77
+msgid "Update Email"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:85
+msgid "Change Password"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:86
+msgid "New Password"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:89
+#: app/blueprints/auth/templates/register.html:25
+msgid "Confirm Password"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:90
+msgid "Confirm New Password"
+msgstr ""
+
+#: app/blueprints/auth/templates/profile.html:93
+msgid "Update Account"
 msgstr ""
 
 #: app/blueprints/auth/templates/register.html:13
 msgid "Username"
-msgstr ""
-
-#: app/blueprints/auth/templates/register.html:25
-msgid "Confirm Password"
 msgstr ""
 
 #: app/blueprints/auth/templates/register.html:34
@@ -114,9 +172,9 @@ msgstr ""
 #: app/blueprints/categories/templates/recipes_by_category.html:19
 #: app/blueprints/main/templates/home.html:53
 #: app/blueprints/main/templates/home.html:95
-#: app/blueprints/planner/templates/meal_planner.html:133
-#: app/blueprints/planner/templates/meal_planner.html:193
-#: app/blueprints/planner/templates/meal_planner.html:215
+#: app/blueprints/planner/templates/meal_planner.html:134
+#: app/blueprints/planner/templates/meal_planner.html:194
+#: app/blueprints/planner/templates/meal_planner.html:216
 #: app/blueprints/planner/templates/shopping_list.html:56
 #: app/blueprints/recipes/templates/my_favorites.html:15
 #: app/blueprints/recipes/templates/recipe_detail.html:222
@@ -283,8 +341,29 @@ msgstr ""
 msgid "View All Recipes"
 msgstr ""
 
+#: app/blueprints/planner/routes.py:73
+msgid "Invalid selection."
+msgstr ""
+
+#: app/blueprints/planner/routes.py:87
+#, python-format
+msgid "%(title)s added to %(day)s %(meal)s!"
+msgstr ""
+
+#: app/blueprints/planner/routes.py:97
+msgid "Unauthorized."
+msgstr ""
+
+#: app/blueprints/planner/routes.py:103
+msgid "Recipe removed from plan."
+msgstr ""
+
+#: app/blueprints/planner/routes.py:113
+msgid "Meal plan cleared."
+msgstr ""
+
 #: app/blueprints/planner/templates/meal_planner.html:106
-#: app/templates/base.html:45 app/templates/base.html:72
+#: app/templates/base.html:49 app/templates/base.html:76
 msgid "Meal Planner"
 msgstr ""
 
@@ -293,42 +372,61 @@ msgstr ""
 msgid "Shopping List"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:114
+#: app/blueprints/planner/templates/meal_planner.html:112
+msgid "Clear your entire meal plan?"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:115
 msgid "Clear Plan"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:123
+#: app/blueprints/planner/templates/meal_planner.html:124
 msgid "Add Recipe to Plan"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:127
+#: app/blueprints/planner/templates/meal_planner.html:128
 msgid "Recipe"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:129
+#: app/blueprints/planner/templates/meal_planner.html:130
 msgid "Choose a recipe..."
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:140
+#: app/blueprints/planner/templates/meal_planner.html:141
 msgid "Day"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:148
-#: app/blueprints/planner/templates/meal_planner.html:171
+#: app/blueprints/planner/templates/meal_planner.html:149
+#: app/blueprints/planner/templates/meal_planner.html:172
 msgid "Meal"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:157
+#: app/blueprints/planner/templates/meal_planner.html:158
 msgid "Add"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:196
+#: app/blueprints/planner/templates/meal_planner.html:197
 #: app/blueprints/recipes/templates/my_favorites.html:20
 msgid "Remove"
 msgstr ""
 
-#: app/blueprints/planner/templates/meal_planner.html:209
+#: app/blueprints/planner/templates/meal_planner.html:210
 msgid "Total"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:103
+msgid "Protein"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:112
+msgid "Carbs"
+msgstr ""
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:121
+msgid "Fats"
 msgstr ""
 
 #: app/blueprints/planner/templates/shopping_list.html:9
@@ -375,6 +473,30 @@ msgstr ""
 
 #: app/blueprints/planner/templates/shopping_list.html:68
 msgid "Go to Meal Planner"
+msgstr ""
+
+#: app/blueprints/recipes/routes.py:92
+msgid "Your review has been added!"
+msgstr ""
+
+#: app/blueprints/recipes/routes.py:115
+msgid "Removed from favorites"
+msgstr ""
+
+#: app/blueprints/recipes/routes.py:116
+msgid "Recipe removed from favorites!"
+msgstr ""
+
+#: app/blueprints/recipes/routes.py:122
+msgid "Added to favorites!"
+msgstr ""
+
+#: app/blueprints/recipes/routes.py:123
+msgid "Recipe added to favorites!"
+msgstr ""
+
+#: app/blueprints/recipes/routes.py:134
+msgid "This recipe is already in your favorites!"
 msgstr ""
 
 #: app/blueprints/recipes/templates/my_favorites.html:4
@@ -490,20 +612,12 @@ msgstr ""
 msgid "Calories"
 msgstr ""
 
-#: app/blueprints/recipes/templates/recipe_detail.html:103
-msgid "Protein"
-msgstr ""
-
-#: app/blueprints/recipes/templates/recipe_detail.html:112
-msgid "Carbs"
-msgstr ""
-
-#: app/blueprints/recipes/templates/recipe_detail.html:121
-msgid "Fats"
-msgstr ""
-
 #: app/blueprints/recipes/templates/recipe_detail.html:133
 msgid "Ingredients"
+msgstr ""
+
+#: app/blueprints/recipes/templates/recipe_detail.html:153
+msgid "Reviews"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:160
@@ -523,6 +637,10 @@ msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:172
 msgid "Submit Review"
+msgstr ""
+
+#: app/blueprints/recipes/templates/recipe_detail.html:200
+msgid "No reviews yet. Be the first to review!"
 msgstr ""
 
 #: app/blueprints/recipes/templates/recipe_detail.html:209
@@ -556,7 +674,7 @@ msgid "Search Recipes"
 msgstr ""
 
 #: app/blueprints/recipes/templates/search.html:14
-#: app/blueprints/recipes/templates/search.html:60 app/templates/base.html:38
+#: app/blueprints/recipes/templates/search.html:60 app/templates/base.html:42
 msgid "Search"
 msgstr ""
 
@@ -632,47 +750,47 @@ msgstr ""
 msgid "Healthy Bytes - Nutritious Recipes"
 msgstr ""
 
-#: app/templates/base.html:18
+#: app/templates/base.html:22
 msgid "Healthy Bytes"
 msgstr ""
 
-#: app/templates/base.html:29
+#: app/templates/base.html:33
 msgid "Home"
 msgstr ""
 
-#: app/templates/base.html:32
+#: app/templates/base.html:36
 msgid "Recipes"
 msgstr ""
 
-#: app/templates/base.html:35
+#: app/templates/base.html:39
 msgid "Categories"
 msgstr ""
 
-#: app/templates/base.html:41
+#: app/templates/base.html:45
 msgid "Pantry Chef"
 msgstr ""
 
-#: app/templates/base.html:49
+#: app/templates/base.html:53
 msgid "About"
 msgstr ""
 
-#: app/templates/base.html:70
+#: app/templates/base.html:74
 msgid "Profile"
 msgstr ""
 
-#: app/templates/base.html:71
+#: app/templates/base.html:75
 msgid "Favorites"
 msgstr ""
 
-#: app/templates/base.html:75
+#: app/templates/base.html:79
 msgid "Logout"
 msgstr ""
 
-#: app/templates/base.html:121
+#: app/templates/base.html:125
 msgid "HealthyBytes"
 msgstr ""
 
-#: app/templates/base.html:122
+#: app/templates/base.html:126
 msgid "Privacy"
 msgstr ""
 
