@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-detail">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="recipe-detail-image-container">
+                <img src="{{ url_for('static', filename='images/recipes/' + recipe.image_file) }}"
+                     alt="{{ recipe.title }}"
+                     class="img-fluid rounded">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1>{{ _(recipe.title) }}</h1>
+            <p>{{ _(recipe.description) }}</p>
+
+            <div class="mb-3">
+                <span class="badge bg-success">{{ _(recipe.category.name) }}</span>
+            </div>
+
+            <!-- Dynamic Average Rating -->
+            <div class="mb-3">
+                <div class="rating">
+                    {% set avg = recipe.average_rating %}
+                    {% for i in range(1, 6) %}
+                        {% if i <= avg|round|int %}
+                            <span class="text-warning">★</span>
+                        {% elif i - 0.5 <= avg %}
+                            <span class="text-warning">★</span>
+                        {% else %}
+                            <span>☆</span>
+                        {% endif %}
+                    {% endfor %}
+                    <span class="text-muted ms-2">
+                        {% if recipe.review_count > 0 %}
+                            {{ "%.1f"|format(avg)|ar_nums }} ({{ ar_nums(recipe.review_count) }} {{ _('review') if recipe.review_count == 1 else _('reviews') }})
+                        {% else %}
+                            {{ _('No reviews yet') }}
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+
+            <!-- AJAX Favorite Toggle -->
+            {% if current_user.is_authenticated %}
+            <div class="mb-3">
+                <button class="btn favorite-btn {% if recipe in current_user.favorites %}favorited{% endif %}"
+                        id="favoriteBtn"
+                        data-recipe-id="{{ recipe.id }}"
+                        onclick="toggleFavorite(this.getAttribute('data-recipe-id'))">
+                    <i class="{% if recipe in current_user.favorites %}fas{% else %}far{% endif %} fa-heart"></i>
+                    <span>{% if recipe in current_user.favorites %}{{ _('Saved to Favorites') }}{% else %}{{ _('Add to Favorites') }}{% endif %}</span>
+                </button>
+            </div>
+            {% endif %}
+
+            <!-- Social Sharing -->
+            <div class="social-share mb-3">
+                <span class="text-muted me-2"><i class="fas fa-share-alt"></i> {{ _('Share:') }}</span>
+                <button class="btn btn-sm btn-outline-secondary share-btn" onclick="copyRecipeLink()" title="Copy Link">
+                    <i class="fas fa-link"></i>
+                </button>
+                <a href="https://wa.me/?text={{ recipe.title }}%20-%20{{ request.url }}" target="_blank"
+                   class="btn btn-sm btn-outline-success share-btn" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20recipe:%20{{ recipe.title }}&url={{ request.url }}" target="_blank"
+                   class="btn btn-sm btn-outline-info share-btn" title="Twitter/X">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url }}" target="_blank"
+                   class="btn btn-sm btn-outline-primary share-btn" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <!-- Print Button -->
+            <button class="btn btn-outline-secondary mb-3" onclick="window.print()">
+                <i class="fas fa-print me-1"></i> {{ _('Print Recipe') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Nutritional Information -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2>{{ _('Nutritional Information') }}</h2>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-fire-alt nutrition-icon text-danger"></i>
+                            <h5 class="card-title mt-2">{{ ar_nums(recipe.calories) }} {{ _('kcal') }}</h5>
+                            <p class="text-muted mb-0">{{ _('Calories') }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-drumstick-bite nutrition-icon text-success"></i>
+                            <h5 class="card-title mt-2">{{ ar_nums(recipe.protein) }} g</h5>
+                            <p class="text-muted mb-0">{{ _('Protein') }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bread-slice nutrition-icon text-warning"></i>
+                            <h5 class="card-title mt-2">{{ ar_nums(recipe.carbs) }} g</h5>
+                            <p class="text-muted mb-0">{{ _('Carbs') }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card nutrition-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cheese nutrition-icon text-info"></i>
+                            <h5 class="card-title mt-2">{{ ar_nums(recipe.fats) }} g</h5>
+                            <p class="text-muted mb-0">{{ _('Fats') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ingredients (if available) -->
+    {% if recipe.ingredients %}
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2><i class="fas fa-list-ul me-2"></i>{{ _('Ingredients') }}</h2>
+            <div class="ingredients-list">
+                {% for ingredient in recipe.ingredients %}
+                <div class="ingredient-item">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    <span>
+                        {% if ingredient.quantity %}{{ ar_nums(ingredient.quantity) }}{% endif %}
+                        {% if ingredient.unit %}{{ _(ingredient.unit) }}{% endif %}
+                        {{ _(ingredient.name) }}
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Reviews -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2>{{ _('Reviews') }} ({{ ar_nums(reviews|length) }})</h2>
+
+            {% if current_user.is_authenticated %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form action="{{ url_for('recipes.add_review', recipe_id=recipe.id) }}" method="POST">
+                            <div class="mb-3">
+                                <textarea class="form-control" name="content" rows="3" placeholder="{{ _('Write a review...') }}"></textarea>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="star-rating-input">
+                                    <select class="form-select" name="rating" style="width: auto;">
+                                        <option value="5">{{ ar_nums(5) }} {{ _('Stars') }}</option>
+                                        <option value="4">{{ ar_nums(4) }} {{ _('Stars') }}</option>
+                                        <option value="3">{{ ar_nums(3) }} {{ _('Stars') }}</option>
+                                        <option value="2">{{ ar_nums(2) }} {{ _('Stars') }}</option>
+                                        <option value="1">{{ ar_nums(1) }} {{ _('Star') }}</option>
+                                    </select>
+
+                                </div>
+                                <button type="submit" class="btn btn-success">{{ _('Submit Review') }}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if reviews %}
+                {% for review in reviews %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">{{ review.author.username }}</h5>
+                                <div class="rating">
+                                    {% for i in range(review.rating) %}
+                                        <span class="text-warning">★</span>
+                                    {% endfor %}
+                                    {% for i in range(5 - review.rating) %}
+                                        <span>☆</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <p class="card-text">{{ review.content }}</p>
+                            <p class="text-muted small">{{ format_date(review.date_posted, format='long')|ar_nums }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>{{ _('No reviews yet. Be the first to review!') }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Related Recipes -->
+    {% if related %}
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2><i class="fas fa-utensils me-2"></i>{{ _('You Might Also Like') }}</h2>
+            <div class="row mt-3">
+                {% for r in related %}
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="{{ url_for('static', filename='images/recipes/' + r.image_file) }}"
+                                 class="card-img-top" alt="{{ r.title }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ _(r.title) }}</h5>
+                            <p class="card-text">{{ _(r.description)|truncate(80) }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted">{{ ar_nums(r.calories) }} {{ _('cal') }}</span>
+                                {% if r.average_rating > 0 %}
+                                <span class="text-warning">★ {{ "%.1f"|format(r.average_rating)|ar_nums }}</span>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{{ url_for('recipes.recipe_detail', recipe_id=r.id) }}" class="btn btn-primary">{{ _('View') }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Copy Link Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="copyToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            <i class="fas fa-check-circle text-success me-2"></i> {{ _('Link copied to clipboard!') }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleFavorite(recipeId) {
+    fetch(`/toggle_favorite/${recipeId}`, {
+        method: 'POST',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const btn = document.getElementById('favoriteBtn');
+        const icon = btn.querySelector('i');
+        const text = btn.querySelector('span');
+
+        if (data.status === 'added') {
+            btn.classList.add('favorited');
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            text.textContent = 'Saved to Favorites';
+        } else {
+            btn.classList.remove('favorited');
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            text.textContent = 'Add to Favorites';
+        }
+
+        // Animate the heart
+        icon.classList.add('heart-pulse');
+        setTimeout(() => icon.classList.remove('heart-pulse'), 400);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function copyRecipeLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        const toast = new bootstrap.Toast(document.getElementById('copyToast'));
+        toast.show();
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">{{ _('Discover Healthy & Delicious Recipes') }}</h1>
+        <p class="hero-subtitle">{{ _("Fuel your body with nutrient-rich meals that don't compromise on taste") }}</p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('recipes.all_recipes') }}" class="btn-hero">{{ _('Browse Recipes') }}</a>
+            {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('auth.register') }}" class="btn-hero-outline" id="secondaryButton">{{ _('Create Account') }}</a>
+            {% else %}
+            <a href="{{ url_for('recipes.my_favorites') }}" class="btn-hero-outline" id="favoritesButton">{{ _('My Favorites') }}</a>
+            {% endif %}
+        </div>
+
+        <div class="community-badge">
+            <span id="communityText">{{ _('Join Our Community') }}</span>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/cover.jpg') }}" alt="Healthy food ingredients" />
+    </div>
+</div>
+
+<!-- Recipe of the Day -->
+{% if recipe_of_day %}
+<section class="recipe-of-day-section">
+    <h2 class="section-title"><i class="fas fa-star text-warning me-2"></i>{{ _('Recipe of the Day') }}</h2>
+    <div class="recipe-of-day-card">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-5">
+                <div class="rod-image-container">
+                    <img src="{{ url_for('static', filename='images/recipes/' + recipe_of_day.image_file) }}"
+                         alt="{{ recipe_of_day.title }}" class="img-fluid">
+                    <div class="rod-badge">
+                        <i class="fas fa-fire"></i> {{ _("Today's Pick") }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="rod-content">
+                    <span class="rod-category badge bg-success">{{ _(recipe_of_day.category.name) }}</span>
+                    <h3 class="rod-title">{{ _(recipe_of_day.title) }}</h3>
+                    <p class="rod-description">{{ _(recipe_of_day.description) }}</p>
+                    <div class="rod-nutrition">
+                        <span><i class="fas fa-fire-alt"></i> {{ ar_nums(recipe_of_day.calories) }} {{ _('cal') }}</span>
+                        <span><i class="fas fa-drumstick-bite"></i> {{ ar_nums(recipe_of_day.protein) }}g {{ _('protein') }}</span>
+                        <span><i class="fas fa-bread-slice"></i> {{ ar_nums(recipe_of_day.carbs) }}g {{ _('carbs') }}</span>
+                        <span><i class="fas fa-cheese"></i> {{ ar_nums(recipe_of_day.fats) }}g {{ _('fats') }}</span>
+                    </div>
+                    {% if recipe_of_day.average_rating > 0 %}
+                    <div class="rod-rating">
+                        {% for i in range(1, 6) %}
+                            {% if i <= recipe_of_day.average_rating|round|int %}
+                                <span class="text-warning">★</span>
+                            {% else %}
+                                <span class="text-muted">☆</span>
+                            {% endif %}
+                        {% endfor %}
+                        <span class="text-muted ms-1">({{ ar_nums(recipe_of_day.review_count) }} {{ _('reviews') }})</span>
+                    </div>
+                    {% endif %}
+                    <a href="{{ url_for('recipes.recipe_detail', recipe_id=recipe_of_day.id) }}" class="btn btn-primary mt-3">
+                        <i class="fas fa-eye me-1"></i> {{ _('View Recipe') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Popular Recipes -->
+{% if popular_recipes %}
+<section class="popular-recipes-section">
+    <h2 class="section-title">{{ _('Popular Recipes') }}</h2>
+    <div class="row">
+        {% for recipe in popular_recipes %}
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="card-img-container">
+                    <img src="{{ url_for('static', filename='images/recipes/' + recipe.image_file) }}"
+                         class="card-img-top" alt="{{ recipe.title }}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ _(recipe.title) }}</h5>
+                    <p class="card-text">{{ _(recipe.description)|truncate(80) }}</p>
+                    <p class="text-muted">{{ ar_nums(recipe.calories) }} {{ _('cal') }}</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{{ url_for('recipes.recipe_detail', recipe_id=recipe.id) }}" class="btn btn-primary">{{ _('View') }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-3 mb-5">
+        <a href="{{ url_for('recipes.all_recipes') }}" class="btn btn-outline-primary btn-lg">
+            {{ _('View All Recipes') }} <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

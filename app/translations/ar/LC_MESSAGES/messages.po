@@ -1,0 +1,2244 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-05-09 18:22+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/blueprints/auth/routes.py:47
+msgid "Login unsuccessful. Please check email and password"
+msgstr "فشل تسجيل الدخول. يرجى التحقق من البريد الإلكتروني وكلمة المرور"
+
+#: app/blueprints/auth/routes.py:64
+msgid "Email already exists. Please choose a different one."
+msgstr "البريد الإلكتروني موجود بالفعل. يرجى اختيار بريد آخر."
+
+#: app/blueprints/auth/routes.py:70
+msgid "Your account has been created! You can now log in."
+msgstr "تم إنشاء حسابك! يمكنك الآن تسجيل الدخول."
+
+#: app/blueprints/auth/routes.py:90
+msgid "Your email has been updated!"
+msgstr "تم تحديث بريدك الإلكتروني!"
+
+#: app/blueprints/auth/routes.py:100
+msgid "Your password has been updated!"
+msgstr "تم تحديث كلمة المرور الخاصة بك!"
+
+#: app/blueprints/auth/routes.py:102
+msgid "Passwords do not match!"
+msgstr "كلمات المرور غير متطابقة!"
+
+#: app/blueprints/auth/routes.py:118
+msgid "Profile picture updated!"
+msgstr "تم تحديث صورة الملف الشخصي!"
+
+#: app/blueprints/auth/routes.py:120
+msgid "Invalid file type. Please upload PNG, JPG, JPEG, or GIF."
+msgstr "نوع ملف غير صالح. يرجى تحميل PNG أو JPG أو JPEG أو GIF."
+
+#: app/blueprints/auth/templates/login.html:8
+#: app/blueprints/auth/templates/login.html:25
+#: app/blueprints/auth/templates/register.html:34 app/templates/base.html:87
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: app/blueprints/auth/templates/login.html:13
+#: app/blueprints/auth/templates/register.html:17
+msgid "Email address"
+msgstr "البريد الإلكتروني"
+
+#: app/blueprints/auth/templates/login.html:17
+#: app/blueprints/auth/templates/register.html:21
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: app/blueprints/auth/templates/login.html:22
+msgid "Remember me"
+msgstr "تذكرني"
+
+#: app/blueprints/auth/templates/login.html:30
+msgid "Don't have an account?"
+msgstr "ليس لديك حساب؟"
+
+#: app/blueprints/auth/templates/login.html:30
+#: app/blueprints/auth/templates/register.html:8
+#: app/blueprints/auth/templates/register.html:29 app/templates/base.html:88
+msgid "Register"
+msgstr "إنشاء حساب"
+
+#: app/blueprints/auth/templates/profile.html:27
+msgid "Profile Picture"
+msgstr "صورة الملف الشخصي"
+
+#: app/blueprints/auth/templates/profile.html:32
+msgid "Upload a new profile picture"
+msgstr "تحميل صورة ملف شخصي جديدة"
+
+#: app/blueprints/auth/templates/profile.html:35
+msgid "Choose File"
+msgstr "اختر ملف"
+
+#: app/blueprints/auth/templates/profile.html:39
+#: app/blueprints/auth/templates/profile.html:40
+msgid "No file chosen"
+msgstr "لم يتم اختيار ملف"
+
+#: app/blueprints/auth/templates/profile.html:42
+msgid "Accepted formats: PNG, JPG, JPEG, GIF. Max size: 2MB."
+msgstr "التنسيقات المقبولة: PNG, JPG, JPEG, GIF. الحجم الأقصى: 2 ميجابايت."
+
+#: app/blueprints/auth/templates/profile.html:46
+msgid "Upload Picture"
+msgstr "تحميل الصورة"
+
+#: app/blueprints/auth/templates/profile.html:55
+msgid "My Activity"
+msgstr "نشاطي"
+
+#: app/blueprints/auth/templates/profile.html:60
+msgid "Recipes Favorited"
+msgstr "الوصفات المفضلة"
+
+#: app/blueprints/auth/templates/profile.html:66
+msgid "Meal Plan"
+msgstr "مخطط الوجبات"
+
+#: app/blueprints/auth/templates/profile.html:67
+msgid "meals planned"
+msgstr "وجبات تم تخطيطها"
+
+#: app/blueprints/auth/templates/profile.html:75
+msgid "Account Settings"
+msgstr "إعدادات الحساب"
+
+#: app/blueprints/auth/templates/profile.html:80
+#: app/blueprints/auth/templates/profile.html:84
+msgid "Update Email"
+msgstr "تحديث البريد الإلكتروني"
+
+#: app/blueprints/auth/templates/profile.html:92
+msgid "Change Password"
+msgstr "تغيير كلمة المرور"
+
+#: app/blueprints/auth/templates/profile.html:93
+msgid "New Password"
+msgstr "كلمة المرور الجديدة"
+
+#: app/blueprints/auth/templates/profile.html:96
+#: app/blueprints/auth/templates/register.html:25
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+#: app/blueprints/auth/templates/profile.html:97
+msgid "Confirm New Password"
+msgstr "تأكيد كلمة المرور الجديدة"
+
+#: app/blueprints/auth/templates/profile.html:100
+msgid "Update Account"
+msgstr "تحديث الحساب"
+
+#: app/blueprints/auth/templates/register.html:13
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: app/blueprints/auth/templates/register.html:34
+msgid "Already have an account?"
+msgstr "لديك حساب بالفعل؟"
+
+#: app/blueprints/categories/templates/categories.html:4
+msgid "Recipe Categories"
+msgstr "أقسام الوصفات"
+
+#: app/blueprints/categories/templates/categories.html:5
+msgid "Explore our diverse collection of recipes categorized for your convenience"
+msgstr "استكشف مجموعتنا المتنوعة من الوصفات المصنفة لراحتك"
+
+#: app/blueprints/categories/templates/categories.html:8
+msgid "Categories found:"
+msgstr "الأقسام الموجودة:"
+
+#: app/blueprints/categories/templates/categories.html:19
+msgid "recipes"
+msgstr "وصفات"
+
+#: app/blueprints/categories/templates/categories.html:22
+msgid "Explore"
+msgstr "استكشف"
+
+#: app/blueprints/categories/templates/recipes_by_category.html:19
+#: app/blueprints/main/templates/home.html:53
+#: app/blueprints/main/templates/home.html:95
+#: app/blueprints/planner/templates/meal_planner.html:134
+#: app/blueprints/planner/templates/meal_planner.html:194
+#: app/blueprints/planner/templates/meal_planner.html:216
+#: app/blueprints/planner/templates/shopping_list.html:56
+#: app/blueprints/recipes/templates/my_favorites.html:15
+#: app/blueprints/recipes/templates/recipe_detail.html:223
+#: app/blueprints/recipes/templates/recipes.html:14
+#: app/blueprints/recipes/templates/search.html:95
+msgid "cal"
+msgstr "سعرة"
+
+#: app/blueprints/categories/templates/recipes_by_category.html:22
+#: app/blueprints/main/templates/home.html:98
+#: app/blueprints/recipes/templates/my_favorites.html:18
+#: app/blueprints/recipes/templates/recipe_detail.html:231
+#: app/blueprints/recipes/templates/recipes.html:17
+#: app/blueprints/recipes/templates/search.html:103
+msgid "View"
+msgstr "عرض"
+
+#: app/blueprints/categories/templates/recipes_by_category.html:30
+msgid "No recipes found in this category yet."
+msgstr "لا توجد وصفات في هذا القسم بعد."
+
+#: app/blueprints/main/templates/about.html:8
+msgid "About Healthy Bytes"
+msgstr "حول هيلثي بايتس"
+
+#: app/blueprints/main/templates/about.html:10
+msgid ""
+"Welcome to Healthy Bytes, your go-to resource for nutritious and "
+"delicious recipes that support a healthy lifestyle without compromising "
+"on taste."
+msgstr ""
+"أهلاً بك في هيلثي بايتس، مصدرك الأول للوصفات المغذية واللذيذة التي تدعم "
+"نمط حياة صحي دون المساومة على المذاق."
+
+#: app/blueprints/main/templates/about.html:12
+msgid "Our Mission"
+msgstr "مهمتنا"
+
+#: app/blueprints/main/templates/about.html:13
+msgid ""
+"At Healthy Bytes, we believe that eating healthy should be enjoyable and "
+"accessible to everyone. Our mission is to provide you with a collection "
+"of carefully crafted recipes that are both nutritious and delicious, "
+"helping you fuel your body while satisfying your taste buds."
+msgstr ""
+"في هيلثي بايتس، نؤمن بأن الأكل الصحي يجب أن يكون ممتعاً ومتاحاً للجميع. "
+"مهمتنا هي تزويدك بمجموعة من الوصفات المصممة بعناية والتي تعتبر مغذية "
+"ولذيذة في آن واحد، مما يساعدك على تزويد جسمك بالطاقة مع إرضاء ذوقك."
+
+#: app/blueprints/main/templates/about.html:15
+msgid "Why Choose Healthy Bytes?"
+msgstr "لماذا تختار هيلثي بايتس؟"
+
+#: app/blueprints/main/templates/about.html:17
+msgid "Nutritional Transparency:"
+msgstr "الشفافية الغذائية:"
+
+#: app/blueprints/main/templates/about.html:17
+msgid ""
+"Each recipe comes with detailed nutritional information, allowing you to "
+"make informed choices about what you eat."
+msgstr ""
+"تأتي كل وصفة مع معلومات غذائية مفصلة، مما يتيح لك اتخاذ خيارات مدروسة "
+"بشأن ما تأكله."
+
+#: app/blueprints/main/templates/about.html:18
+msgid "Diverse Selection:"
+msgstr "خيارات متنوعة:"
+
+#: app/blueprints/main/templates/about.html:18
+msgid ""
+"From breakfast to dinner and everything in between, our recipe collection"
+" caters to various meal times and dietary preferences."
+msgstr ""
+"من الإفطار إلى العشاء وكل ما بينهما، تلبي مجموعة وصفاتنا أوقات الوجبات "
+"المختلفة والتفضيلات الغذائية المتنوعة."
+
+#: app/blueprints/main/templates/about.html:19
+msgid "Community-Driven:"
+msgstr "مدعوم من المجتمع:"
+
+#: app/blueprints/main/templates/about.html:19
+msgid ""
+"Join our community of health enthusiasts, share your experiences, and "
+"discover new favorites through reviews and ratings."
+msgstr ""
+"انضم إلى مجتمعنا من عشاق الصحة، وشارك تجاربك، واكتشف وصفات مفضلة جديدة من"
+" خلال المراجعات والتقييمات."
+
+#: app/blueprints/main/templates/about.html:20
+msgid "Simple and Accessible:"
+msgstr "بسيط ومتاح:"
+
+#: app/blueprints/main/templates/about.html:20
+msgid ""
+"Our recipes are designed to be straightforward and achievable, using "
+"ingredients that are commonly available."
+msgstr ""
+"تم تصميم وصفاتنا لتكون مباشرة وقابلة للتنفيذ، باستخدام مكونات متوفرة بشكل"
+" شائع."
+
+#: app/blueprints/main/templates/about.html:23
+msgid "Get in Touch"
+msgstr "تواصل معنا"
+
+#: app/blueprints/main/templates/about.html:24
+msgid ""
+"We'd love to hear from you! If you have any questions, suggestions, or "
+"just want to say hello, feel free to contact us at "
+"contact@healthybytes.com."
+msgstr ""
+"نود أن نسمع منك! إذا كانت لديك أي أسئلة أو اقتراحات، أو ترغب فقط في إلقاء"
+" التحية، فلا تتردد في الاتصال بنا على contact@healthybytes.com."
+
+#: app/blueprints/main/templates/about.html:28
+msgid "The Healthy Bytes Team"
+msgstr "فريق هيلثي بايتس"
+
+#: app/blueprints/main/templates/home.html:10
+msgid "Discover Healthy & Delicious Recipes"
+msgstr "اكتشف وصفات صحية ولذيذة"
+
+#: app/blueprints/main/templates/home.html:11
+msgid "Fuel your body with nutrient-rich meals that don't compromise on taste"
+msgstr "زود جسمك بوجبات غنية بالعناصر الغذائية دون المساومة على المذاق"
+
+#: app/blueprints/main/templates/home.html:14
+#: app/blueprints/recipes/templates/my_favorites.html:32
+msgid "Browse Recipes"
+msgstr "تصفح الوصفات"
+
+#: app/blueprints/main/templates/home.html:16
+msgid "Create Account"
+msgstr "إنشاء حساب"
+
+#: app/blueprints/main/templates/home.html:18
+msgid "My Favorites"
+msgstr "مفضلاتي"
+
+#: app/blueprints/main/templates/home.html:23
+msgid "Join Our Community"
+msgstr "انضم إلى مجتمعنا"
+
+#: app/blueprints/main/templates/home.html:35
+msgid "Recipe of the Day"
+msgstr "وصفة اليوم"
+
+#: app/blueprints/main/templates/home.html:43
+msgid "Today's Pick"
+msgstr "اختيار اليوم"
+
+#: app/blueprints/main/templates/home.html:54
+msgid "protein"
+msgstr "بروتين"
+
+#: app/blueprints/main/templates/home.html:55
+msgid "carbs"
+msgstr "كربوهيدرات"
+
+#: app/blueprints/main/templates/home.html:56
+msgid "fats"
+msgstr "دهون"
+
+#: app/blueprints/main/templates/home.html:67
+#: app/blueprints/recipes/templates/recipe_detail.html:36
+msgid "reviews"
+msgstr "مراجعات"
+
+#: app/blueprints/main/templates/home.html:71
+#: app/blueprints/recipes/templates/pantry.html:193
+msgid "View Recipe"
+msgstr "عرض الوصفة"
+
+#: app/blueprints/main/templates/home.html:83
+msgid "Popular Recipes"
+msgstr "وصفات شائعة"
+
+#: app/blueprints/main/templates/home.html:106
+msgid "View All Recipes"
+msgstr "عرض كل الوصفات"
+
+#: app/blueprints/planner/routes.py:73
+msgid "Invalid selection."
+msgstr "اختيار غير صحيح."
+
+#: app/blueprints/planner/routes.py:87
+#, python-format
+msgid "%(title)s added to %(day)s %(meal)s!"
+msgstr "تم إضافة %(title)s إلى %(day)s (%(meal)s)!"
+
+#: app/blueprints/planner/routes.py:97
+msgid "Unauthorized."
+msgstr "غير مصرح لك بالقيام بهذا الإجراء."
+
+#: app/blueprints/planner/routes.py:103
+msgid "Recipe removed from plan."
+msgstr "تم إزالة الوصفة من المخطط."
+
+#: app/blueprints/planner/routes.py:113
+msgid "Meal plan cleared."
+msgstr "تم مسح مخطط الوجبات بالكامل."
+
+#: app/blueprints/planner/templates/meal_planner.html:106
+#: app/templates/base.html:51 app/templates/base.html:78
+msgid "Meal Planner"
+msgstr "مخطط الوجبات"
+
+#: app/blueprints/planner/templates/meal_planner.html:109
+#: app/blueprints/planner/templates/shopping_list.html:6
+msgid "Shopping List"
+msgstr "قائمة التسوق"
+
+#: app/blueprints/planner/templates/meal_planner.html:112
+msgid "Clear your entire meal plan?"
+msgstr "هل تريد مسح مخطط وجباتك بالكامل؟"
+
+#: app/blueprints/planner/templates/meal_planner.html:115
+msgid "Clear Plan"
+msgstr "مسح المخطط"
+
+#: app/blueprints/planner/templates/meal_planner.html:124
+msgid "Add Recipe to Plan"
+msgstr "إضافة وصفة للمخطط"
+
+#: app/blueprints/planner/templates/meal_planner.html:128
+msgid "Recipe"
+msgstr "الوصفة"
+
+#: app/blueprints/planner/templates/meal_planner.html:130
+msgid "Choose a recipe..."
+msgstr "اختر وصفة..."
+
+#: app/blueprints/planner/templates/meal_planner.html:141
+msgid "Day"
+msgstr "اليوم"
+
+#: app/blueprints/planner/templates/meal_planner.html:149
+#: app/blueprints/planner/templates/meal_planner.html:172
+msgid "Meal"
+msgstr "الوجبة"
+
+#: app/blueprints/planner/templates/meal_planner.html:158
+msgid "Add"
+msgstr "إضافة"
+
+#: app/blueprints/planner/templates/meal_planner.html:197
+#: app/blueprints/recipes/templates/my_favorites.html:20
+msgid "Remove"
+msgstr "إزالة"
+
+#: app/blueprints/planner/templates/meal_planner.html:210
+msgid "Total"
+msgstr "المجموع"
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:103
+msgid "Protein"
+msgstr "البروتين"
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:112
+msgid "Carbs"
+msgstr "الكربوهيدرات"
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:121
+msgid "Fats"
+msgstr "الدهون"
+
+#: app/blueprints/planner/templates/shopping_list.html:9
+msgid "Print"
+msgstr "طباعة"
+
+#: app/blueprints/planner/templates/shopping_list.html:12
+msgid "Back to Planner"
+msgstr "العودة للمخطط"
+
+#: app/blueprints/planner/templates/shopping_list.html:22
+msgid "Ingredients Needed"
+msgstr "المكونات المطلوبة"
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+msgid "Based on"
+msgstr "بناءً على"
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+#: app/blueprints/recipes/templates/pantry.html:145
+#: app/blueprints/recipes/templates/search.html:75
+msgid "recipe"
+msgid_plural "recipes"
+msgstr[0] "وصفات"
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+msgid "in your meal plan"
+msgstr "في مخطط وجباتك"
+
+#: app/blueprints/planner/templates/shopping_list.html:48
+msgid "Recipes in Plan"
+msgstr "الوصفات في المخطط"
+
+#: app/blueprints/planner/templates/shopping_list.html:66
+msgid "No items in your shopping list"
+msgstr "لا توجد عناصر في قائمة التسوق"
+
+#: app/blueprints/planner/templates/shopping_list.html:67
+msgid ""
+"Add recipes to your meal plan first, and they need to have ingredients "
+"listed."
+msgstr ""
+"أضف وصفات لمخطط وجباتك أولاً، ويجب أن تحتوي على مكونات.أضف وصفات إلى مخطط"
+" وجباتك أولاً، ويجب أن تحتوي هذه الوصفات على قائمة بالمكونات."
+
+#: app/blueprints/planner/templates/shopping_list.html:68
+msgid "Go to Meal Planner"
+msgstr "اذهب لمخطط الوجبات"
+
+#: app/blueprints/recipes/routes.py:92
+msgid "Your review has been added!"
+msgstr "تم إضافة تقييمك بنجاح!"
+
+#: app/blueprints/recipes/routes.py:115
+msgid "Removed from favorites"
+msgstr "تم الإزالة من المفضلة"
+
+#: app/blueprints/recipes/routes.py:116
+msgid "Recipe removed from favorites!"
+msgstr "تم إزالة الوصفة من المفضلة!"
+
+#: app/blueprints/recipes/routes.py:122
+msgid "Added to favorites!"
+msgstr "تم الإضافة إلى المفضلة!"
+
+#: app/blueprints/recipes/routes.py:123
+msgid "Recipe added to favorites!"
+msgstr "تم إضافة الوصفة إلى المفضلة!"
+
+#: app/blueprints/recipes/routes.py:134
+msgid "This recipe is already in your favorites!"
+msgstr "هذه الوصفة موجودة بالفعل في مفضلتك!"
+
+#: app/blueprints/recipes/templates/my_favorites.html:4
+msgid "My Favorite Recipes"
+msgstr "المفضلة"
+
+#: app/blueprints/recipes/templates/my_favorites.html:29
+msgid ""
+"You don't have any favorite recipes yet. Browse our recipes and add some "
+"to your favorites!"
+msgstr "ليس لديك أي وصفات مفضلة بعد. تصفح وصفاتنا وأضف بعضها إلى مفضلتك!"
+
+#: app/blueprints/recipes/templates/pantry.html:101
+msgid "The Pantry Chef"
+msgstr "شيف المطبخ"
+
+#: app/blueprints/recipes/templates/pantry.html:102
+msgid "Select the ingredients you have, and we'll tell you what you can make!"
+msgstr "اختر المكونات المتوفرة لديك، وسنخبرك بما يمكنك طبخه!"
+
+#: app/blueprints/recipes/templates/pantry.html:110
+msgid "My Pantry"
+msgstr "مطبخي"
+
+#: app/blueprints/recipes/templates/pantry.html:115
+msgid "Search ingredients..."
+msgstr "ابحث عن مكونات..."
+
+#: app/blueprints/recipes/templates/pantry.html:129
+msgid "Find Recipes"
+msgstr "ابحث عن وصفات"
+
+#: app/blueprints/recipes/templates/pantry.html:132
+msgid "Clear Selection"
+msgstr "مسح الاختيار"
+
+#: app/blueprints/recipes/templates/pantry.html:145
+#: app/blueprints/recipes/templates/search.html:75
+msgid "Found"
+msgstr "تم العثور على"
+
+#: app/blueprints/recipes/templates/pantry.html:145
+msgid "matching your pantry"
+msgstr "تطابق مطبخك"
+
+#: app/blueprints/recipes/templates/pantry.html:147
+msgid "No matching recipes found"
+msgstr "لم يتم العثور على وصفات مطابقة"
+
+#: app/blueprints/recipes/templates/pantry.html:162
+msgid "of"
+msgstr "من"
+
+#: app/blueprints/recipes/templates/pantry.html:162
+msgid "ingredients"
+msgstr "مكونات"
+
+#: app/blueprints/recipes/templates/pantry.html:167
+msgid "Match"
+msgstr "تطابق"
+
+#: app/blueprints/recipes/templates/pantry.html:181
+msgid "Missing:"
+msgstr "ناقص:"
+
+#: app/blueprints/recipes/templates/pantry.html:188
+msgid "You have everything!"
+msgstr "لديك كل شيء!"
+
+#: app/blueprints/recipes/templates/pantry.html:204
+msgid "What's in your fridge?"
+msgstr "ماذا يوجد في ثلاجتك؟"
+
+#: app/blueprints/recipes/templates/pantry.html:205
+msgid ""
+"Select the ingredients you currently have on hand from the list, and I'll"
+" find recipes you can cook right now."
+msgstr ""
+"اختر المكونات المتوفرة لديك حالياً من القائمة، وسأجد لك وصفات يمكنك طهيها"
+" الآن.حدد المكونات المتوفرة لديك حالياً من القائمة، وسأبحث عن وصفات يمكنك"
+" طهيها الآن."
+
+#: app/blueprints/recipes/templates/recipe_detail.html:36
+msgid "review"
+msgstr "مراجعة"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:38
+msgid "No reviews yet"
+msgstr "لا توجد مراجعات بعد"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:52
+msgid "Saved to Favorites"
+msgstr "محفوظ في المفضلة"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:52
+msgid "Add to Favorites"
+msgstr "أضف للمفضلة"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:59
+msgid "Share:"
+msgstr "مشاركة:"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:79
+msgid "Print Recipe"
+msgstr "طباعة الوصفة"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:87
+msgid "Nutritional Information"
+msgstr "المعلومات الغذائية"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:93
+msgid "kcal"
+msgstr "س.حرارية"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:94
+msgid "Calories"
+msgstr "السعرات الحرارية"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:133
+msgid "Ingredients"
+msgstr "المكونات"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:153
+msgid "Reviews"
+msgstr "المراجعات"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:160
+msgid "Write a review..."
+msgstr "اكتب مراجعة..."
+
+#: app/blueprints/recipes/templates/recipe_detail.html:165
+#: app/blueprints/recipes/templates/recipe_detail.html:166
+#: app/blueprints/recipes/templates/recipe_detail.html:167
+#: app/blueprints/recipes/templates/recipe_detail.html:168
+msgid "Stars"
+msgstr "نجوم"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:169
+msgid "Star"
+msgstr "نجمة"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:173
+msgid "Submit Review"
+msgstr "إرسال المراجعة"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:201
+msgid "No reviews yet. Be the first to review!"
+msgstr "لا توجد مراجعات بعد. كن أول من يقيم هذه الوصفة!"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:210
+msgid "You Might Also Like"
+msgstr "قد يعجبك أيضاً"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:246
+msgid "Link copied to clipboard!"
+msgstr "تم نسخ الرابط!"
+
+#: app/blueprints/recipes/templates/recipes.html:4
+msgid "All Recipes"
+msgstr "كل الوصفات"
+
+#: app/blueprints/recipes/templates/recipes.html:28
+#: app/blueprints/recipes/templates/recipes.html:32
+#: app/blueprints/recipes/templates/search.html:116
+#: app/blueprints/recipes/templates/search.html:119
+msgid "Previous"
+msgstr "السابق"
+
+#: app/blueprints/recipes/templates/recipes.html:56
+#: app/blueprints/recipes/templates/recipes.html:60
+#: app/blueprints/recipes/templates/search.html:135
+#: app/blueprints/recipes/templates/search.html:138
+msgid "Next"
+msgstr "التالي"
+
+#: app/blueprints/recipes/templates/search.html:5
+msgid "Search Recipes"
+msgstr "البحث عن وصفات"
+
+#: app/blueprints/recipes/templates/search.html:14
+#: app/blueprints/recipes/templates/search.html:60 app/templates/base.html:44
+msgid "Search"
+msgstr "بحث"
+
+#: app/blueprints/recipes/templates/search.html:18
+msgid "Search by recipe name or description..."
+msgstr "ابحث باسم الوصفة أو الوصف..."
+
+#: app/blueprints/recipes/templates/search.html:25
+msgid "Category"
+msgstr "القسم"
+
+#: app/blueprints/recipes/templates/search.html:27
+msgid "All Categories"
+msgstr "كل الأقسام"
+
+#: app/blueprints/recipes/templates/search.html:36
+msgid "Sort By"
+msgstr "ترتيب حسب"
+
+#: app/blueprints/recipes/templates/search.html:38
+msgid "Name (A-Z)"
+msgstr "الاسم (أ-ي)"
+
+#: app/blueprints/recipes/templates/search.html:39
+msgid "Calories (Low → High)"
+msgstr "السعرات (أقل ← أعلى)"
+
+#: app/blueprints/recipes/templates/search.html:40
+msgid "Calories (High → Low)"
+msgstr "السعرات (أعلى ← أقل)"
+
+#: app/blueprints/recipes/templates/search.html:41
+msgid "Protein (Highest)"
+msgstr "البروتين (الأعلى)"
+
+#: app/blueprints/recipes/templates/search.html:47
+msgid "Min Calories"
+msgstr "أقل سعرات"
+
+#: app/blueprints/recipes/templates/search.html:52
+msgid "Max Calories"
+msgstr "أعلى سعرات"
+
+#: app/blueprints/recipes/templates/search.html:63
+msgid "Clear"
+msgstr "مسح"
+
+#: app/blueprints/recipes/templates/search.html:76
+msgid "matching"
+msgstr "مطابقة"
+
+#: app/blueprints/recipes/templates/search.html:147
+msgid "No recipes found"
+msgstr "لم يتم العثور على وصفات"
+
+#: app/blueprints/recipes/templates/search.html:148
+msgid "Try adjusting your search filters"
+msgstr "جرب تعديل فلاتر البحث"
+
+#: app/blueprints/recipes/templates/search.html:149
+msgid "Clear Filters"
+msgstr "مسح الفلاتر"
+
+#: app/blueprints/recipes/templates/search.html:154
+msgid "Start searching!"
+msgstr "ابدأ البحث!"
+
+#: app/blueprints/recipes/templates/search.html:155
+msgid "Use the filters above to find the perfect recipe"
+msgstr "استخدم الفلاتر أعلاه للعثور على الوصفة المثالية"
+
+#: app/templates/base.html:6
+msgid "HealthyBytes - Nutritious Recipes"
+msgstr "هيلثي بايتس - وصفات مغذية"
+
+#: app/templates/base.html:23 app/templates/base.html:127
+msgid "HealthyBytes"
+msgstr "هيلثي بايتس"
+
+#: app/templates/base.html:35
+msgid "Home"
+msgstr "الرئيسية"
+
+#: app/templates/base.html:38
+msgid "Recipes"
+msgstr "الوصفات"
+
+#: app/templates/base.html:41
+msgid "Categories"
+msgstr "الأقسام"
+
+#: app/templates/base.html:47
+msgid "Pantry Chef"
+msgstr "شيف المطبخ"
+
+#: app/templates/base.html:55
+msgid "About"
+msgstr "حول"
+
+#: app/templates/base.html:76
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: app/templates/base.html:77
+msgid "Favorites"
+msgstr "المفضلة"
+
+#: app/templates/base.html:81
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: app/templates/base.html:128
+msgid "Privacy"
+msgstr "الخصوصية"
+
+#: app/templates/error.html:9
+msgid "Return to Home"
+msgstr "العودة للرئيسية"
+
+#: app/translations/recipe_strings.py:8
+msgid "Pancakes"
+msgstr "بانكيك"
+
+#: app/translations/recipe_strings.py:9
+msgid "Omelette"
+msgstr "أومليت"
+
+#: app/translations/recipe_strings.py:10
+msgid "Avocado Toast"
+msgstr "توست الأفوكادو"
+
+#: app/translations/recipe_strings.py:11
+msgid "French Toast"
+msgstr "توست فرنسي"
+
+#: app/translations/recipe_strings.py:12
+msgid "Smoothie Bowl"
+msgstr "وعاء السموذي"
+
+#: app/translations/recipe_strings.py:13
+msgid "Waffles"
+msgstr "وافل"
+
+#: app/translations/recipe_strings.py:14
+msgid "Grilled Chicken Salad"
+msgstr "سلطة الدجاج المشوي"
+
+#: app/translations/recipe_strings.py:15
+msgid "Beef Burger"
+msgstr "برجر لحم البقر"
+
+#: app/translations/recipe_strings.py:16
+msgid "Spaghetti Bolognese"
+msgstr "سباغيتي بولونيز"
+
+#: app/translations/recipe_strings.py:17
+msgid "Grilled Cheese Sandwich"
+msgstr "ساندوتش الجبن المشوي"
+
+#: app/translations/recipe_strings.py:18
+msgid "Fish Tacos"
+msgstr "تاكو السمك"
+
+#: app/translations/recipe_strings.py:19
+msgid "Tuna Melt"
+msgstr "تونا ميلت"
+
+#: app/translations/recipe_strings.py:20
+msgid "Eggplant Parmesan"
+msgstr "باذنجان بارميزان"
+
+#: app/translations/recipe_strings.py:21
+msgid "Shrimp Scampi Pasta"
+msgstr "باستا الروبيان بالثوم"
+
+#: app/translations/recipe_strings.py:22
+msgid "Butternut Squash Soup"
+msgstr "شوربة قرع العسل"
+
+#: app/translations/recipe_strings.py:23
+msgid "Lamb Kebabs"
+msgstr "كباب غنم"
+
+#: app/translations/recipe_strings.py:24
+msgid "Seafood Paella"
+msgstr "باييلا ثمار البحر"
+
+#: app/translations/recipe_strings.py:25
+msgid "Stuffed Bell Peppers"
+msgstr "فلفل محشو"
+
+#: app/translations/recipe_strings.py:26
+msgid "Molten Caramel Cake"
+msgstr "كيكة الكراميل الذائبة"
+
+#: app/translations/recipe_strings.py:27
+msgid "Key Lime Pie"
+msgstr "فطيرة الليمون"
+
+#: app/translations/recipe_strings.py:28
+msgid "Red Velvet Cake"
+msgstr "كيكة الرد فيلفيت"
+
+#: app/translations/recipe_strings.py:29
+msgid "Banana Pudding"
+msgstr "بودينغ الموز"
+
+#: app/translations/recipe_strings.py:30
+msgid "Lemon Tart"
+msgstr "تارت الليمون"
+
+#: app/translations/recipe_strings.py:31
+msgid "Strawberry Cheesecake"
+msgstr "تشيز كيك الفراولة"
+
+#: app/translations/recipe_strings.py:32
+msgid "Greek Yogurt Parfait"
+msgstr "بارفيه الزبادي اليوناني"
+
+#: app/translations/recipe_strings.py:33
+msgid "Oatmeal with Berries"
+msgstr "شوفان بالتوت"
+
+#: app/translations/recipe_strings.py:34
+msgid "Lentil Soup"
+msgstr "شوربة العدس"
+
+#: app/translations/recipe_strings.py:35
+msgid "Turkey Wraps"
+msgstr "لفائف الديك الرومي"
+
+#: app/translations/recipe_strings.py:36
+msgid "Chicken Stir Fry"
+msgstr "ستير فراي الدجاج"
+
+#: app/translations/recipe_strings.py:37
+msgid "Zucchini Noodles with Pesto"
+msgstr "نودلز الكوسة بالبيستو"
+
+#: app/translations/recipe_strings.py:38
+msgid "Frozen Yogurt Bites"
+msgstr "قطع الزبادي المثلج"
+
+#: app/translations/recipe_strings.py:39
+msgid "Chia Seed Pudding"
+msgstr "بودينغ بذور الشيا"
+
+#: app/translations/recipe_strings.py:40
+msgid "Teriyaki Salmon"
+msgstr "سلمون ترياكي"
+
+#: app/translations/recipe_strings.py:41
+msgid "Quinoa Salad"
+msgstr "سلطة الكينوا"
+
+#: app/translations/recipe_strings.py:42
+msgid "Caesar Salad"
+msgstr "سلطة سيزر"
+
+#: app/translations/recipe_strings.py:43
+msgid "Vegetable Curry"
+msgstr "كاري الخضار"
+
+#: app/translations/recipe_strings.py:44
+msgid "Mushroom Risotto"
+msgstr "ريزوتو الفطر"
+
+#: app/translations/recipe_strings.py:45
+msgid "Protein Brownies"
+msgstr "براونيز البروتين"
+
+#: app/translations/recipe_strings.py:46
+msgid "Shakshuka"
+msgstr "شكشوكة"
+
+#: app/translations/recipe_strings.py:47
+msgid "Pesto Penne Pasta"
+msgstr "باستا بيني بالبيستو"
+
+#: app/translations/recipe_strings.py:48
+msgid "Caprese Salad"
+msgstr "سلطة كابريزي"
+
+#: app/translations/recipe_strings.py:49
+msgid "Baked Ziti"
+msgstr "زيتي مخبوز بالفرن"
+
+#: app/translations/recipe_strings.py:50
+msgid "Minestrone Soup"
+msgstr "شوربة مينيستروني"
+
+#: app/translations/recipe_strings.py:51
+msgid "Mango Lassi"
+msgstr "مانجو لاسي"
+
+#: app/translations/recipe_strings.py:52
+msgid "BBQ Chicken Pizza"
+msgstr "بيتزا الدجاج باربيكيو"
+
+#: app/translations/recipe_strings.py:53
+msgid "Breakfast Burrito"
+msgstr "بوريتو الإفطار"
+
+#: app/translations/recipe_strings.py:54
+msgid "Fruit Salad"
+msgstr "سلطة فواكه"
+
+#: app/translations/recipe_strings.py:57
+msgid "Fluffy pancakes with maple syrup"
+msgstr "بانكيك هش مع شراب القيقب"
+
+#: app/translations/recipe_strings.py:58
+msgid "Cheese and veggie omelette"
+msgstr "أومليت بالجبن والخضروات"
+
+#: app/translations/recipe_strings.py:59
+msgid "Toasted bread topped with smashed avocado and poached egg"
+msgstr "خبز محمص يعلوه الأفوكادو المهروس وبيض مسلوق"
+
+#: app/translations/recipe_strings.py:60
+msgid "Golden brown French toast with cinnamon and syrup"
+msgstr "توست فرنسي ذهبي مع القرفة والشراب"
+
+#: app/translations/recipe_strings.py:61
+msgid "Mixed fruit smoothie topped with granola and fresh fruits"
+msgstr "سموذي فواكه مشكلة مغطى بالجرانولا والفواكه الطازجة"
+
+#: app/translations/recipe_strings.py:62
+msgid "Crispy waffles served with fresh fruits and whipped cream"
+msgstr "وافل مقرمش يقدم مع الفواكه الطازجة والكريمة المخفوقة"
+
+#: app/translations/recipe_strings.py:63
+msgid ""
+"Fresh mixed greens topped with grilled chicken breast, cherry tomatoes, "
+"and vinaigrette."
+msgstr "خضروات مشكلة طازجة تعلوها صدور دجاج مشوية وطماطم كرزية"
+
+#: app/translations/recipe_strings.py:64
+msgid "Juicy beef patty served in a bun with cheese, lettuce, and special sauce"
+msgstr "شريحة لحم بقري عصارية في خبز مع الجبن والخس والصلصة الخاصة"
+
+#: app/translations/recipe_strings.py:65
+msgid "Classic Italian pasta with rich tomato and beef sauce"
+msgstr "مكرونة إيطالية كلاسيكية مع صلصة الطماطم واللحم البقري الغنية"
+
+#: app/translations/recipe_strings.py:66
+msgid "Melted cheese between two slices of crispy toasted bread"
+msgstr "جبنة ذائبة بين شريحتين من الخبز المحمص المقرمش"
+
+#: app/translations/recipe_strings.py:67
+msgid "Soft tortillas filled with crispy fish, slaw, and spicy mayo"
+msgstr "تورتيلا طرية محشوة بالسمك المقرمش والسلطة والمايونيز الحار"
+
+#: app/translations/recipe_strings.py:68
+msgid "Toasted bread with tuna salad and melted cheddar cheese"
+msgstr "خبز محمص مع سلطة التونة وجبنة الشيدر الذائبة"
+
+#: app/translations/recipe_strings.py:69
+msgid "Breaded eggplant layered with marinara and melted mozzarella"
+msgstr "باذنجان مغطى بالبقسماط مع صلصة المارينارا والموزاريلا الذائبة"
+
+#: app/translations/recipe_strings.py:70
+msgid "Garlicky shrimp tossed with linguine in white wine butter sauce"
+msgstr "روبيان بالثوم مع مكرونة لينجويني وصلصة الزبدة"
+
+#: app/translations/recipe_strings.py:71
+msgid "Velvety soup with roasted squash, sage, and a touch of cream"
+msgstr "شوربة مخملية مع القرع المحمص والمريمية ولمسة من الكريمة"
+
+#: app/translations/recipe_strings.py:72
+msgid "Marinated lamb grilled with bell peppers and onions"
+msgstr "لحم غنم متبل مشوي مع الفلفل الرومي والبصل"
+
+#: app/translations/recipe_strings.py:73
+msgid "Spanish rice dish with shrimp, mussels, and saffron"
+msgstr "أرز إسباني مع الروبيان والمحار والزعفران"
+
+#: app/translations/recipe_strings.py:74
+msgid "Peppers filled with ground turkey, rice, and tomatoes"
+msgstr "فلفل محشو بالديك الرومي المفروم والأرز والطماطم"
+
+#: app/translations/recipe_strings.py:75
+msgid "Gooey caramel-filled cake with sea salt garnish"
+msgstr "كيكة محشوة بالكراميل مع رشة ملح البحر"
+
+#: app/translations/recipe_strings.py:76
+msgid "Tangy lime custard in graham cracker crust"
+msgstr "كاسترد الليمون الحامض في عجينة بسكويت غراهام"
+
+#: app/translations/recipe_strings.py:77
+msgid "Moist red cake with cream cheese frosting"
+msgstr "كيكة حمراء هشة مع كريمة الجبن"
+
+#: app/translations/recipe_strings.py:78
+msgid "Layered pudding with vanilla wafers and fresh bananas"
+msgstr "بودينغ طبقات مع بسكويت الفانيليا والموز الطازج"
+
+#: app/translations/recipe_strings.py:79
+msgid "Buttery crust filled with tangy lemon curd"
+msgstr "قشرة زبدية محشوة بكريمة الليمون الحامض"
+
+#: app/translations/recipe_strings.py:80
+msgid "Creamy cheesecake on graham crust with fresh strawberries"
+msgstr "تشيز كيك كريمي مع الفراولة الطازجة"
+
+#: app/translations/recipe_strings.py:81
+msgid "Greek yogurt layered with granola and fresh berries"
+msgstr "زبادي يوناني مع الجرانولا والتوت الطازج"
+
+#: app/translations/recipe_strings.py:82
+msgid "Warm oatmeal served with mixed berries and honey"
+msgstr "شوفان دافئ يقدم مع التوت المشكل والعسل"
+
+#: app/translations/recipe_strings.py:83
+msgid "Comforting and hearty lentil soup with spices"
+msgstr "شوربة عدس مريحة ومغذية مع التوابل"
+
+#: app/translations/recipe_strings.py:84
+msgid "Healthy turkey wraps with veggies and low-fat dressing"
+msgstr "لفائف ديك رومي صحية مع خضروات وصلصة قليلة الدسم"
+
+#: app/translations/recipe_strings.py:85
+msgid "Quick chicken stir-fry with colorful veggies"
+msgstr "دجاج ستير فراي سريع مع خضروات ملونة"
+
+#: app/translations/recipe_strings.py:86
+msgid "Low-carb zucchini noodles tossed with fresh pesto"
+msgstr "نودلز كوسة منخفضة الكربوهيدرات مع صلصة البيستو الطازجة"
+
+#: app/translations/recipe_strings.py:87
+msgid "Mini frozen yogurt bites with mixed fruits"
+msgstr "قطع زبادي مثلج صغيرة مع فواكه مشكلة"
+
+#: app/translations/recipe_strings.py:88
+msgid "Creamy chia pudding topped with fruits"
+msgstr "بودينغ الشيا الكريمي مغطى بالفواكه"
+
+#: app/translations/recipe_strings.py:89
+msgid "Glazed salmon fillets with homemade teriyaki sauce"
+msgstr "شرائح سلمون مغطاة بصلصة الترياكي المنزلية"
+
+#: app/translations/recipe_strings.py:90
+msgid "Light and refreshing quinoa salad with cucumber and feta"
+msgstr "سلطة كينوا خفيفة ومنعشة مع الخيار والفيتا"
+
+#: app/translations/recipe_strings.py:91
+msgid "Classic Caesar salad with homemade dressing and croutons"
+msgstr "سلطة سيزر كلاسيكية مع صلصة منزلية وقطع خبز محمص"
+
+#: app/translations/recipe_strings.py:92
+msgid "Rich coconut milk vegetable curry with potatoes and carrots"
+msgstr "كاري خضروات بحليب جوز الهند مع البطاطس والجزر"
+
+#: app/translations/recipe_strings.py:93
+msgid "Creamy arborio rice with wild mushrooms and parmesan"
+msgstr "أرز أربوريو كريمي مع فطر بري وجبن بارميزان"
+
+#: app/translations/recipe_strings.py:94
+msgid "Fudgy chocolate brownies packed with whey protein"
+msgstr "براونيز شوكولاتة غنية ببروتين مصل اللبن"
+
+#: app/translations/recipe_strings.py:95
+msgid "Eggs poached in a sauce of tomatoes, chili peppers, and onions"
+msgstr "بيض مطهو في صلصة الطماطم والفلفل الحار والبصل"
+
+#: app/translations/recipe_strings.py:96
+msgid "Simple penne pasta tossed in basil pesto sauce"
+msgstr "مكرونة بيني بسيطة مع صلصة بيستو الريحان"
+
+#: app/translations/recipe_strings.py:97
+msgid "Fresh mozzarella, tomatoes, and sweet basil"
+msgstr "موزاريلا طازجة مع الطماطم والريحان"
+
+#: app/translations/recipe_strings.py:98
+msgid "Cheesy baked ziti with marinara and ground sausage"
+msgstr "مكرونة زيتي بالجبن مع صلصة مارينارا وسجق"
+
+#: app/translations/recipe_strings.py:99
+msgid "Traditional Italian vegetable soup with beans and pasta"
+msgstr "شوربة خضروات إيطالية تقليدية مع الفاصوليا والمكرونة"
+
+#: app/translations/recipe_strings.py:100
+msgid "Refreshing Indian yogurt drink with fresh mango"
+msgstr "مشروب زبادي هندي منعش مع المانجو الطازج"
+
+#: app/translations/recipe_strings.py:101
+msgid "Homemade pizza topped with BBQ sauce, chicken, and red unions"
+msgstr "بيتزا منزلية بصلصة الباربيكيو والدجاج والبصل الأحمر"
+
+#: app/translations/recipe_strings.py:102
+msgid "Scrambled eggs, beans, and cheese wrapped in a tortilla"
+msgstr "بيض مخفوق مع فاصوليا وجبن في خبز التورتيلا"
+
+#: app/translations/recipe_strings.py:103
+msgid "A mix of fresh seasonal fruits"
+msgstr "مزيج من الفواكه الموسمية الطازجة"
+
+msgid "Healthy Bytes - Nutritious Recipes"
+msgstr "هيلثي بايتس - وصفات مغذية"
+
+msgid "Healthy Bytes"
+msgstr "هيلثي بايتس"
+
+msgid "Breakfast"
+msgstr "الإفطار"
+
+msgid "Lunch"
+msgstr "الغداء"
+
+msgid "Dinner"
+msgstr "العشاء"
+
+msgid "Dessert"
+msgstr "الحلويات"
+
+msgid "Start your day with these nutritious breakfast recipes"
+msgstr "ابدأ يومك بهذه الوصفات المغذية للإفطار"
+
+msgid "Healthy and satisfying midday meal options"
+msgstr "خيارات وجبات منتصف اليوم صحية ومشبعة"
+
+msgid "Nutritious dinner recipes to end your day right"
+msgstr "وصفات عشاء مغذية لإنهاء يومك بشكل صحيح"
+
+msgid "Healthier versions of your favorite sweet treats"
+msgstr "نسخ صحية أكثر من حلوياتك المفضلة"
+
+msgid "Snack"
+msgstr "وجبة خفيفة"
+
+msgid "Saturday"
+msgstr "السبت"
+
+msgid "Sunday"
+msgstr "الأحد"
+
+msgid "Monday"
+msgstr "الاثنين"
+
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+msgid "Thursday"
+msgstr "الخميس"
+
+msgid "Friday"
+msgstr "الجمعة"
+
+msgid "All-purpose flour"
+msgstr "طحين متعدد الاستعمالات"
+
+msgid "Milk"
+msgstr "حليب"
+
+msgid "Egg"
+msgstr "بيضة"
+
+msgid "Butter"
+msgstr "زبدة"
+
+msgid "Sugar"
+msgstr "سكر"
+
+msgid "Baking powder"
+msgstr "بكنج باودر"
+
+msgid "Salt"
+msgstr "ملح"
+
+msgid "Maple syrup"
+msgstr "شراب القيقب"
+
+msgid "Eggs"
+msgstr "بيض"
+
+msgid "Cheddar cheese"
+msgstr "جبنة شيدر"
+
+msgid "Bell pepper"
+msgstr "فلفل رومي"
+
+msgid "Onion"
+msgstr "بصل"
+
+msgid "Mushrooms"
+msgstr "فطر"
+
+msgid "Pepper"
+msgstr "فلفل"
+
+msgid "Sourdough bread"
+msgstr "خبز العجين المخمر"
+
+msgid "Avocado"
+msgstr "أفوكادو"
+
+msgid "Cherry tomatoes"
+msgstr "طماطم كرزية"
+
+msgid "Red pepper flakes"
+msgstr "رقائق الفلفل الأحمر"
+
+msgid "Lemon juice"
+msgstr "عصير ليمون"
+
+msgid "Bread"
+msgstr "خبز"
+
+msgid "Cinnamon"
+msgstr "قرفة"
+
+msgid "Vanilla extract"
+msgstr "خلاصة الفانيليا"
+
+msgid "Banana"
+msgstr "موز"
+
+msgid "Mixed berries"
+msgstr "توت مشكل"
+
+msgid "Almond milk"
+msgstr "حليب اللوز"
+
+msgid "Granola"
+msgstr "جرانولا"
+
+msgid "Chia seeds"
+msgstr "بذور الشيا"
+
+msgid "Honey"
+msgstr "عسل"
+
+msgid "Vegetable oil"
+msgstr "زيت نباتي"
+
+msgid "Chicken breast"
+msgstr "صدر دجاج"
+
+msgid "Mixed salad greens"
+msgstr "خضروات سلطة مشكلة"
+
+msgid "Cucumber"
+msgstr "خيار"
+
+msgid "Red onion"
+msgstr "بصل أحمر"
+
+msgid "Olive oil"
+msgstr "زيت زيتون"
+
+msgid "Balsamic vinegar"
+msgstr "خل بلسميك"
+
+msgid "Black pepper"
+msgstr "فلفل أسود"
+
+msgid "Ground beef"
+msgstr "لحم بقري مفروم"
+
+msgid "Hamburger bun"
+msgstr "خبز برجر"
+
+msgid "Lettuce"
+msgstr "خس"
+
+msgid "Tomato"
+msgstr "طماطم"
+
+msgid "Ketchup"
+msgstr "كاتشاب"
+
+msgid "Spaghetti"
+msgstr "سباغيتي"
+
+msgid "Garlic"
+msgstr "ثوم"
+
+msgid "Tomato sauce"
+msgstr "صلصة طماطم"
+
+msgid "Tomato paste"
+msgstr "معجون طماطم"
+
+msgid "Oregano"
+msgstr "أوريغانو"
+
+msgid "Basil"
+msgstr "ريحان"
+
+msgid "Parmesan cheese"
+msgstr "جبنة بارميزان"
+
+msgid "White fish fillets"
+msgstr "شرائح سمك أبيض"
+
+msgid "Corn tortillas"
+msgstr "تورتيلا الذرة"
+
+msgid "Cabbage slaw"
+msgstr "سلطة ملفوف"
+
+msgid "Spicy mayo"
+msgstr "مايونيز حار"
+
+msgid "Lime"
+msgstr "ليمون أخضر"
+
+msgid "Cilantro"
+msgstr "كزبرة"
+
+msgid "Canned tuna"
+msgstr "تونة معلبة"
+
+msgid "Mayonnaise"
+msgstr "مايونيز"
+
+msgid "Celery"
+msgstr "كرفس"
+
+msgid "Eggplant"
+msgstr "باذنجان"
+
+msgid "Marinara sauce"
+msgstr "صلصة مارينارا"
+
+msgid "Mozzarella cheese"
+msgstr "جبنة موزاريلا"
+
+msgid "Breadcrumbs"
+msgstr "بقسماط"
+
+msgid "Linguine"
+msgstr "لينجويني"
+
+msgid "Shrimp"
+msgstr "روبيان"
+
+msgid "White wine"
+msgstr "عنب أبيض (بديل)"
+
+msgid "Parsley"
+msgstr "بقدونس"
+
+msgid "Butternut squash"
+msgstr "قرع عسلي"
+
+msgid "Vegetable broth"
+msgstr "مرق خضروات"
+
+msgid "Heavy cream"
+msgstr "كريمة ثقيلة"
+
+msgid "Sage"
+msgstr "مريمية"
+
+msgid "Nutmeg"
+msgstr "جوزة الطيب"
+
+msgid "Lamb meat"
+msgstr "لحم غنم"
+
+msgid "Cumin"
+msgstr "كمون"
+
+msgid "Coriander"
+msgstr "كزبرة"
+
+msgid "Arborio rice"
+msgstr "أرز أربوريو"
+
+msgid "Mussels"
+msgstr "محار"
+
+msgid "Chicken broth"
+msgstr "مرق دجاج"
+
+msgid "Saffron"
+msgstr "زعفران"
+
+msgid "Ground turkey"
+msgstr "ديك رومي مفروم"
+
+msgid "Cooked rice"
+msgstr "أرز مطهو"
+
+msgid "Dark chocolate"
+msgstr "شوكولاتة داكنة"
+
+msgid "Caramel sauce"
+msgstr "صلصة كراميل"
+
+msgid "Sea salt"
+msgstr "ملح البحر"
+
+msgid "Graham cracker crumbs"
+msgstr "فتات بسكويت غراهام"
+
+msgid "Sweetened condensed milk"
+msgstr "حليب مكثف محلى"
+
+msgid "Key lime juice"
+msgstr "عصير ليمون بنزهير"
+
+msgid "Egg yolks"
+msgstr "صفار البيض"
+
+msgid "Cocoa powder"
+msgstr "بودرة كاكاو"
+
+msgid "Baking soda"
+msgstr "بكنج صودا"
+
+msgid "Buttermilk"
+msgstr "لبن رائب"
+
+msgid "Red food coloring"
+msgstr "ملون طعام أحمر"
+
+msgid "Cream cheese"
+msgstr "جبنة كريمة"
+
+msgid "Vanilla wafers"
+msgstr "بسكويت فانيليا"
+
+msgid "Vanilla pudding mix"
+msgstr "خليط بودينغ الفانيليا"
+
+msgid "Pie crust"
+msgstr "عجينة فطيرة"
+
+msgid "Lemons"
+msgstr "ليمون"
+
+msgid "Strawberries"
+msgstr "فراولة"
+
+msgid "Greek yogurt"
+msgstr "زبادي يوناني"
+
+msgid "Blueberries"
+msgstr "توت أزرق"
+
+msgid "Rolled oats"
+msgstr "شوفان"
+
+msgid "Red lentils"
+msgstr "عدس أحمر"
+
+msgid "Carrot"
+msgstr "جزر"
+
+msgid "Tortilla wrap"
+msgstr "خبز تورتيلا"
+
+msgid "Turkey slices"
+msgstr "شرائح ديك رومي"
+
+msgid "Broccoli"
+msgstr "بروكلي"
+
+msgid "Sesame oil"
+msgstr "زيت سمسم"
+
+msgid "Ginger"
+msgstr "زنجبيل"
+
+msgid "Cornstarch"
+msgstr "نشا ذرة"
+
+msgid "Zucchini"
+msgstr "كوسة"
+
+msgid "Pesto sauce"
+msgstr "صلصة بيستو"
+
+msgid "Salmon fillet"
+msgstr "شريحة سلمون"
+
+msgid "Soy sauce"
+msgstr "صلصة صويا"
+
+msgid "Brown sugar"
+msgstr "سكر بني"
+
+msgid "Sesame seeds"
+msgstr "سمسم"
+
+msgid "Quinoa"
+msgstr "كينوا"
+
+msgid "Feta cheese"
+msgstr "جبنة فيتا"
+
+msgid "Romaine lettuce"
+msgstr "خس روماني"
+
+msgid "Croutons"
+msgstr "خبز محمص"
+
+msgid "Caesar dressing"
+msgstr "صلصة سيزر"
+
+msgid "Coconut milk"
+msgstr "حليب جوز الهند"
+
+msgid "Curry paste"
+msgstr "معجون كاري"
+
+msgid "Potatoes"
+msgstr "بطاطس"
+
+msgid "Wild mushrooms"
+msgstr "فطر بري"
+
+msgid "Whey protein powder"
+msgstr "بودرة بروتين مصل اللبن"
+
+msgid "Almond flour"
+msgstr "طحين اللوز"
+
+msgid "Dark chocolate chips"
+msgstr "رقائق شوكولاتة داكنة"
+
+msgid "Paprika"
+msgstr "بابريكا"
+
+msgid "Penne pasta"
+msgstr "مكرونة بيني"
+
+msgid "Pine nuts"
+msgstr "صنوبر"
+
+msgid "Balsamic glaze"
+msgstr "تغليفة بلسميك"
+
+msgid "Ziti pasta"
+msgstr "مكرونة زيتي"
+
+msgid "Ricotta cheese"
+msgstr "جبنة ريكوتا"
+
+msgid "Ground sausage"
+msgstr "سجق مفروم"
+
+msgid "Diced tomatoes"
+msgstr "طماطم مكعبات"
+
+msgid "Kidney beans"
+msgstr "فاصوليا حمراء"
+
+msgid "Small pasta"
+msgstr "مكرونة صغيرة"
+
+msgid "Italian seasoning"
+msgstr "توابل إيطالية"
+
+msgid "Yogurt"
+msgstr "زبادي"
+
+msgid "Cardamom"
+msgstr "هيل"
+
+msgid "Pizza dough"
+msgstr "عجينة بيتزا"
+
+msgid "Cooked chicken"
+msgstr "دجاج مطهو"
+
+msgid "Black beans"
+msgstr "فاصوليا سوداء"
+
+msgid "Salsa"
+msgstr "صلصة"
+
+msgid "Grapes"
+msgstr "عنب"
+
+msgid "Apple"
+msgstr "تفاح"
+
+msgid "Orange"
+msgstr "برتقال"
+
+msgid "all-purpose flour"
+msgstr "طحين متعدد الاستعمالات"
+
+msgid "milk"
+msgstr "حليب"
+
+msgid "egg"
+msgstr "بيضة"
+
+msgid "butter"
+msgstr "زبدة"
+
+msgid "sugar"
+msgstr "سكر"
+
+msgid "baking powder"
+msgstr "بكنج باودر"
+
+msgid "salt"
+msgstr "ملح"
+
+msgid "maple syrup"
+msgstr "شراب القيقب"
+
+msgid "eggs"
+msgstr "بيض"
+
+msgid "cheddar cheese"
+msgstr "جبنة شيدر"
+
+msgid "bell pepper"
+msgstr "فلفل رومي"
+
+msgid "onion"
+msgstr "بصل"
+
+msgid "mushrooms"
+msgstr "فطر"
+
+msgid "pepper"
+msgstr "فلفل"
+
+msgid "sourdough bread"
+msgstr "خبز العجين المخمر"
+
+msgid "avocado"
+msgstr "أفوكادو"
+
+msgid "cherry tomatoes"
+msgstr "طماطم كرزية"
+
+msgid "red pepper flakes"
+msgstr "رقائق الفلفل الأحمر"
+
+msgid "lemon juice"
+msgstr "عصير ليمون"
+
+msgid "bread"
+msgstr "خبز"
+
+msgid "cinnamon"
+msgstr "قرفة"
+
+msgid "vanilla extract"
+msgstr "خلاصة الفانيليا"
+
+msgid "banana"
+msgstr "موز"
+
+msgid "mixed berries"
+msgstr "توت مشكل"
+
+msgid "almond milk"
+msgstr "حليب اللوز"
+
+msgid "granola"
+msgstr "جرانولا"
+
+msgid "chia seeds"
+msgstr "بذور الشيا"
+
+msgid "honey"
+msgstr "عسل"
+
+msgid "vegetable oil"
+msgstr "زيت نباتي"
+
+msgid "chicken breast"
+msgstr "صدر دجاج"
+
+msgid "mixed salad greens"
+msgstr "خضروات سلطة مشكلة"
+
+msgid "cucumber"
+msgstr "خيار"
+
+msgid "red onion"
+msgstr "بصل أحمر"
+
+msgid "olive oil"
+msgstr "زيت زيتون"
+
+msgid "balsamic vinegar"
+msgstr "خل بلسميك"
+
+msgid "black pepper"
+msgstr "فلفل أسود"
+
+msgid "ground beef"
+msgstr "لحم بقري مفروم"
+
+msgid "hamburger bun"
+msgstr "خبز برجر"
+
+msgid "lettuce"
+msgstr "خس"
+
+msgid "tomato"
+msgstr "طماطم"
+
+msgid "ketchup"
+msgstr "كاتشاب"
+
+msgid "spaghetti"
+msgstr "سباغيتي"
+
+msgid "garlic"
+msgstr "ثوم"
+
+msgid "tomato sauce"
+msgstr "صلصة طماطم"
+
+msgid "tomato paste"
+msgstr "معجون طماطم"
+
+msgid "oregano"
+msgstr "أوريغانو"
+
+msgid "basil"
+msgstr "ريحان"
+
+msgid "parmesan cheese"
+msgstr "جبنة بارميزان"
+
+msgid "white fish fillets"
+msgstr "شرائح سمك أبيض"
+
+msgid "corn tortillas"
+msgstr "تورتيلا الذرة"
+
+msgid "cabbage slaw"
+msgstr "سلطة ملفوف"
+
+msgid "spicy mayo"
+msgstr "مايونيز حار"
+
+msgid "lime"
+msgstr "ليمون أخضر"
+
+msgid "cilantro"
+msgstr "كزبرة"
+
+msgid "canned tuna"
+msgstr "تونة معلبة"
+
+msgid "mayonnaise"
+msgstr "مايونيز"
+
+msgid "celery"
+msgstr "كرفس"
+
+msgid "eggplant"
+msgstr "باذنجان"
+
+msgid "marinara sauce"
+msgstr "صلصة مارينارا"
+
+msgid "mozzarella cheese"
+msgstr "جبنة موزاريلا"
+
+msgid "breadcrumbs"
+msgstr "بقسماط"
+
+msgid "linguine"
+msgstr "لينجويني"
+
+msgid "shrimp"
+msgstr "روبيان"
+
+msgid "white wine"
+msgstr "عنب أبيض (بديل)"
+
+msgid "parsley"
+msgstr "بقدونس"
+
+msgid "butternut squash"
+msgstr "قرع عسلي"
+
+msgid "vegetable broth"
+msgstr "مرق خضروات"
+
+msgid "heavy cream"
+msgstr "كريمة ثقيلة"
+
+msgid "sage"
+msgstr "مريمية"
+
+msgid "nutmeg"
+msgstr "جوزة الطيب"
+
+msgid "lamb meat"
+msgstr "لحم غنم"
+
+msgid "cumin"
+msgstr "كمون"
+
+msgid "coriander"
+msgstr "كزبرة"
+
+msgid "arborio rice"
+msgstr "أرز أربوريو"
+
+msgid "mussels"
+msgstr "محار"
+
+msgid "chicken broth"
+msgstr "مرق دجاج"
+
+msgid "saffron"
+msgstr "زعفران"
+
+msgid "ground turkey"
+msgstr "ديك رومي مفروم"
+
+msgid "cooked rice"
+msgstr "أرز مطهو"
+
+msgid "dark chocolate"
+msgstr "شوكولاتة داكنة"
+
+msgid "caramel sauce"
+msgstr "صلصة كراميل"
+
+msgid "sea salt"
+msgstr "ملح البحر"
+
+msgid "graham cracker crumbs"
+msgstr "فتات بسكويت غراهام"
+
+msgid "sweetened condensed milk"
+msgstr "حليب مكثف محلى"
+
+msgid "key lime juice"
+msgstr "عصير ليمون بنزهير"
+
+msgid "egg yolks"
+msgstr "صفار البيض"
+
+msgid "cocoa powder"
+msgstr "بودرة كاكاو"
+
+msgid "baking soda"
+msgstr "بكنج صودا"
+
+msgid "buttermilk"
+msgstr "لبن رائب"
+
+msgid "red food coloring"
+msgstr "ملون طعام أحمر"
+
+msgid "cream cheese"
+msgstr "جبنة كريمة"
+
+msgid "vanilla wafers"
+msgstr "بسكويت فانيليا"
+
+msgid "vanilla pudding mix"
+msgstr "خليط بودينغ الفانيليا"
+
+msgid "pie crust"
+msgstr "عجينة فطيرة"
+
+msgid "lemons"
+msgstr "ليمون"
+
+msgid "strawberries"
+msgstr "فراولة"
+
+msgid "greek yogurt"
+msgstr "زبادي يوناني"
+
+msgid "blueberries"
+msgstr "توت أزرق"
+
+msgid "rolled oats"
+msgstr "شوفان"
+
+msgid "red lentils"
+msgstr "عدس أحمر"
+
+msgid "carrot"
+msgstr "جزر"
+
+msgid "tortilla wrap"
+msgstr "خبز تورتيلا"
+
+msgid "turkey slices"
+msgstr "شرائح ديك رومي"
+
+msgid "broccoli"
+msgstr "بروكلي"
+
+msgid "sesame oil"
+msgstr "زيت سمسم"
+
+msgid "ginger"
+msgstr "زنجبيل"
+
+msgid "cornstarch"
+msgstr "نشا ذرة"
+
+msgid "zucchini"
+msgstr "كوسة"
+
+msgid "pesto sauce"
+msgstr "صلصة بيستو"
+
+msgid "salmon fillet"
+msgstr "شريحة سلمون"
+
+msgid "soy sauce"
+msgstr "صلصة صويا"
+
+msgid "brown sugar"
+msgstr "سكر بني"
+
+msgid "sesame seeds"
+msgstr "سمسم"
+
+msgid "quinoa"
+msgstr "كينوا"
+
+msgid "feta cheese"
+msgstr "جبنة فيتا"
+
+msgid "romaine lettuce"
+msgstr "خس روماني"
+
+msgid "croutons"
+msgstr "خبز محمص"
+
+msgid "caesar dressing"
+msgstr "صلصة سيزر"
+
+msgid "coconut milk"
+msgstr "حليب جوز الهند"
+
+msgid "curry paste"
+msgstr "معجون كاري"
+
+msgid "potatoes"
+msgstr "بطاطس"
+
+msgid "wild mushrooms"
+msgstr "فطر بري"
+
+msgid "whey protein powder"
+msgstr "بودرة بروتين مصل اللبن"
+
+msgid "almond flour"
+msgstr "طحين اللوز"
+
+msgid "dark chocolate chips"
+msgstr "رقائق شوكولاتة داكنة"
+
+msgid "paprika"
+msgstr "بابريكا"
+
+msgid "penne pasta"
+msgstr "مكرونة بيني"
+
+msgid "pine nuts"
+msgstr "صنوبر"
+
+msgid "balsamic glaze"
+msgstr "تغليفة بلسميك"
+
+msgid "ziti pasta"
+msgstr "مكرونة زيتي"
+
+msgid "ricotta cheese"
+msgstr "جبنة ريكوتا"
+
+msgid "ground sausage"
+msgstr "سجق مفروم"
+
+msgid "diced tomatoes"
+msgstr "طماطم مكعبات"
+
+msgid "kidney beans"
+msgstr "فاصوليا حمراء"
+
+msgid "small pasta"
+msgstr "مكرونة صغيرة"
+
+msgid "italian seasoning"
+msgstr "توابل إيطالية"
+
+msgid "yogurt"
+msgstr "زبادي"
+
+msgid "cardamom"
+msgstr "هيل"
+
+msgid "pizza dough"
+msgstr "عجينة بيتزا"
+
+msgid "cooked chicken"
+msgstr "دجاج مطهو"
+
+msgid "black beans"
+msgstr "فاصوليا سوداء"
+
+msgid "salsa"
+msgstr "صلصة"
+
+msgid "grapes"
+msgstr "عنب"
+
+msgid "apple"
+msgstr "تفاح"
+
+msgid "orange"
+msgstr "برتقال"
+
+msgid "Fresh basil"
+msgstr "ريحان طازج"
+
+msgid "fresh basil"
+msgstr "ريحان طازج"
+
+msgid "Fresh mozzarella"
+msgstr "جبنة موزاريلا طازجة"
+
+msgid "fresh mozzarella"
+msgstr "جبنة موزاريلا طازجة"
+
+msgid "Graham cracker crust"
+msgstr "عجينة بسكويت غراهام"
+
+msgid "graham cracker crust"
+msgstr "عجينة بسكويت غراهام"
+
+msgid "Mango"
+msgstr "مانجو"
+
+msgid "mango"
+msgstr "مانجو"
+
+msgid "Tomatoes"
+msgstr "طماطم"
+
+msgid "tomatoes"
+msgstr "طماطم"
+
+msgid "Bananas"
+msgstr "موز"
+
+msgid "bananas"
+msgstr "موز"
+
+msgid "BBQ sauce"
+msgstr "صلصة باربيكيو"
+
+msgid "bbq sauce"
+msgstr "صلصة باربيكيو"
+
+msgid "Bell peppers"
+msgstr "فلفل رومي"
+
+msgid "bell peppers"
+msgstr "فلفل رومي"
+
+msgid "Mangos"
+msgstr "مانجو"
+
+msgid "mangos"
+msgstr "مانجو"
+
+msgid "Mangoes"
+msgstr "مانجو"
+
+msgid "mangoes"
+msgstr "مانجو"
+
+msgid "cups"
+msgstr "أكواب"
+
+msgid "cup"
+msgstr "كوب"
+
+msgid "tbsp"
+msgstr "ملعقة كبيرة"
+
+msgid "tsp"
+msgstr "ملعقة صغيرة"
+
+msgid "large"
+msgstr "حبة كبيرة"
+
+msgid "medium"
+msgstr "حبة متوسطة"
+
+msgid "small"
+msgstr "حبة صغيرة"
+
+msgid "Great recipe! Highly recommended."
+msgstr "وصفة رائعة! نوصي بها بشدة."
+
+msgid "Page Not Found"
+msgstr "الصفحة غير موجودة"
+
+msgid "Something went wrong on our end."
+msgstr "حدث خطأ ما من جانبنا."
+
+msgid "Mon"
+msgstr "اثنين"
+
+msgid "Tue"
+msgstr "ثلاثاء"
+
+msgid "Wed"
+msgstr "أربعاء"
+
+msgid "Thu"
+msgstr "خميس"
+
+msgid "Fri"
+msgstr "جمعة"
+
+msgid "Sat"
+msgstr "سبت"
+
+msgid "Sun"
+msgstr "أحد"
+
+
+
+msgid "Fresh mixed greens topped with grilled chicken breast, cherry tomatoes, and vinaigrette."
+msgstr "خضروات مشكلة طازجة تعلوها صدور دجاج مشوية وطماطم كرزية"

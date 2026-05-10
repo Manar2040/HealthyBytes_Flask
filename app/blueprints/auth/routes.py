@@ -1,0 +1,122 @@
+import os
+import secrets
+from flask import render_template, url_for, flash, redirect, request, current_app
+# pyrefly: ignore [missing-import]
+from flask_babel import _
+# pyrefly: ignore [missing-import]
+from flask_login import login_user, current_user, logout_user, login_required
+from app import db, bcrypt
+from app.models import User
+from app.blueprints.auth import auth
+from werkzeug.utils import secure_filename
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def save_profile_picture(file):
+    """Save uploaded profile picture with a random filename."""
+    random_hex = secrets.token_hex(8)
+    _, ext = os.path.splitext(file.filename)
+    filename = random_hex + ext
+    upload_dir = os.path.join(current_app.root_path, 'static', 'images', 'profiles')
+    os.makedirs(upload_dir, exist_ok=True)
+    filepath = os.path.join(upload_dir, filename)
+    file.save(filepath)
+    return filename
+
+
+@auth.route('/login', methods=['GET', 'POST'])
+def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('main.home'))
+
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        user = User.query.filter_by(email=email).first()
+        if user and bcrypt.check_password_hash(user.password, password):
+            login_user(user, remember=request.form.get('remember'))
+            next_page = request.args.get('next')
+            return redirect(next_page) if next_page else redirect(url_for('main.home'))
+        else:
+            flash(_('Login unsuccessful. Please check email and password'), 'danger')
+
+    return render_template('login.html')
+
+
+@auth.route('/register', methods=['GET', 'POST'])
+def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('main.home'))
+
+    if request.method == 'POST':
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash(_('Email already exists. Please choose a different one.'), 'danger')
+        else:
+            hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+            new_user = User(username=username, email=email, password=hashed_password)
+            db.session.add(new_user)
+            db.session.commit()
+            flash(_('Your account has been created! You can now log in.'), 'success')
+            return redirect(url_for('auth.login'))
+
+    return render_template('register.html')
+
+
+@auth.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('main.home'))
+
+
+@auth.route('/profile', methods=['GET', 'POST'])
+@login_required
+def profile():
+    if request.method == 'POST':
+        if 'update_email' in request.form:
+            email = request.form.get('email')
+            current_user.email = email
+            db.session.commit()
+            flash(_('Your email has been updated!'), 'success')
+
+        elif 'update_password' in request.form:
+            new_password = request.form.get('new_password')
+            confirm_password = request.form.get('confirm_password')
+
+            if new_password == confirm_password:
+                hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
+                current_user.password = hashed_password
+                db.session.commit()
+                flash(_('Your password has been updated!'), 'success')
+            else:
+                flash(_('Passwords do not match!'), 'danger')
+
+        elif 'update_picture' in request.form:
+            if 'profile_picture' in request.files:
+                file = request.files['profile_picture']
+                if file and file.filename != '' and allowed_file(file.filename):
+                    # Delete old picture if it's not the default
+                    if current_user.profile_image and current_user.profile_image != 'default-profile.png':
+                        old_path = os.path.join(current_app.root_path, 'static', 'images', 'profiles',
+                                                current_user.profile_image)
+                        if os.path.exists(old_path):
+                            os.remove(old_path)
+
+                    filename = save_profile_picture(file)
+                    current_user.profile_image = filename
+                    db.session.commit()
+                    flash(_('Profile picture updated!'), 'success')
+                else:
+                    flash(_('Invalid file type. Please upload PNG, JPG, JPEG, or GIF.'), 'danger')
+
+    return render_template('profile.html')

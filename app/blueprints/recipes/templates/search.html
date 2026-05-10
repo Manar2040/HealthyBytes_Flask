@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="search-page mt-4 mb-5">
+    <h1 class="mb-4"><i class="fas fa-search me-2"></i>{{ _('Search Recipes') }}</h1>
+
+    <!-- Search & Filter Form -->
+    <div class="card mb-4 search-filter-card">
+        <div class="card-body">
+            <form method="GET" action="{{ url_for('recipes.search') }}">
+                <div class="row g-3">
+                    <!-- Search Input -->
+                    <div class="col-md-6">
+                        <label for="searchQuery" class="form-label fw-bold">{{ _('Search') }}</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <input type="text" class="form-control" id="searchQuery" name="q"
+                                   placeholder="{{ _('Search by recipe name or description...') }}"
+                                   value="{{ query or '' }}">
+                        </div>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="col-md-3">
+                        <label for="categoryFilter" class="form-label fw-bold">{{ _('Category') }}</label>
+                        <select class="form-select" id="categoryFilter" name="category">
+                            <option value="">{{ _('All Categories') }}</option>
+                            {% for cat in categories %}
+                                <option value="{{ cat.id }}" {% if category_id == cat.id %}selected{% endif %}>{{ _(cat.name) }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Sort By -->
+                    <div class="col-md-3">
+                        <label for="sortBy" class="form-label fw-bold">{{ _('Sort By') }}</label>
+                        <select class="form-select" id="sortBy" name="sort">
+                            <option value="title" {% if sort_by == 'title' %}selected{% endif %}>{{ _('Name (A-Z)') }}</option>
+                            <option value="calories_asc" {% if sort_by == 'calories_asc' %}selected{% endif %}>{{ _('Calories (Low → High)') }}</option>
+                            <option value="calories_desc" {% if sort_by == 'calories_desc' %}selected{% endif %}>{{ _('Calories (High → Low)') }}</option>
+                            <option value="protein" {% if sort_by == 'protein' %}selected{% endif %}>{{ _('Protein (Highest)') }}</option>
+                        </select>
+                    </div>
+
+                    <!-- Calorie Range -->
+                    <div class="col-md-3">
+                        <label for="minCal" class="form-label fw-bold">{{ _('Min Calories') }}</label>
+                        <input type="number" class="form-control" id="minCal" name="min_cal"
+                               placeholder="e.g. 100" value="{{ min_cal or '' }}" min="0">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="maxCal" class="form-label fw-bold">{{ _('Max Calories') }}</label>
+                        <input type="number" class="form-control" id="maxCal" name="max_cal"
+                               placeholder="e.g. 500" value="{{ max_cal or '' }}" min="0">
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="col-md-6 d-flex align-items-end gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search me-1"></i> {{ _('Search') }}
+                        </button>
+                        <a href="{{ url_for('recipes.search') }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-times me-1"></i> {{ _('Clear') }}
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results -->
+    {% if query or category_id or min_cal or max_cal %}
+    <div class="mb-3">
+        <p class="text-muted">
+            {{ _('Found') }} <strong>{{ ar_nums(results.total) }}</strong> {{ ngettext('recipe', 'recipes', results.total) }}
+            {% if query %} {{ _('matching') }} "<em>{{ query }}</em>"{% endif %}
+        </p>
+    </div>
+    {% endif %}
+
+    {% if results.items %}
+    <div class="row">
+        {% for recipe in results.items %}
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="{{ url_for('static', filename='images/recipes/' + recipe.image_file) }}"
+                             class="card-img-top" alt="{{ recipe.title }}">
+                    </div>
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">{{ _(recipe.category.name) }}</span>
+                        <h5 class="card-title">{{ _(recipe.title) }}</h5>
+                        <p class="card-text">{{ _(recipe.description)|truncate(80) }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted"><i class="fas fa-fire-alt"></i> {{ ar_nums(recipe.calories) }} {{ _('cal') }}</span>
+                            {% if recipe.average_rating > 0 %}
+                            <span class="text-warning">★ {{ "%.1f"|format(recipe.average_rating)|ar_nums }}</span>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="{{ url_for('recipes.recipe_detail', recipe_id=recipe.id) }}" class="btn btn-primary">{{ _('View') }}</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if results.pages > 1 %}
+    <nav aria-label="Search results pagination">
+        <ul class="pagination justify-content-center">
+            {% if results.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('recipes.search', q=query, category=category_id, min_cal=min_cal, max_cal=max_cal, sort=sort_by, page=results.prev_num) }}">{{ _('Previous') }}</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#">{{ _('Previous') }}</a></li>
+            {% endif %}
+
+            {% for page_num in results.iter_pages() %}
+                {% if page_num %}
+                    <li class="page-item {% if results.page == page_num %}active{% endif %}">
+                        <a class="page-link" href="{{ url_for('recipes.search', q=query, category=category_id, min_cal=min_cal, max_cal=max_cal, sort=sort_by, page=page_num) }}">{{ ar_nums(page_num) }}</a>
+
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if results.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('recipes.search', q=query, category=category_id, min_cal=min_cal, max_cal=max_cal, sort=sort_by, page=results.next_num) }}">{{ _('Next') }}</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#">{{ _('Next') }}</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+
+    {% elif query or category_id or min_cal or max_cal %}
+    <div class="text-center py-5">
+        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+        <h4 class="text-muted">{{ _('No recipes found') }}</h4>
+        <p class="text-muted">{{ _('Try adjusting your search filters') }}</p>
+        <a href="{{ url_for('recipes.search') }}" class="btn btn-primary">{{ _('Clear Filters') }}</a>
+    </div>
+    {% else %}
+    <div class="text-center py-5">
+        <i class="fas fa-utensils fa-3x text-muted mb-3"></i>
+        <h4 class="text-muted">{{ _('Start searching!') }}</h4>
+        <p class="text-muted">{{ _('Use the filters above to find the perfect recipe') }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

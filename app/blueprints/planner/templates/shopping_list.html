@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-4 mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1><i class="fas fa-shopping-cart me-2"></i>{{ _('Shopping List') }}</h1>
+        <div>
+            <button class="btn btn-outline-secondary me-2" onclick="window.print()">
+                <i class="fas fa-print me-1"></i> {{ _('Print') }}
+            </button>
+            <a href="{{ url_for('planner.meal_planner') }}" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-1"></i> {{ _('Back to Planner') }}
+            </a>
+        </div>
+    </div>
+
+    {% if ingredient_map %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-list-check me-2"></i>{{ _('Ingredients Needed') }}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-3">{{ _('Based on') }} {{ ar_nums(recipes|length) }} {{ ngettext('recipe', 'recipes', recipes|length) }} {{ _('in your meal plan') }}</p>
+
+                    {% for name, details in ingredient_map.items() %}
+                    <div class="shopping-item d-flex align-items-center py-2 border-bottom">
+                        <input type="checkbox" class="form-check-input me-3 shopping-checkbox" id="item-{{ loop.index }}">
+                        <label for="item-{{ loop.index }}" class="flex-grow-1">
+                            <strong class="text-capitalize">{{ _(name) }}</strong>
+                            <br>
+                            <small class="text-muted">
+                                {% for d in details %}
+                                    {{ ar_nums(d.quantity) }} {{ _(d.unit) }} ({{ _(d.recipe) }}){% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </small>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-utensils me-2"></i>{{ _('Recipes in Plan') }}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for recipe in recipes %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{ url_for('recipes.recipe_detail', recipe_id=recipe.id) }}" class="text-decoration-none">
+                            {{ _(recipe.title) }}
+                        </a>
+                        <span class="badge bg-primary rounded-pill">{{ ar_nums(recipe.calories) }} {{ _('cal') }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="text-center py-5">
+        <i class="fas fa-shopping-basket fa-3x text-muted mb-3"></i>
+        <h4 class="text-muted">{{ _('No items in your shopping list') }}</h4>
+        <p class="text-muted">{{ _('Add recipes to your meal plan first, and they need to have ingredients listed.') }}</p>
+        <a href="{{ url_for('planner.meal_planner') }}" class="btn btn-primary">{{ _('Go to Meal Planner') }}</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Strike-through checked items
+document.querySelectorAll('.shopping-checkbox').forEach(cb => {
+    cb.addEventListener('change', function() {
+        const label = this.nextElementSibling;
+        if (this.checked) {
+            label.style.textDecoration = 'line-through';
+            label.style.opacity = '0.5';
+        } else {
+            label.style.textDecoration = 'none';
+            label.style.opacity = '1';
+        }
+    });
+});
+</script>
+{% endblock %}

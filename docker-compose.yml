@@ -1,0 +1,12 @@
+
+
+services:
+  healthybytes:
+    build: .
+    container_name: healthybytes-flask
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./instance:/app/instance
+    working_dir: /app
+    command: python run.py

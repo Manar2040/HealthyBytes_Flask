@@ -1,0 +1,2601 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-05-09 18:22+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/blueprints/auth/routes.py:47
+msgid "Login unsuccessful. Please check email and password"
+msgstr "Échec de la connexion. Veuillez vérifier l'e-mail et le mot de passe"
+
+#: app/blueprints/auth/routes.py:64
+msgid "Email already exists. Please choose a different one."
+msgstr "L'e-mail existe déjà. Veuillez en choisir un autre."
+
+#: app/blueprints/auth/routes.py:70
+msgid "Your account has been created! You can now log in."
+msgstr "Votre compte a été créé ! Vous pouvez maintenant vous connecter."
+
+#: app/blueprints/auth/routes.py:90
+msgid "Your email has been updated!"
+msgstr "Votre e-mail a été mis à jour !"
+
+#: app/blueprints/auth/routes.py:100
+msgid "Your password has been updated!"
+msgstr "Votre mot de passe a été mis à jour !"
+
+#: app/blueprints/auth/routes.py:102
+msgid "Passwords do not match!"
+msgstr "Les mots de passe ne correspondent pas !"
+
+#: app/blueprints/auth/routes.py:118
+msgid "Profile picture updated!"
+msgstr "Photo de profil mise à jour !"
+
+#: app/blueprints/auth/routes.py:120
+msgid "Invalid file type. Please upload PNG, JPG, JPEG, or GIF."
+msgstr "Type de fichier invalide. Veuillez télécharger PNG, JPG, JPEG ou GIF."
+
+#: app/blueprints/auth/templates/login.html:8
+#: app/blueprints/auth/templates/login.html:25
+#: app/blueprints/auth/templates/register.html:34 app/templates/base.html:87
+msgid "Login"
+msgstr "Connexion"
+
+#: app/blueprints/auth/templates/login.html:13
+#: app/blueprints/auth/templates/register.html:17
+msgid "Email address"
+msgstr "Adresse e-mail"
+
+#: app/blueprints/auth/templates/login.html:17
+#: app/blueprints/auth/templates/register.html:21
+msgid "Password"
+msgstr "Mot de passe"
+
+#: app/blueprints/auth/templates/login.html:22
+msgid "Remember me"
+msgstr "Se souvenir de moi"
+
+#: app/blueprints/auth/templates/login.html:30
+msgid "Don't have an account?"
+msgstr "Vous n'avez pas de compte ?"
+
+#: app/blueprints/auth/templates/login.html:30
+#: app/blueprints/auth/templates/register.html:8
+#: app/blueprints/auth/templates/register.html:29 app/templates/base.html:88
+msgid "Register"
+msgstr "S'inscrire"
+
+#: app/blueprints/auth/templates/profile.html:27
+msgid "Profile Picture"
+msgstr "Photo de profil"
+
+#: app/blueprints/auth/templates/profile.html:32
+msgid "Upload a new profile picture"
+msgstr "Télécharger une nouvelle photo de profil"
+
+#: app/blueprints/auth/templates/profile.html:35
+msgid "Choose File"
+msgstr "Choisir un fichier"
+
+#: app/blueprints/auth/templates/profile.html:39
+#: app/blueprints/auth/templates/profile.html:40
+msgid "No file chosen"
+msgstr "Aucun fichier choisi"
+
+#: app/blueprints/auth/templates/profile.html:42
+msgid "Accepted formats: PNG, JPG, JPEG, GIF. Max size: 2MB."
+msgstr "Formats acceptés : PNG, JPG, JPEG, GIF. Taille max : 2 Mo."
+
+#: app/blueprints/auth/templates/profile.html:46
+msgid "Upload Picture"
+msgstr "Télécharger la photo"
+
+#: app/blueprints/auth/templates/profile.html:55
+msgid "My Activity"
+msgstr "Mon activité"
+
+#: app/blueprints/auth/templates/profile.html:60
+msgid "Recipes Favorited"
+msgstr "Recettes favorites"
+
+#: app/blueprints/auth/templates/profile.html:66
+msgid "Meal Plan"
+msgstr "Planificateur de repas"
+
+#: app/blueprints/auth/templates/profile.html:67
+msgid "meals planned"
+msgstr "repas planifiés"
+
+#: app/blueprints/auth/templates/profile.html:75
+msgid "Account Settings"
+msgstr "Paramètres du compte"
+
+#: app/blueprints/auth/templates/profile.html:80
+#: app/blueprints/auth/templates/profile.html:84
+msgid "Update Email"
+msgstr "Mettre à jour l'e-mail"
+
+#: app/blueprints/auth/templates/profile.html:92
+msgid "Change Password"
+msgstr "Changer le mot de passe"
+
+#: app/blueprints/auth/templates/profile.html:93
+msgid "New Password"
+msgstr "Nouveau mot de passe"
+
+#: app/blueprints/auth/templates/profile.html:96
+#: app/blueprints/auth/templates/register.html:25
+msgid "Confirm Password"
+msgstr "Confirmer le mot de passe"
+
+#: app/blueprints/auth/templates/profile.html:97
+msgid "Confirm New Password"
+msgstr "Confirmer le nouveau mot de passe"
+
+#: app/blueprints/auth/templates/profile.html:100
+msgid "Update Account"
+msgstr "Mettre à jour le compte"
+
+#: app/blueprints/auth/templates/register.html:13
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: app/blueprints/auth/templates/register.html:34
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+#: app/blueprints/categories/templates/categories.html:4
+msgid "Recipe Categories"
+msgstr "Catégories de recettes"
+
+#: app/blueprints/categories/templates/categories.html:5
+msgid "Explore our diverse collection of recipes categorized for your convenience"
+msgstr ""
+"Explorez notre collection diversifiée de recettes classées pour votre "
+"commoditéExplorez notre collection diversifiée de recettes classées pour "
+"votre commodité"
+
+#: app/blueprints/categories/templates/categories.html:8
+msgid "Categories found:"
+msgstr "Catégories trouvées :"
+
+#: app/blueprints/categories/templates/categories.html:19
+msgid "recipes"
+msgstr "recettes"
+
+#: app/blueprints/categories/templates/categories.html:22
+msgid "Explore"
+msgstr "Explorer"
+
+#: app/blueprints/categories/templates/recipes_by_category.html:19
+#: app/blueprints/main/templates/home.html:53
+#: app/blueprints/main/templates/home.html:95
+#: app/blueprints/planner/templates/meal_planner.html:134
+#: app/blueprints/planner/templates/meal_planner.html:194
+#: app/blueprints/planner/templates/meal_planner.html:216
+#: app/blueprints/planner/templates/shopping_list.html:56
+#: app/blueprints/recipes/templates/my_favorites.html:15
+#: app/blueprints/recipes/templates/recipe_detail.html:223
+#: app/blueprints/recipes/templates/recipes.html:14
+#: app/blueprints/recipes/templates/search.html:95
+msgid "cal"
+msgstr "kcal"
+
+#: app/blueprints/categories/templates/recipes_by_category.html:22
+#: app/blueprints/main/templates/home.html:98
+#: app/blueprints/recipes/templates/my_favorites.html:18
+#: app/blueprints/recipes/templates/recipe_detail.html:231
+#: app/blueprints/recipes/templates/recipes.html:17
+#: app/blueprints/recipes/templates/search.html:103
+msgid "View"
+msgstr "Voir"
+
+#: app/blueprints/categories/templates/recipes_by_category.html:30
+msgid "No recipes found in this category yet."
+msgstr "Aucune recette trouvée dans cette catégorie pour le moment."
+
+#: app/blueprints/main/templates/about.html:8
+msgid "About Healthy Bytes"
+msgstr "À propos de Healthy Bytes"
+
+#: app/blueprints/main/templates/about.html:10
+msgid ""
+"Welcome to Healthy Bytes, your go-to resource for nutritious and "
+"delicious recipes that support a healthy lifestyle without compromising "
+"on taste."
+msgstr ""
+
+#: app/blueprints/main/templates/about.html:12
+msgid "Our Mission"
+msgstr "Notre Mission"
+
+#: app/blueprints/main/templates/about.html:13
+msgid ""
+"At Healthy Bytes, we believe that eating healthy should be enjoyable and "
+"accessible to everyone. Our mission is to provide you with a collection "
+"of carefully crafted recipes that are both nutritious and delicious, "
+"helping you fuel your body while satisfying your taste buds."
+msgstr ""
+
+#: app/blueprints/main/templates/about.html:15
+msgid "Why Choose Healthy Bytes?"
+msgstr "Pourquoi choisir Healthy Bytes ?"
+
+#: app/blueprints/main/templates/about.html:17
+msgid "Nutritional Transparency:"
+msgstr "Transparence nutritionnelle :"
+
+#: app/blueprints/main/templates/about.html:17
+msgid ""
+"Each recipe comes with detailed nutritional information, allowing you to "
+"make informed choices about what you eat."
+msgstr ""
+
+#: app/blueprints/main/templates/about.html:18
+msgid "Diverse Selection:"
+msgstr "Sélection diversifiée :"
+
+#: app/blueprints/main/templates/about.html:18
+msgid ""
+"From breakfast to dinner and everything in between, our recipe collection"
+" caters to various meal times and dietary preferences."
+msgstr ""
+
+#: app/blueprints/main/templates/about.html:19
+msgid "Community-Driven:"
+msgstr "Axé sur la communauté :"
+
+#: app/blueprints/main/templates/about.html:19
+msgid ""
+"Join our community of health enthusiasts, share your experiences, and "
+"discover new favorites through reviews and ratings."
+msgstr ""
+
+#: app/blueprints/main/templates/about.html:20
+msgid "Simple and Accessible:"
+msgstr "Simple et accessible :"
+
+#: app/blueprints/main/templates/about.html:20
+msgid ""
+"Our recipes are designed to be straightforward and achievable, using "
+"ingredients that are commonly available."
+msgstr ""
+"Nos recettes sont conçues pour être simples et réalisables, en utilisant "
+"des ingrédients couramment disponibles."
+
+#: app/blueprints/main/templates/about.html:23
+msgid "Get in Touch"
+msgstr "Contactez-nous"
+
+#: app/blueprints/main/templates/about.html:24
+msgid ""
+"We'd love to hear from you! If you have any questions, suggestions, or "
+"just want to say hello, feel free to contact us at "
+"contact@healthybytes.com."
+msgstr ""
+
+#: app/blueprints/main/templates/about.html:28
+msgid "The Healthy Bytes Team"
+msgstr "L'équipe Healthy Bytes"
+
+#: app/blueprints/main/templates/home.html:10
+msgid "Discover Healthy & Delicious Recipes"
+msgstr "Découvrez des recettes saines et délicieuses"
+
+#: app/blueprints/main/templates/home.html:11
+msgid "Fuel your body with nutrient-rich meals that don't compromise on taste"
+msgstr ""
+"Nourrissez votre corps avec des repas riches en nutriments sans compromis"
+" sur le goûtNourrissez votre corps avec des repas riches en nutriments "
+"sans compromis sur le goûtNourrissez votre corps avec des repas riches en"
+" nutriments sans compromis sur le goût"
+
+#: app/blueprints/main/templates/home.html:14
+#: app/blueprints/recipes/templates/my_favorites.html:32
+msgid "Browse Recipes"
+msgstr "Parcourir les recettes"
+
+#: app/blueprints/main/templates/home.html:16
+msgid "Create Account"
+msgstr "Créer un compte"
+
+#: app/blueprints/main/templates/home.html:18
+msgid "My Favorites"
+msgstr "Mes favoris"
+
+#: app/blueprints/main/templates/home.html:23
+msgid "Join Our Community"
+msgstr "Rejoignez notre communauté"
+
+#: app/blueprints/main/templates/home.html:35
+msgid "Recipe of the Day"
+msgstr "Recette du jour"
+
+#: app/blueprints/main/templates/home.html:43
+msgid "Today's Pick"
+msgstr "Le choix du jour"
+
+#: app/blueprints/main/templates/home.html:54
+msgid "protein"
+msgstr "protéines"
+
+#: app/blueprints/main/templates/home.html:55
+msgid "carbs"
+msgstr "glucides"
+
+#: app/blueprints/main/templates/home.html:56
+msgid "fats"
+msgstr "lipides"
+
+#: app/blueprints/main/templates/home.html:67
+#: app/blueprints/recipes/templates/recipe_detail.html:36
+msgid "reviews"
+msgstr "avis"
+
+#: app/blueprints/main/templates/home.html:71
+#: app/blueprints/recipes/templates/pantry.html:193
+msgid "View Recipe"
+msgstr "Voir la recette"
+
+#: app/blueprints/main/templates/home.html:83
+msgid "Popular Recipes"
+msgstr "Recettes populaires"
+
+#: app/blueprints/main/templates/home.html:106
+msgid "View All Recipes"
+msgstr "Voir toutes les recettes"
+
+#: app/blueprints/planner/routes.py:73
+msgid "Invalid selection."
+msgstr "Effacer la sélection"
+
+#: app/blueprints/planner/routes.py:87
+#, python-format
+msgid "%(title)s added to %(day)s %(meal)s!"
+msgstr ""
+
+#: app/blueprints/planner/routes.py:97
+msgid "Unauthorized."
+msgstr ""
+
+#: app/blueprints/planner/routes.py:103
+msgid "Recipe removed from plan."
+msgstr "Ajouter une recette au plan"
+
+#: app/blueprints/planner/routes.py:113
+msgid "Meal plan cleared."
+msgstr "Planificateur de repas"
+
+#: app/blueprints/planner/templates/meal_planner.html:106
+#: app/templates/base.html:51 app/templates/base.html:78
+msgid "Meal Planner"
+msgstr "Planificateur de repas"
+
+#: app/blueprints/planner/templates/meal_planner.html:109
+#: app/blueprints/planner/templates/shopping_list.html:6
+msgid "Shopping List"
+msgstr "Liste de courses"
+
+#: app/blueprints/planner/templates/meal_planner.html:112
+msgid "Clear your entire meal plan?"
+msgstr "Effacer tout votre plan de repas ?"
+
+#: app/blueprints/planner/templates/meal_planner.html:115
+msgid "Clear Plan"
+msgstr "Effacer le plan"
+
+#: app/blueprints/planner/templates/meal_planner.html:124
+msgid "Add Recipe to Plan"
+msgstr "Ajouter une recette au plan"
+
+#: app/blueprints/planner/templates/meal_planner.html:128
+msgid "Recipe"
+msgstr "Recette"
+
+#: app/blueprints/planner/templates/meal_planner.html:130
+msgid "Choose a recipe..."
+msgstr "Choisir une recette..."
+
+#: app/blueprints/planner/templates/meal_planner.html:141
+msgid "Day"
+msgstr "Jour"
+
+#: app/blueprints/planner/templates/meal_planner.html:149
+#: app/blueprints/planner/templates/meal_planner.html:172
+msgid "Meal"
+msgstr "Repas"
+
+#: app/blueprints/planner/templates/meal_planner.html:158
+msgid "Add"
+msgstr "Ajouter"
+
+#: app/blueprints/planner/templates/meal_planner.html:197
+#: app/blueprints/recipes/templates/my_favorites.html:20
+msgid "Remove"
+msgstr "Supprimer"
+
+#: app/blueprints/planner/templates/meal_planner.html:210
+msgid "Total"
+msgstr "Total"
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:103
+msgid "Protein"
+msgstr "Protéines"
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:112
+msgid "Carbs"
+msgstr "Glucides"
+
+#: app/blueprints/planner/templates/meal_planner.html:217
+#: app/blueprints/recipes/templates/recipe_detail.html:121
+msgid "Fats"
+msgstr "Lipides"
+
+#: app/blueprints/planner/templates/shopping_list.html:9
+msgid "Print"
+msgstr "Imprimer"
+
+#: app/blueprints/planner/templates/shopping_list.html:12
+msgid "Back to Planner"
+msgstr "Retour au planificateur"
+
+#: app/blueprints/planner/templates/shopping_list.html:22
+msgid "Ingredients Needed"
+msgstr "Ingrédients nécessaires"
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+msgid "Based on"
+msgstr "Basé sur"
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+#: app/blueprints/recipes/templates/pantry.html:145
+#: app/blueprints/recipes/templates/search.html:75
+msgid "recipe"
+msgid_plural "recipes"
+msgstr[0] "recette"
+msgstr[1] "recettes"
+
+#: app/blueprints/planner/templates/shopping_list.html:25
+msgid "in your meal plan"
+msgstr "dans votre plan de repas"
+
+#: app/blueprints/planner/templates/shopping_list.html:48
+msgid "Recipes in Plan"
+msgstr "Recettes dans le plan"
+
+#: app/blueprints/planner/templates/shopping_list.html:66
+msgid "No items in your shopping list"
+msgstr "Aucun article dans votre liste de courses"
+
+#: app/blueprints/planner/templates/shopping_list.html:67
+msgid ""
+"Add recipes to your meal plan first, and they need to have ingredients "
+"listed."
+msgstr ""
+"Ajoutez d'abord des recettes à votre plan de repas, et elles doivent "
+"avoir des ingrédients listés."
+
+#: app/blueprints/planner/templates/shopping_list.html:68
+msgid "Go to Meal Planner"
+msgstr "Aller au planificateur de repas"
+
+#: app/blueprints/recipes/routes.py:92
+msgid "Your review has been added!"
+msgstr "Votre e-mail a été mis à jour !"
+
+#: app/blueprints/recipes/routes.py:115
+msgid "Removed from favorites"
+msgstr "Enregistré dans les favoris"
+
+#: app/blueprints/recipes/routes.py:116
+msgid "Recipe removed from favorites!"
+msgstr "Recettes favorites"
+
+#: app/blueprints/recipes/routes.py:122
+msgid "Added to favorites!"
+msgstr "Ajouter aux favoris"
+
+#: app/blueprints/recipes/routes.py:123
+msgid "Recipe added to favorites!"
+msgstr "Ajouter aux favoris"
+
+#: app/blueprints/recipes/routes.py:134
+msgid "This recipe is already in your favorites!"
+msgstr ""
+
+#: app/blueprints/recipes/templates/my_favorites.html:4
+msgid "My Favorite Recipes"
+msgstr "Mes recettes préférées"
+
+#: app/blueprints/recipes/templates/my_favorites.html:29
+msgid ""
+"You don't have any favorite recipes yet. Browse our recipes and add some "
+"to your favorites!"
+msgstr ""
+"Vous n'avez pas encore de recettes préférées. Parcourez nos recettes et "
+"ajoutez-en à vos favoris !"
+
+#: app/blueprints/recipes/templates/pantry.html:101
+msgid "The Pantry Chef"
+msgstr "Le Chef de Cuisine"
+
+#: app/blueprints/recipes/templates/pantry.html:102
+msgid "Select the ingredients you have, and we'll tell you what you can make!"
+msgstr ""
+"Sélectionnez les ingrédients que vous avez, et nous vous dirons ce que "
+"vous pouvez cuisiner !Sélectionnez les ingrédients que vous avez, et nous"
+" vous dirons ce que vous pouvez cuisiner !"
+
+#: app/blueprints/recipes/templates/pantry.html:110
+msgid "My Pantry"
+msgstr "Ma cuisine"
+
+#: app/blueprints/recipes/templates/pantry.html:115
+msgid "Search ingredients..."
+msgstr "Rechercher des ingrédients..."
+
+#: app/blueprints/recipes/templates/pantry.html:129
+msgid "Find Recipes"
+msgstr "Trouver des recettes"
+
+#: app/blueprints/recipes/templates/pantry.html:132
+msgid "Clear Selection"
+msgstr "Effacer la sélection"
+
+#: app/blueprints/recipes/templates/pantry.html:145
+#: app/blueprints/recipes/templates/search.html:75
+msgid "Found"
+msgstr "Trouvé"
+
+#: app/blueprints/recipes/templates/pantry.html:145
+msgid "matching your pantry"
+msgstr "correspondant à votre cuisine"
+
+#: app/blueprints/recipes/templates/pantry.html:147
+msgid "No matching recipes found"
+msgstr "Aucune recette correspondante trouvée"
+
+#: app/blueprints/recipes/templates/pantry.html:162
+msgid "of"
+msgstr "de"
+
+#: app/blueprints/recipes/templates/pantry.html:162
+msgid "ingredients"
+msgstr "ingrédients"
+
+#: app/blueprints/recipes/templates/pantry.html:167
+msgid "Match"
+msgstr "Match"
+
+#: app/blueprints/recipes/templates/pantry.html:181
+msgid "Missing:"
+msgstr "Manquant :"
+
+#: app/blueprints/recipes/templates/pantry.html:188
+msgid "You have everything!"
+msgstr "Vous avez tout !"
+
+#: app/blueprints/recipes/templates/pantry.html:204
+msgid "What's in your fridge?"
+msgstr "Qu'y a-t-il dans votre frigo ?"
+
+#: app/blueprints/recipes/templates/pantry.html:205
+msgid ""
+"Select the ingredients you currently have on hand from the list, and I'll"
+" find recipes you can cook right now."
+msgstr ""
+"Sélectionnez les ingrédients que vous avez actuellement sous la main, et "
+"je trouverai des recettes que vous pouvez cuisiner dès maintenant."
+
+#: app/blueprints/recipes/templates/recipe_detail.html:36
+msgid "review"
+msgstr "avis"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:38
+msgid "No reviews yet"
+msgstr "Pas encore d'avis"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:52
+msgid "Saved to Favorites"
+msgstr "Enregistré dans les favoris"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:52
+msgid "Add to Favorites"
+msgstr "Ajouter aux favoris"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:59
+msgid "Share:"
+msgstr "Partager :"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:79
+msgid "Print Recipe"
+msgstr "Imprimer la recette"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:87
+msgid "Nutritional Information"
+msgstr "Informations nutritionnelles"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:93
+msgid "kcal"
+msgstr "kcal"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:94
+msgid "Calories"
+msgstr "Calories"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:133
+msgid "Ingredients"
+msgstr "Ingrédients"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:153
+msgid "Reviews"
+msgstr "Avis"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:160
+msgid "Write a review..."
+msgstr "Écrire un avis..."
+
+#: app/blueprints/recipes/templates/recipe_detail.html:165
+#: app/blueprints/recipes/templates/recipe_detail.html:166
+#: app/blueprints/recipes/templates/recipe_detail.html:167
+#: app/blueprints/recipes/templates/recipe_detail.html:168
+msgid "Stars"
+msgstr "étoiles"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:169
+msgid "Star"
+msgstr "étoile"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:173
+msgid "Submit Review"
+msgstr "Envoyer l'avis"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:201
+msgid "No reviews yet. Be the first to review!"
+msgstr "Aucun avis pour le moment. Soyez le premier à donner votre avis !"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:210
+msgid "You Might Also Like"
+msgstr "Vous aimerez aussi"
+
+#: app/blueprints/recipes/templates/recipe_detail.html:246
+msgid "Link copied to clipboard!"
+msgstr "Lien copié dans le presse-papier !"
+
+#: app/blueprints/recipes/templates/recipes.html:4
+msgid "All Recipes"
+msgstr "Toutes les recettes"
+
+#: app/blueprints/recipes/templates/recipes.html:28
+#: app/blueprints/recipes/templates/recipes.html:32
+#: app/blueprints/recipes/templates/search.html:116
+#: app/blueprints/recipes/templates/search.html:119
+msgid "Previous"
+msgstr "Précédent"
+
+#: app/blueprints/recipes/templates/recipes.html:56
+#: app/blueprints/recipes/templates/recipes.html:60
+#: app/blueprints/recipes/templates/search.html:135
+#: app/blueprints/recipes/templates/search.html:138
+msgid "Next"
+msgstr "Suivant"
+
+#: app/blueprints/recipes/templates/search.html:5
+msgid "Search Recipes"
+msgstr "Rechercher des recettes"
+
+#: app/blueprints/recipes/templates/search.html:14
+#: app/blueprints/recipes/templates/search.html:60 app/templates/base.html:44
+msgid "Search"
+msgstr "Rechercher"
+
+#: app/blueprints/recipes/templates/search.html:18
+msgid "Search by recipe name or description..."
+msgstr "Rechercher par nom de recette ou description..."
+
+#: app/blueprints/recipes/templates/search.html:25
+msgid "Category"
+msgstr "Catégorie"
+
+#: app/blueprints/recipes/templates/search.html:27
+msgid "All Categories"
+msgstr "Toutes les catégories"
+
+#: app/blueprints/recipes/templates/search.html:36
+msgid "Sort By"
+msgstr "Trier par"
+
+#: app/blueprints/recipes/templates/search.html:38
+msgid "Name (A-Z)"
+msgstr "Nom (A-Z)"
+
+#: app/blueprints/recipes/templates/search.html:39
+msgid "Calories (Low → High)"
+msgstr "Calories (Croissant)"
+
+#: app/blueprints/recipes/templates/search.html:40
+msgid "Calories (High → Low)"
+msgstr "Calories (Décroissant)"
+
+#: app/blueprints/recipes/templates/search.html:41
+msgid "Protein (Highest)"
+msgstr "Protéines (Le plus haut)"
+
+#: app/blueprints/recipes/templates/search.html:47
+msgid "Min Calories"
+msgstr "Calories Min"
+
+#: app/blueprints/recipes/templates/search.html:52
+msgid "Max Calories"
+msgstr "Calories Max"
+
+#: app/blueprints/recipes/templates/search.html:63
+msgid "Clear"
+msgstr "Effacer"
+
+#: app/blueprints/recipes/templates/search.html:76
+msgid "matching"
+msgstr "correspondant"
+
+#: app/blueprints/recipes/templates/search.html:147
+msgid "No recipes found"
+msgstr "Aucune recette trouvée"
+
+#: app/blueprints/recipes/templates/search.html:148
+msgid "Try adjusting your search filters"
+msgstr "Essayez d'ajuster vos filtres de recherche"
+
+#: app/blueprints/recipes/templates/search.html:149
+msgid "Clear Filters"
+msgstr "Effacer les filtres"
+
+#: app/blueprints/recipes/templates/search.html:154
+msgid "Start searching!"
+msgstr "Commencer la recherche !"
+
+#: app/blueprints/recipes/templates/search.html:155
+msgid "Use the filters above to find the perfect recipe"
+msgstr "Utilisez les filtres ci-dessus pour trouver la recette parfaite"
+
+#: app/templates/base.html:6
+msgid "HealthyBytes - Nutritious Recipes"
+msgstr "HealthyBytes - Recettes Nutritives"
+
+#: app/templates/base.html:23 app/templates/base.html:127
+msgid "HealthyBytes"
+msgstr "Bouchées Santé"
+
+#: app/templates/base.html:35
+msgid "Home"
+msgstr "Accueil"
+
+#: app/templates/base.html:38
+msgid "Recipes"
+msgstr "Recettes"
+
+#: app/templates/base.html:41
+msgid "Categories"
+msgstr "Catégories"
+
+#: app/templates/base.html:47
+msgid "Pantry Chef"
+msgstr "Chef de Cuisine"
+
+#: app/templates/base.html:55
+msgid "About"
+msgstr "À propos"
+
+#: app/templates/base.html:76
+msgid "Profile"
+msgstr "Profil"
+
+#: app/templates/base.html:77
+msgid "Favorites"
+msgstr "Favoris"
+
+#: app/templates/base.html:81
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: app/templates/base.html:128
+msgid "Privacy"
+msgstr "Confidentialité"
+
+#: app/templates/error.html:9
+msgid "Return to Home"
+msgstr "Retour à l'accueil"
+
+#: app/translations/recipe_strings.py:8
+msgid "Pancakes"
+msgstr "Pancakes"
+
+#: app/translations/recipe_strings.py:9
+msgid "Omelette"
+msgstr "Omelette"
+
+#: app/translations/recipe_strings.py:10
+msgid "Avocado Toast"
+msgstr "Toast à l'avocat"
+
+#: app/translations/recipe_strings.py:11
+msgid "French Toast"
+msgstr "Pain perdu"
+
+#: app/translations/recipe_strings.py:12
+msgid "Smoothie Bowl"
+msgstr "Bol de smoothie"
+
+#: app/translations/recipe_strings.py:13
+msgid "Waffles"
+msgstr "Gaufres"
+
+#: app/translations/recipe_strings.py:14
+msgid "Grilled Chicken Salad"
+msgstr "Salade de poulet grillé"
+
+#: app/translations/recipe_strings.py:15
+msgid "Beef Burger"
+msgstr "Burger de bœuf"
+
+#: app/translations/recipe_strings.py:16
+msgid "Spaghetti Bolognese"
+msgstr "Spaghetti Bolognaise"
+
+#: app/translations/recipe_strings.py:17
+msgid "Grilled Cheese Sandwich"
+msgstr "Sandwich au fromage grillé"
+
+#: app/translations/recipe_strings.py:18
+msgid "Fish Tacos"
+msgstr "Tacos au poisson"
+
+#: app/translations/recipe_strings.py:19
+msgid "Tuna Melt"
+msgstr "Tuna Melt"
+
+#: app/translations/recipe_strings.py:20
+msgid "Eggplant Parmesan"
+msgstr "Parmigiana d'aubergines"
+
+#: app/translations/recipe_strings.py:21
+msgid "Shrimp Scampi Pasta"
+msgstr "Pâtes aux crevettes à l'ail"
+
+#: app/translations/recipe_strings.py:22
+msgid "Butternut Squash Soup"
+msgstr "Soupe de courge musquée"
+
+#: app/translations/recipe_strings.py:23
+msgid "Lamb Kebabs"
+msgstr "Kebabs d'agneau"
+
+#: app/translations/recipe_strings.py:24
+msgid "Seafood Paella"
+msgstr "Paella aux fruits de mer"
+
+#: app/translations/recipe_strings.py:25
+msgid "Stuffed Bell Peppers"
+msgstr "Poivrons farcis"
+
+#: app/translations/recipe_strings.py:26
+msgid "Molten Caramel Cake"
+msgstr "Moelleux au caramel"
+
+#: app/translations/recipe_strings.py:27
+msgid "Key Lime Pie"
+msgstr "Tarte au citron vert"
+
+#: app/translations/recipe_strings.py:28
+msgid "Red Velvet Cake"
+msgstr "Gâteau Red Velvet"
+
+#: app/translations/recipe_strings.py:29
+msgid "Banana Pudding"
+msgstr "Pudding à la banane"
+
+#: app/translations/recipe_strings.py:30
+msgid "Lemon Tart"
+msgstr "Tarte au citron"
+
+#: app/translations/recipe_strings.py:31
+msgid "Strawberry Cheesecake"
+msgstr "Cheesecake aux fraises"
+
+#: app/translations/recipe_strings.py:32
+msgid "Greek Yogurt Parfait"
+msgstr "Parfait au yaourt grec"
+
+#: app/translations/recipe_strings.py:33
+msgid "Oatmeal with Berries"
+msgstr "Flocons d'avoine aux baies"
+
+#: app/translations/recipe_strings.py:34
+msgid "Lentil Soup"
+msgstr "Soupe aux lentilles"
+
+#: app/translations/recipe_strings.py:35
+msgid "Turkey Wraps"
+msgstr "Wraps à la dinde"
+
+#: app/translations/recipe_strings.py:36
+msgid "Chicken Stir Fry"
+msgstr "Wok de poulet"
+
+#: app/translations/recipe_strings.py:37
+msgid "Zucchini Noodles with Pesto"
+msgstr "Nouilles de courgettes au pesto"
+
+#: app/translations/recipe_strings.py:38
+msgid "Frozen Yogurt Bites"
+msgstr "Bouchées de yaourt glacé"
+
+#: app/translations/recipe_strings.py:39
+msgid "Chia Seed Pudding"
+msgstr "Pudding aux graines de chia"
+
+#: app/translations/recipe_strings.py:40
+msgid "Teriyaki Salmon"
+msgstr "Saumon Teriyaki"
+
+#: app/translations/recipe_strings.py:41
+msgid "Quinoa Salad"
+msgstr "Salade de quinoa"
+
+#: app/translations/recipe_strings.py:42
+msgid "Caesar Salad"
+msgstr "Salade César"
+
+#: app/translations/recipe_strings.py:43
+msgid "Vegetable Curry"
+msgstr "Curry de légumes"
+
+#: app/translations/recipe_strings.py:44
+msgid "Mushroom Risotto"
+msgstr "Risotto aux champignons"
+
+#: app/translations/recipe_strings.py:45
+msgid "Protein Brownies"
+msgstr "Brownies protéinés"
+
+#: app/translations/recipe_strings.py:46
+msgid "Shakshuka"
+msgstr "Chakchouka"
+
+#: app/translations/recipe_strings.py:47
+msgid "Pesto Penne Pasta"
+msgstr "Pennes au pesto"
+
+#: app/translations/recipe_strings.py:48
+msgid "Caprese Salad"
+msgstr "Salade Caprese"
+
+#: app/translations/recipe_strings.py:49
+msgid "Baked Ziti"
+msgstr "Ziti au four"
+
+#: app/translations/recipe_strings.py:50
+msgid "Minestrone Soup"
+msgstr "Soupe Minestrone"
+
+#: app/translations/recipe_strings.py:51
+msgid "Mango Lassi"
+msgstr "Lassi à la mangue"
+
+#: app/translations/recipe_strings.py:52
+msgid "BBQ Chicken Pizza"
+msgstr "Pizza au poulet BBQ"
+
+#: app/translations/recipe_strings.py:53
+msgid "Breakfast Burrito"
+msgstr "Burrito de petit-déjeuner"
+
+#: app/translations/recipe_strings.py:54
+msgid "Fruit Salad"
+msgstr "Salade de fruits"
+
+#: app/translations/recipe_strings.py:57
+msgid "Fluffy pancakes with maple syrup"
+msgstr "Pancakes moelleux au sirop d'érable"
+
+#: app/translations/recipe_strings.py:58
+msgid "Cheese and veggie omelette"
+msgstr "Omelette au fromage et aux légumes"
+
+#: app/translations/recipe_strings.py:59
+msgid "Toasted bread topped with smashed avocado and poached egg"
+msgstr "Pain grillé garni d'avocat écrasé et d'un œuf poché"
+
+#: app/translations/recipe_strings.py:60
+msgid "Golden brown French toast with cinnamon and syrup"
+msgstr "Pain perdu doré à la cannelle et au sirop"
+
+#: app/translations/recipe_strings.py:61
+msgid "Mixed fruit smoothie topped with granola and fresh fruits"
+msgstr "Smoothie aux fruits mélangés garni de granola et de fruits frais"
+
+#: app/translations/recipe_strings.py:62
+msgid "Crispy waffles served with fresh fruits and whipped cream"
+msgstr "Gaufres croustillantes servies avec des fruits frais et de la crème fouettée"
+
+#: app/translations/recipe_strings.py:63
+msgid ""
+"Fresh mixed greens topped with grilled chicken breast, cherry tomatoes, "
+"and vinaigrette."
+msgstr ""
+
+#: app/translations/recipe_strings.py:64
+msgid "Juicy beef patty served in a bun with cheese, lettuce, and special sauce"
+msgstr "Steak de bœuf juteux servi dans un pain avec du fromage, de la laitue et une sauce spéciale"
+
+#: app/translations/recipe_strings.py:65
+msgid "Classic Italian pasta with rich tomato and beef sauce"
+msgstr "Pâtes italiennes classiques avec une riche sauce tomate et bœuf"
+
+#: app/translations/recipe_strings.py:66
+msgid "Melted cheese between two slices of crispy toasted bread"
+msgstr "Fromage fondu entre deux tranches de pain grillé croustillant"
+
+#: app/translations/recipe_strings.py:67
+msgid "Soft tortillas filled with crispy fish, slaw, and spicy mayo"
+msgstr "Tortillas souples garnies de poisson croustillant, de salade de chou et de mayonnaise épicée"
+
+#: app/translations/recipe_strings.py:68
+msgid "Toasted bread with tuna salad and melted cheddar cheese"
+msgstr "Pain grillé avec salade de thon et fromage cheddar fondu"
+
+#: app/translations/recipe_strings.py:69
+msgid "Breaded eggplant layered with marinara and melted mozzarella"
+msgstr "Aubergines panées avec de la sauce marinara et de la mozzarella fondue"
+
+#: app/translations/recipe_strings.py:70
+msgid "Garlicky shrimp tossed with linguine in white wine butter sauce"
+msgstr "Crevettes à l'ail mélangées à des linguines dans une sauce au beurre et au vin blanc"
+
+#: app/translations/recipe_strings.py:71
+msgid "Velvety soup with roasted squash, sage, and a touch of cream"
+msgstr "Soupe veloutée à la courge rôtie, sauge et une touche de crème"
+
+#: app/translations/recipe_strings.py:72
+msgid "Marinated lamb grilled with bell peppers and onions"
+msgstr "Agneau mariné grillé avec des poivrons et des oignons"
+
+#: app/translations/recipe_strings.py:73
+msgid "Spanish rice dish with shrimp, mussels, and saffron"
+msgstr "Plat de riz espagnol avec crevettes, moules et safran"
+
+#: app/translations/recipe_strings.py:74
+msgid "Peppers filled with ground turkey, rice, and tomatoes"
+msgstr "Poivrons farcis à la dinde hachée, au riz et aux tomates"
+
+#: app/translations/recipe_strings.py:75
+msgid "Gooey caramel-filled cake with sea salt garnish"
+msgstr "Gâteau fondant au caramel avec une pincée de sel marin"
+
+#: app/translations/recipe_strings.py:76
+msgid "Tangy lime custard in graham cracker crust"
+msgstr "Crème pâtissière au citron vert dans une croûte de biscuits Graham"
+
+#: app/translations/recipe_strings.py:77
+msgid "Moist red cake with cream cheese frosting"
+msgstr "Gâteau rouge moelleux avec un glaçage au fromage à la crème"
+
+#: app/translations/recipe_strings.py:78
+msgid "Layered pudding with vanilla wafers and fresh bananas"
+msgstr "Pudding à étages avec des gaufrettes à la vanille et des bananes fraîches"
+
+#: app/translations/recipe_strings.py:79
+msgid "Buttery crust filled with tangy lemon curd"
+msgstr "Croûte beurrée remplie d'une crème au citron acidulée"
+
+#: app/translations/recipe_strings.py:80
+msgid "Creamy cheesecake on graham crust with fresh strawberries"
+msgstr "Cheesecake crémeux sur croûte de Graham avec des fraises fraîches"
+
+#: app/translations/recipe_strings.py:81
+msgid "Greek yogurt layered with granola and fresh berries"
+msgstr "Yaourt grec superposé à du granola et des baies fraîches"
+
+#: app/translations/recipe_strings.py:82
+msgid "Warm oatmeal served with mixed berries and honey"
+msgstr "Flocons d'avoine chauds servis avec des baies mélangées et du miel"
+
+#: app/translations/recipe_strings.py:83
+msgid "Comforting and hearty lentil soup with spices"
+msgstr "Soupe aux lentilles réconfortante et copieuse avec des épices"
+
+#: app/translations/recipe_strings.py:84
+msgid "Healthy turkey wraps with veggies and low-fat dressing"
+msgstr "Wraps à la dinde sains avec légumes et sauce allégée"
+
+#: app/translations/recipe_strings.py:85
+msgid "Quick chicken stir-fry with colorful veggies"
+msgstr "Sauté de poulet rapide avec des légumes colorés"
+
+#: app/translations/recipe_strings.py:86
+msgid "Low-carb zucchini noodles tossed with fresh pesto"
+msgstr "Nouilles de courgettes à faible teneur en glucides avec du pesto frais"
+
+#: app/translations/recipe_strings.py:87
+msgid "Mini frozen yogurt bites with mixed fruits"
+msgstr "Mini bouchées de yaourt glacé avec des fruits mélangés"
+
+#: app/translations/recipe_strings.py:88
+msgid "Creamy chia pudding topped with fruits"
+msgstr "Pudding crémeux au chia garni de fruits"
+
+#: app/translations/recipe_strings.py:89
+msgid "Glazed salmon fillets with homemade teriyaki sauce"
+msgstr "Filets de saumon glacés avec une sauce teriyaki maison"
+
+#: app/translations/recipe_strings.py:90
+msgid "Light and refreshing quinoa salad with cucumber and feta"
+msgstr "Salade de quinoa légère et rafraîchissante avec concombre et feta"
+
+#: app/translations/recipe_strings.py:91
+msgid "Classic Caesar salad with homemade dressing and croutons"
+msgstr "Salade César classique avec vinaigrette maison et croûtons"
+
+#: app/translations/recipe_strings.py:92
+msgid "Rich coconut milk vegetable curry with potatoes and carrots"
+msgstr "Curry de légumes au lait de coco avec pommes de terre et carottes"
+
+#: app/translations/recipe_strings.py:93
+msgid "Creamy arborio rice with wild mushrooms and parmesan"
+msgstr "Riz arborio crémeux aux champignons sauvages et parmesan"
+
+#: app/translations/recipe_strings.py:94
+msgid "Fudgy chocolate brownies packed with whey protein"
+msgstr "Brownies au chocolat fondants riches en protéines de lactosérum"
+
+#: app/translations/recipe_strings.py:95
+msgid "Eggs poached in a sauce of tomatoes, chili peppers, and onions"
+msgstr "Œufs pochés dans une sauce de tomates, piments et oignons"
+
+#: app/translations/recipe_strings.py:96
+msgid "Simple penne pasta tossed in basil pesto sauce"
+msgstr "Pâtes penne simples mélangées à une sauce pesto au basilic"
+
+#: app/translations/recipe_strings.py:97
+msgid "Fresh mozzarella, tomatoes, and sweet basil"
+msgstr "Mozzarella fraîche, tomates et basilic doux"
+
+#: app/translations/recipe_strings.py:98
+msgid "Cheesy baked ziti with marinara and ground sausage"
+msgstr "Pâtes Ziti au four avec sauce marinara et saucisse hachée"
+
+#: app/translations/recipe_strings.py:99
+msgid "Traditional Italian vegetable soup with beans and pasta"
+msgstr "Soupe de légumes italienne traditionnelle avec haricots et pâtes"
+
+#: app/translations/recipe_strings.py:100
+msgid "Refreshing Indian yogurt drink with fresh mango"
+msgstr "Boisson indienne rafraîchissante au yaourt et à la mangue fraîche"
+
+#: app/translations/recipe_strings.py:101
+msgid "Homemade pizza topped with BBQ sauce, chicken, and red unions"
+msgstr "Pizza maison garnie de sauce BBQ, de poulet et d'oignons rouges"
+
+#: app/translations/recipe_strings.py:102
+msgid "Scrambled eggs, beans, and cheese wrapped in a tortilla"
+msgstr "Œufs brouillés, haricots et fromage enveloppés dans une tortilla"
+
+#: app/translations/recipe_strings.py:103
+msgid "A mix of fresh seasonal fruits"
+msgstr "Un mélange de fruits frais de saison"
+
+msgid "Pancakes"
+msgstr "Pancakes"
+
+msgid "Fluffy pancakes with maple syrup"
+msgstr "Pancakes moelleux au sirop d'érable"
+
+msgid "Omelette"
+msgstr "Omelette"
+
+msgid "Cheese and veggie omelette"
+msgstr "Omelette au fromage et aux légumes"
+
+msgid "Avocado Toast"
+msgstr "Toast à l'avocat"
+
+msgid "French Toast"
+msgstr "Pain perdu"
+
+msgid "Smoothie Bowl"
+msgstr "Bol de smoothie"
+
+msgid "Waffles"
+msgstr "Gaufres"
+
+msgid "Grilled Chicken Salad"
+msgstr "Salade de poulet grillé"
+
+msgid "Beef Burger"
+msgstr "Burger de bœuf"
+
+msgid "Breakfast"
+msgstr "Petit Déjeuner"
+
+msgid "Lunch"
+msgstr "Déjeuner"
+
+msgid "Dinner"
+msgstr "Dîner"
+
+msgid "Dessert"
+msgstr "Dessert"
+
+msgid "Eggplant Parmesan"
+msgstr "Parmigiana d'aubergines"
+
+msgid "Shrimp Scampi Pasta"
+msgstr "Pâtes aux crevettes à l'ail"
+
+msgid "Butternut Squash Soup"
+msgstr "Soupe de courge musquée"
+
+msgid "Lamb Kebabs"
+msgstr "Kebabs d'agneau"
+
+msgid "Seafood Paella"
+msgstr "Paella aux fruits de mer"
+
+msgid "Stuffed Bell Peppers"
+msgstr "Poivrons farcis"
+
+msgid "Molten Caramel Cake"
+msgstr "Moelleux au caramel"
+
+msgid "Key Lime Pie"
+msgstr "Tarte au citron vert"
+
+msgid "Red Velvet Cake"
+msgstr "Gâteau Red Velvet"
+
+msgid "Banana Pudding"
+msgstr "Pudding à la banane"
+
+msgid "Lemon Tart"
+msgstr "Tarte au citron"
+
+msgid "Strawberry Cheesecake"
+msgstr "Cheesecake aux fraises"
+
+msgid "Greek Yogurt Parfait"
+msgstr "Parfait au yaourt grec"
+
+msgid "Oatmeal with Berries"
+msgstr "Flocons d'avoine aux baies"
+
+msgid "Lentil Soup"
+msgstr "Soupe aux lentilles"
+
+msgid "Turkey Wraps"
+msgstr "Wraps à la dinde"
+
+msgid "Chicken Stir Fry"
+msgstr "Wok de poulet"
+
+msgid "Zucchini Noodles with Pesto"
+msgstr "Nouilles de courgettes au pesto"
+
+msgid "Frozen Yogurt Bites"
+msgstr "Bouchées de yaourt glacé"
+
+msgid "Chia Seed Pudding"
+msgstr "Pudding aux graines de chia"
+
+msgid "Teriyaki Salmon"
+msgstr "Saumon Teriyaki"
+
+msgid "Quinoa Salad"
+msgstr "Salade de quinoa"
+
+msgid "Caesar Salad"
+msgstr "Salade César"
+
+msgid "Vegetable Curry"
+msgstr "Curry de légumes"
+
+msgid "Mushroom Risotto"
+msgstr "Risotto aux champignons"
+
+msgid "Protein Brownies"
+msgstr "Brownies protéinés"
+
+msgid "Shakshuka"
+msgstr "Chakchouka"
+
+msgid "Pesto Penne Pasta"
+msgstr "Pennes au pesto"
+
+msgid "Caprese Salad"
+msgstr "Salade Caprese"
+
+msgid "Baked Ziti"
+msgstr "Ziti au four"
+
+msgid "Minestrone Soup"
+msgstr "Soupe Minestrone"
+
+msgid "Mango Lassi"
+msgstr "Lassi à la mangue"
+
+msgid "BBQ Chicken Pizza"
+msgstr "Pizza au poulet BBQ"
+
+msgid "Breakfast Burrito"
+msgstr "Burrito de petit-déjeuner"
+
+msgid "Fruit Salad"
+msgstr "Salade de fruits"
+
+msgid "Start your day with these nutritious breakfast recipes"
+msgstr "Commencez votre journée avec ces recettes nutritives"
+
+msgid "Healthy and satisfying midday meal options"
+msgstr "Options de repas de midi saines et satisfaisantes"
+
+msgid "Nutritious dinner recipes to end your day right"
+msgstr "Recettes de dîner nutritives pour bien finir la journée"
+
+msgid "Healthier versions of your favorite sweet treats"
+msgstr "Versions plus saines de vos douceurs préférées"
+
+msgid "Toasted bread topped with smashed avocado and poached egg"
+msgstr "Pain grillé garni d'avocat écrasé et d'un œuf poché"
+
+msgid "Golden brown French toast with cinnamon and syrup"
+msgstr "Pain perdu doré à la cannelle et au sirop"
+
+msgid "Mixed fruit smoothie topped with granola and fresh fruits"
+msgstr "Smoothie aux fruits mélangés garni de granola et de fruits frais"
+
+msgid "Crispy waffles served with fresh fruits and whipped cream"
+msgstr "Gaufres croustillantes servies avec des fruits frais et de la crème fouettée"
+
+msgid ""
+#~ "Fresh mixed greens topped with grilled"
+#~ " chicken breast, cherry tomatoes, and "
+#~ "vinaigrette."
+msgstr "Salade composée garnie de blanc de poulet grillé et tomates cerises"
+
+msgid ""
+#~ "Juicy beef patty served in a bun"
+#~ " with cheese, lettuce, and special "
+#~ "sauce"
+msgstr "Pâté de bœuf juteux servi dans un pain avec fromage et laitue"
+
+msgid "Spaghetti Bolognese"
+msgstr "Spaghetti Bolognaise"
+
+msgid "Classic Italian pasta with rich tomato and beef sauce"
+msgstr "Pâtes italiennes classiques avec une riche sauce tomate et bœuf"
+
+msgid "Grilled Cheese Sandwich"
+msgstr "Sandwich au fromage grillé"
+
+msgid "Melted cheese between two slices of crispy toasted bread"
+msgstr "Fromage fondu entre deux tranches de pain grillé croustillant"
+
+msgid "Fish Tacos"
+msgstr "Tacos au poisson"
+
+msgid "Soft tortillas filled with crispy fish, slaw, and spicy mayo"
+msgstr "Tortillas souples garnies de poisson croustillant, de salade de chou et de mayonnaise épicée"
+
+msgid "Tuna Melt"
+msgstr "Tuna Melt"
+
+msgid "Toasted bread with tuna salad and melted cheddar cheese"
+msgstr "Pain grillé avec salade de thon et fromage cheddar fondu"
+
+msgid "Breaded eggplant layered with marinara and melted mozzarella"
+msgstr "Aubergines panées avec de la sauce marinara et de la mozzarella fondue"
+
+msgid "Garlicky shrimp tossed with linguine in white wine butter sauce"
+msgstr "Crevettes à l'ail mélangées à des linguines dans une sauce au beurre et au vin blanc"
+
+msgid "Velvety soup with roasted squash, sage, and a touch of cream"
+msgstr "Soupe veloutée à la courge rôtie, sauge et une touche de crème"
+
+msgid "Marinated lamb grilled with bell peppers and onions"
+msgstr "Agneau mariné grillé avec des poivrons et des oignons"
+
+msgid "Spanish rice dish with shrimp, mussels, and saffron"
+msgstr "Plat de riz espagnol avec crevettes, moules et safran"
+
+msgid "Peppers filled with ground turkey, rice, and tomatoes"
+msgstr "Poivrons farcis à la dinde hachée, au riz et aux tomates"
+
+msgid "Gooey caramel-filled cake with sea salt garnish"
+msgstr "Gâteau fondant au caramel avec une pincée de sel marin"
+
+msgid "Tangy lime custard in graham cracker crust"
+msgstr "Crème pâtissière au citron vert dans une croûte de biscuits Graham"
+
+msgid "Moist red cake with cream cheese frosting"
+msgstr "Gâteau rouge moelleux avec un glaçage au fromage à la crème"
+
+msgid "Layered pudding with vanilla wafers and fresh bananas"
+msgstr "Pudding à étages avec des gaufrettes à la vanille et des bananes fraîches"
+
+msgid "Buttery crust filled with tangy lemon curd"
+msgstr "Croûte beurrée remplie d'une crème au citron acidulée"
+
+msgid "Creamy cheesecake on graham crust with fresh strawberries"
+msgstr "Cheesecake crémeux sur croûte de Graham avec des fraises fraîches"
+
+msgid "Greek yogurt layered with granola and fresh berries"
+msgstr "Yaourt grec superposé à du granola et des baies fraîches"
+
+msgid "Warm oatmeal served with mixed berries and honey"
+msgstr "Flocons d'avoine chauds servis avec des baies mélangées et du miel"
+
+msgid "Comforting and hearty lentil soup with spices"
+msgstr "Soupe aux lentilles réconfortante et copieuse avec des épices"
+
+msgid "Healthy turkey wraps with veggies and low-fat dressing"
+msgstr "Wraps à la dinde sains avec légumes et sauce allégée"
+
+msgid "Quick chicken stir-fry with colorful veggies"
+msgstr "Sauté de poulet rapide avec des légumes colorés"
+
+msgid "Low-carb zucchini noodles tossed with fresh pesto"
+msgstr "Nouilles de courgettes à faible teneur en glucides avec du pesto frais"
+
+msgid "Mini frozen yogurt bites with mixed fruits"
+msgstr "Mini bouchées de yaourt glacé avec des fruits mélangés"
+
+msgid "Creamy chia pudding topped with fruits"
+msgstr "Pudding crémeux au chia garni de fruits"
+
+msgid "Glazed salmon fillets with homemade teriyaki sauce"
+msgstr "Filets de saumon glacés avec une sauce teriyaki maison"
+
+msgid "Light and refreshing quinoa salad with cucumber and feta"
+msgstr "Salade de quinoa légère et rafraîchissante avec concombre et feta"
+
+msgid "Classic Caesar salad with homemade dressing and croutons"
+msgstr "Salade César classique avec vinaigrette maison et croûtons"
+
+msgid "Rich coconut milk vegetable curry with potatoes and carrots"
+msgstr "Curry de légumes au lait de coco avec pommes de terre et carottes"
+
+msgid "Creamy arborio rice with wild mushrooms and parmesan"
+msgstr "Riz arborio crémeux aux champignons sauvages et parmesan"
+
+msgid "Fudgy chocolate brownies packed with whey protein"
+msgstr "Brownies au chocolat fondants riches en protéines de lactosérum"
+
+msgid "Eggs poached in a sauce of tomatoes, chili peppers, and onions"
+msgstr "Œufs pochés dans une sauce de tomates, piments et oignons"
+
+msgid "Simple penne pasta tossed in basil pesto sauce"
+msgstr "Pâtes penne simples mélangées à une sauce pesto au basilic"
+
+msgid "Fresh mozzarella, tomatoes, and sweet basil"
+msgstr "Mozzarella fraîche, tomates et basilic doux"
+
+msgid "Cheesy baked ziti with marinara and ground sausage"
+msgstr "Pâtes Ziti au four avec sauce marinara et saucisse hachée"
+
+msgid "Traditional Italian vegetable soup with beans and pasta"
+msgstr "Soupe de légumes italienne traditionnelle avec haricots et pâtes"
+
+msgid "Refreshing Indian yogurt drink with fresh mango"
+msgstr "Boisson indienne rafraîchissante au yaourt et à la mangue fraîche"
+
+msgid "Homemade pizza topped with BBQ sauce, chicken, and red unions"
+msgstr "Pizza maison garnie de sauce BBQ, de poulet et d'oignons rouges"
+
+msgid "Scrambled eggs, beans, and cheese wrapped in a tortilla"
+msgstr "Œufs brouillés, haricots et fromage enveloppés dans une tortilla"
+
+msgid "A mix of fresh seasonal fruits"
+msgstr "Un mélange de fruits frais de saison"
+
+msgid "Snack"
+msgstr "Goûter"
+
+msgid "Saturday"
+msgstr "Samedi"
+
+msgid "Sunday"
+msgstr "Dimanche"
+
+msgid "Monday"
+msgstr "Lundi"
+
+msgid "Tuesday"
+msgstr "Mardi"
+
+msgid "Wednesday"
+msgstr "Mercredi"
+
+msgid "Thursday"
+msgstr "Jeudi"
+
+msgid "Friday"
+msgstr "Vendredi"
+
+msgid "all-purpose flour"
+msgstr "farine tout usage"
+
+msgid "All-purpose flour"
+msgstr "Farine tout usage"
+
+msgid "milk"
+msgstr "lait"
+
+msgid "Milk"
+msgstr "Lait"
+
+msgid "egg"
+msgstr "œuf"
+
+msgid "Egg"
+msgstr "Œuf"
+
+msgid "butter"
+msgstr "beurre"
+
+msgid "Butter"
+msgstr "Beurre"
+
+msgid "sugar"
+msgstr "sucre"
+
+msgid "Sugar"
+msgstr "Sucre"
+
+msgid "baking powder"
+msgstr "levure chimique"
+
+msgid "Baking powder"
+msgstr "Levure chimique"
+
+msgid "salt"
+msgstr "sel"
+
+msgid "Salt"
+msgstr "Sel"
+
+msgid "maple syrup"
+msgstr "sirop d'érable"
+
+msgid "Maple syrup"
+msgstr "Sirop d'érable"
+
+msgid "eggs"
+msgstr "œufs"
+
+msgid "Eggs"
+msgstr "Œufs"
+
+msgid "cheddar cheese"
+msgstr "fromage cheddar"
+
+msgid "Cheddar cheese"
+msgstr "Fromage cheddar"
+
+msgid "bell pepper"
+msgstr "poivron"
+
+msgid "Bell pepper"
+msgstr "Poivron"
+
+msgid "onion"
+msgstr "oignon"
+
+msgid "Onion"
+msgstr "Oignon"
+
+msgid "mushrooms"
+msgstr "champignons"
+
+msgid "Mushrooms"
+msgstr "Champignons"
+
+msgid "pepper"
+msgstr "poivre"
+
+msgid "Pepper"
+msgstr "Poivre"
+
+msgid "sourdough bread"
+msgstr "pain au levain"
+
+msgid "Sourdough bread"
+msgstr "Pain au levain"
+
+msgid "avocado"
+msgstr "avocat"
+
+msgid "Avocado"
+msgstr "Avocat"
+
+msgid "cherry tomatoes"
+msgstr "tomates cerises"
+
+msgid "Cherry tomatoes"
+msgstr "Tomates cerises"
+
+msgid "red pepper flakes"
+msgstr "flocons de piment rouge"
+
+msgid "Red pepper flakes"
+msgstr "Flocons de piment rouge"
+
+msgid "lemon juice"
+msgstr "jus de citron"
+
+msgid "Lemon juice"
+msgstr "Jus de citron"
+
+msgid "bread"
+msgstr "pain"
+
+msgid "Bread"
+msgstr "Pain"
+
+msgid "cinnamon"
+msgstr "cannelle"
+
+msgid "Cinnamon"
+msgstr "Cannelle"
+
+msgid "vanilla extract"
+msgstr "extrait de vanille"
+
+msgid "Vanilla extract"
+msgstr "Extrait de vanille"
+
+msgid "banana"
+msgstr "banane"
+
+msgid "Banana"
+msgstr "Banane"
+
+msgid "mixed berries"
+msgstr "mélange de baies"
+
+msgid "Mixed berries"
+msgstr "Mélange de baies"
+
+msgid "almond milk"
+msgstr "lait d'amande"
+
+msgid "Almond milk"
+msgstr "Lait d'amande"
+
+msgid "granola"
+msgstr "granola"
+
+msgid "Granola"
+msgstr "Granola"
+
+msgid "chia seeds"
+msgstr "graines de chia"
+
+msgid "Chia seeds"
+msgstr "Graines de chia"
+
+msgid "honey"
+msgstr "miel"
+
+msgid "Honey"
+msgstr "Miel"
+
+msgid "vegetable oil"
+msgstr "huile végétale"
+
+msgid "Vegetable oil"
+msgstr "Huile végétale"
+
+msgid "chicken breast"
+msgstr "poitrine de poulet"
+
+msgid "Chicken breast"
+msgstr "Poitrine de poulet"
+
+msgid "mixed salad greens"
+msgstr "mélange de salade verte"
+
+msgid "Mixed salad greens"
+msgstr "Mélange de salade verte"
+
+msgid "cucumber"
+msgstr "concombre"
+
+msgid "Cucumber"
+msgstr "Concombre"
+
+msgid "red onion"
+msgstr "oignon rouge"
+
+msgid "Red onion"
+msgstr "Oignon rouge"
+
+msgid "olive oil"
+msgstr "huile d'olive"
+
+msgid "Olive oil"
+msgstr "Huile d'olive"
+
+msgid "balsamic vinegar"
+msgstr "vinaigre balsamique"
+
+msgid "Balsamic vinegar"
+msgstr "Vinaigre balsamique"
+
+msgid "black pepper"
+msgstr "poivre noir"
+
+msgid "Black pepper"
+msgstr "Poivre noir"
+
+msgid "ground beef"
+msgstr "bœuf haché"
+
+msgid "Ground beef"
+msgstr "Bœuf haché"
+
+msgid "hamburger bun"
+msgstr "pain à hamburger"
+
+msgid "Hamburger bun"
+msgstr "Pain à hamburger"
+
+msgid "lettuce"
+msgstr "laitue"
+
+msgid "Lettuce"
+msgstr "Laitue"
+
+msgid "tomato"
+msgstr "tomate"
+
+msgid "Tomato"
+msgstr "Tomate"
+
+msgid "ketchup"
+msgstr "ketchup"
+
+msgid "Ketchup"
+msgstr "Ketchup"
+
+msgid "spaghetti"
+msgstr "spaghetti"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "garlic"
+msgstr "ail"
+
+msgid "Garlic"
+msgstr "Ail"
+
+msgid "tomato sauce"
+msgstr "sauce tomate"
+
+msgid "Tomato sauce"
+msgstr "Sauce tomate"
+
+msgid "tomato paste"
+msgstr "pâte de tomate"
+
+msgid "Tomato paste"
+msgstr "Pâte de tomate"
+
+msgid "oregano"
+msgstr "origan"
+
+msgid "Oregano"
+msgstr "Origan"
+
+msgid "basil"
+msgstr "basilic"
+
+msgid "Basil"
+msgstr "Basilic"
+
+msgid "parmesan cheese"
+msgstr "parmesan"
+
+msgid "Parmesan cheese"
+msgstr "Parmesan"
+
+msgid "white fish fillets"
+msgstr "filets de poisson blanc"
+
+msgid "White fish fillets"
+msgstr "Filets de poisson blanc"
+
+msgid "corn tortillas"
+msgstr "tortillas de maïs"
+
+msgid "Corn tortillas"
+msgstr "Tortillas de maïs"
+
+msgid "cabbage slaw"
+msgstr "salade de chou"
+
+msgid "Cabbage slaw"
+msgstr "Salade de chou"
+
+msgid "spicy mayo"
+msgstr "mayonnaise épicée"
+
+msgid "Spicy mayo"
+msgstr "Mayonnaise épicée"
+
+msgid "lime"
+msgstr "citron vert"
+
+msgid "Lime"
+msgstr "Citron vert"
+
+msgid "cilantro"
+msgstr "coriandre"
+
+msgid "Cilantro"
+msgstr "Coriandre"
+
+msgid "canned tuna"
+msgstr "thon en conserve"
+
+msgid "Canned tuna"
+msgstr "Thon en conserve"
+
+msgid "mayonnaise"
+msgstr "mayonnaise"
+
+msgid "Mayonnaise"
+msgstr "Mayonnaise"
+
+msgid "celery"
+msgstr "céleri"
+
+msgid "Celery"
+msgstr "Céleri"
+
+msgid "eggplant"
+msgstr "aubergine"
+
+msgid "Eggplant"
+msgstr "Aubergine"
+
+msgid "marinara sauce"
+msgstr "sauce marinara"
+
+msgid "Marinara sauce"
+msgstr "Sauce marinara"
+
+msgid "mozzarella cheese"
+msgstr "mozzarella"
+
+msgid "Mozzarella cheese"
+msgstr "Mozzarella"
+
+msgid "breadcrumbs"
+msgstr "chapelure"
+
+msgid "Breadcrumbs"
+msgstr "Chapelure"
+
+msgid "linguine"
+msgstr "linguine"
+
+msgid "Linguine"
+msgstr "Linguine"
+
+msgid "shrimp"
+msgstr "crevettes"
+
+msgid "Shrimp"
+msgstr "Crevettes"
+
+msgid "white wine"
+msgstr "vin blanc"
+
+msgid "White wine"
+msgstr "Vin blanc"
+
+msgid "parsley"
+msgstr "persil"
+
+msgid "Parsley"
+msgstr "Persil"
+
+msgid "butternut squash"
+msgstr "courge musquée"
+
+msgid "Butternut squash"
+msgstr "Courge musquée"
+
+msgid "vegetable broth"
+msgstr "bouillon de légumes"
+
+msgid "Vegetable broth"
+msgstr "Bouillon de légumes"
+
+msgid "heavy cream"
+msgstr "crème épaisse"
+
+msgid "Heavy cream"
+msgstr "Crème épaisse"
+
+msgid "sage"
+msgstr "sauge"
+
+msgid "Sage"
+msgstr "Sauge"
+
+msgid "nutmeg"
+msgstr "noix de muscade"
+
+msgid "Nutmeg"
+msgstr "Noix de muscade"
+
+msgid "lamb meat"
+msgstr "viande d'agneau"
+
+msgid "Lamb meat"
+msgstr "Viande d'agneau"
+
+msgid "cumin"
+msgstr "cumin"
+
+msgid "Cumin"
+msgstr "Cumin"
+
+msgid "coriander"
+msgstr "coriandre"
+
+msgid "Coriander"
+msgstr "Coriandre"
+
+msgid "arborio rice"
+msgstr "riz arborio"
+
+msgid "Arborio rice"
+msgstr "Riz arborio"
+
+msgid "mussels"
+msgstr "moules"
+
+msgid "Mussels"
+msgstr "Moules"
+
+msgid "chicken broth"
+msgstr "bouillon de poulet"
+
+msgid "Chicken broth"
+msgstr "Bouillon de poulet"
+
+msgid "saffron"
+msgstr "safran"
+
+msgid "Saffron"
+msgstr "Safran"
+
+msgid "ground turkey"
+msgstr "dinde hachée"
+
+msgid "Ground turkey"
+msgstr "Dinde hachée"
+
+msgid "cooked rice"
+msgstr "riz cuit"
+
+msgid "Cooked rice"
+msgstr "Riz cuit"
+
+msgid "dark chocolate"
+msgstr "chocolat noir"
+
+msgid "Dark chocolate"
+msgstr "Chocolat noir"
+
+msgid "caramel sauce"
+msgstr "sauce au caramel"
+
+msgid "Caramel sauce"
+msgstr "Sauce au caramel"
+
+msgid "sea salt"
+msgstr "sel de mer"
+
+msgid "Sea salt"
+msgstr "Sel de mer"
+
+msgid "graham cracker crumbs"
+msgstr "miettes de biscuits Graham"
+
+msgid "Graham cracker crumbs"
+msgstr "Miettes de biscuits Graham"
+
+msgid "sweetened condensed milk"
+msgstr "lait concentré sucré"
+
+msgid "Sweetened condensed milk"
+msgstr "Lait concentré sucré"
+
+msgid "key lime juice"
+msgstr "jus de lime"
+
+msgid "Key lime juice"
+msgstr "Jus de lime"
+
+msgid "egg yolks"
+msgstr "jaunes d'œufs"
+
+msgid "Egg yolks"
+msgstr "Jaunes d'œufs"
+
+msgid "cocoa powder"
+msgstr "cacao en poudre"
+
+msgid "Cocoa powder"
+msgstr "Cacao en poudre"
+
+msgid "baking soda"
+msgstr "bicarbonate de soude"
+
+msgid "Baking soda"
+msgstr "Bicarbonate de soude"
+
+msgid "buttermilk"
+msgstr "babeurre"
+
+msgid "Buttermilk"
+msgstr "Babeurre"
+
+msgid "red food coloring"
+msgstr "colorant alimentaire rouge"
+
+msgid "Red food coloring"
+msgstr "Colorant alimentaire rouge"
+
+msgid "cream cheese"
+msgstr "fromage à la crème"
+
+msgid "Cream cheese"
+msgstr "Fromage à la crème"
+
+msgid "vanilla wafers"
+msgstr "gaufrettes à la vanille"
+
+msgid "Vanilla wafers"
+msgstr "Gaufrettes à la vanille"
+
+msgid "vanilla pudding mix"
+msgstr "mélange pour pouding à la vanille"
+
+msgid "Vanilla pudding mix"
+msgstr "Mélange pour pouding à la vanille"
+
+msgid "pie crust"
+msgstr "croûte à tarte"
+
+msgid "Pie crust"
+msgstr "Croûte à tarte"
+
+msgid "lemons"
+msgstr "citrons"
+
+msgid "Lemons"
+msgstr "Citrons"
+
+msgid "strawberries"
+msgstr "fraises"
+
+msgid "Strawberries"
+msgstr "Fraises"
+
+msgid "greek yogurt"
+msgstr "yaourt grec"
+
+msgid "Greek yogurt"
+msgstr "Yaourt grec"
+
+msgid "blueberries"
+msgstr "myrtilles"
+
+msgid "Blueberries"
+msgstr "Myrtilles"
+
+msgid "rolled oats"
+msgstr "flocons d'avoine"
+
+msgid "Rolled oats"
+msgstr "Flocons d'avoine"
+
+msgid "red lentils"
+msgstr "lentilles rouges"
+
+msgid "Red lentils"
+msgstr "Lentilles rouges"
+
+msgid "carrot"
+msgstr "carotte"
+
+msgid "Carrot"
+msgstr "Carotte"
+
+msgid "tortilla wrap"
+msgstr "wrap tortilla"
+
+msgid "Tortilla wrap"
+msgstr "Wrap tortilla"
+
+msgid "turkey slices"
+msgstr "tranches de dinde"
+
+msgid "Turkey slices"
+msgstr "Tranches de dinde"
+
+msgid "broccoli"
+msgstr "brocoli"
+
+msgid "Broccoli"
+msgstr "Brocoli"
+
+msgid "sesame oil"
+msgstr "huile de sésame"
+
+msgid "Sesame oil"
+msgstr "Huile de sésame"
+
+msgid "ginger"
+msgstr "gingembre"
+
+msgid "Ginger"
+msgstr "Gingembre"
+
+msgid "cornstarch"
+msgstr "fécule de maïs"
+
+msgid "Cornstarch"
+msgstr "Fécule de maïs"
+
+msgid "zucchini"
+msgstr "courgette"
+
+msgid "Zucchini"
+msgstr "Courgette"
+
+msgid "pesto sauce"
+msgstr "sauce pesto"
+
+msgid "Pesto sauce"
+msgstr "Sauce pesto"
+
+msgid "salmon fillet"
+msgstr "filet de saumon"
+
+msgid "Salmon fillet"
+msgstr "Filet de saumon"
+
+msgid "soy sauce"
+msgstr "sauce soja"
+
+msgid "Soy sauce"
+msgstr "Sauce soja"
+
+msgid "brown sugar"
+msgstr "sucre roux"
+
+msgid "Brown sugar"
+msgstr "Sucre roux"
+
+msgid "sesame seeds"
+msgstr "graines de sésame"
+
+msgid "Sesame seeds"
+msgstr "Graines de sésame"
+
+msgid "quinoa"
+msgstr "quinoa"
+
+msgid "Quinoa"
+msgstr "Quinoa"
+
+msgid "feta cheese"
+msgstr "feta"
+
+msgid "Feta cheese"
+msgstr "Feta"
+
+msgid "romaine lettuce"
+msgstr "laitue romaine"
+
+msgid "Romaine lettuce"
+msgstr "Laitue romaine"
+
+msgid "croutons"
+msgstr "croûtons"
+
+msgid "Croutons"
+msgstr "Croûtons"
+
+msgid "caesar dressing"
+msgstr "vinaigrette César"
+
+msgid "Caesar dressing"
+msgstr "Vinaigrette César"
+
+msgid "coconut milk"
+msgstr "lait de coco"
+
+msgid "Coconut milk"
+msgstr "Lait de coco"
+
+msgid "curry paste"
+msgstr "pâte de curry"
+
+msgid "Curry paste"
+msgstr "Pâte de curry"
+
+msgid "potatoes"
+msgstr "pommes de terre"
+
+msgid "Potatoes"
+msgstr "Pommes de terre"
+
+msgid "wild mushrooms"
+msgstr "champignons sauvages"
+
+msgid "Wild mushrooms"
+msgstr "Champignons sauvages"
+
+msgid "whey protein powder"
+msgstr "protéine de lactosérum en poudre"
+
+msgid "Whey protein powder"
+msgstr "Protéine de lactosérum en poudre"
+
+msgid "almond flour"
+msgstr "farine d'amande"
+
+msgid "Almond flour"
+msgstr "Farine d'amande"
+
+msgid "dark chocolate chips"
+msgstr "pépites de chocolat noir"
+
+msgid "Dark chocolate chips"
+msgstr "Pépites de chocolat noir"
+
+msgid "paprika"
+msgstr "paprika"
+
+msgid "Paprika"
+msgstr "Paprika"
+
+msgid "penne pasta"
+msgstr "pâtes penne"
+
+msgid "Penne pasta"
+msgstr "Pâtes penne"
+
+msgid "pine nuts"
+msgstr "pignons de pin"
+
+msgid "Pine nuts"
+msgstr "Pignons de pin"
+
+msgid "balsamic glaze"
+msgstr "glaçage balsamique"
+
+msgid "Balsamic glaze"
+msgstr "Glaçage balsamique"
+
+msgid "ziti pasta"
+msgstr "pâtes ziti"
+
+msgid "Ziti pasta"
+msgstr "Pâtes ziti"
+
+msgid "ricotta cheese"
+msgstr "ricotta"
+
+msgid "Ricotta cheese"
+msgstr "Ricotta"
+
+msgid "ground sausage"
+msgstr "chair à saucisse"
+
+msgid "Ground sausage"
+msgstr "Chair à saucisse"
+
+msgid "diced tomatoes"
+msgstr "tomates en dés"
+
+msgid "Diced tomatoes"
+msgstr "Tomates en dés"
+
+msgid "kidney beans"
+msgstr "haricots rouges"
+
+msgid "Kidney beans"
+msgstr "Haricots rouges"
+
+msgid "small pasta"
+msgstr "petites pâtes"
+
+msgid "Small pasta"
+msgstr "Petites pâtes"
+
+msgid "italian seasoning"
+msgstr "assaisonnement italien"
+
+msgid "Italian seasoning"
+msgstr "Assaisonnement italien"
+
+msgid "yogurt"
+msgstr "yaourt"
+
+msgid "Yogurt"
+msgstr "Yaourt"
+
+msgid "cardamom"
+msgstr "cardamome"
+
+msgid "Cardamom"
+msgstr "Cardamome"
+
+msgid "pizza dough"
+msgstr "pâte à pizza"
+
+msgid "Pizza dough"
+msgstr "Pâte à pizza"
+
+msgid "cooked chicken"
+msgstr "poulet cuit"
+
+msgid "Cooked chicken"
+msgstr "Poulet cuit"
+
+msgid "black beans"
+msgstr "haricots noirs"
+
+msgid "Black beans"
+msgstr "Haricots noirs"
+
+msgid "salsa"
+msgstr "salsa"
+
+msgid "Salsa"
+msgstr "Salsa"
+
+msgid "grapes"
+msgstr "raisins"
+
+msgid "Grapes"
+msgstr "Raisins"
+
+msgid "apple"
+msgstr "pomme"
+
+msgid "Apple"
+msgstr "Pomme"
+
+msgid "orange"
+msgstr "orange"
+
+msgid "Orange"
+msgstr "Orange"
+
+msgid "Fresh basil"
+msgstr "Basilic frais"
+
+msgid "fresh basil"
+msgstr "Basilic frais"
+
+msgid "Fresh mozzarella"
+msgstr "Mozzarella fraîche"
+
+msgid "fresh mozzarella"
+msgstr "Mozzarella fraîche"
+
+msgid "Graham cracker crust"
+msgstr "Croûte de biscuits Graham"
+
+msgid "graham cracker crust"
+msgstr "Croûte de biscuits Graham"
+
+msgid "Mango"
+msgstr "Mangue"
+
+msgid "mango"
+msgstr "Mangue"
+
+msgid "Tomatoes"
+msgstr "Tomates"
+
+msgid "tomatoes"
+msgstr "Tomates"
+
+msgid "Bananas"
+msgstr "Bananes"
+
+msgid "bananas"
+msgstr "Bananes"
+
+msgid "BBQ sauce"
+msgstr "Sauce BBQ"
+
+msgid "bbq sauce"
+msgstr "Sauce BBQ"
+
+msgid "Bell peppers"
+msgstr "Poivrons"
+
+msgid "bell peppers"
+msgstr "Poivrons"
+
+msgid "Mangos"
+msgstr "Mangues"
+
+msgid "mangos"
+msgstr "Mangues"
+
+msgid "Mangoes"
+msgstr "Mangues"
+
+msgid "mangoes"
+msgstr "Mangues"
+
+msgid "cups"
+msgstr "tasses"
+
+msgid "cup"
+msgstr "tasse"
+
+msgid "tbsp"
+msgstr "c. à soupe"
+
+msgid "tsp"
+msgstr "c. à café"
+
+msgid "large"
+msgstr "grand"
+
+msgid "medium"
+msgstr "moyen"
+
+msgid "small"
+msgstr "petit"
+
+msgid "Great recipe! Highly recommended."
+msgstr "Superbe recette ! Hautement recommandée."
+
+msgid "Page Not Found"
+msgstr "Page non trouvée"
+
+msgid "Something went wrong on our end."
+msgstr "Un problème est survenu de notre côté."
+
+msgid "Fluffy pancakes served with maple syrup"
+msgstr "Pancakes moelleux servis avec du sirop d'érable"
+
+msgid "Cheesy omelette with fresh vegetables"
+msgstr "Omelette au fromage avec des légumes frais"
+
+msgid "Sourdough toast topped with mashed avocado and a poached egg"
+msgstr "Pain grillé surmonté d'avocat écrasé et d'un œuf poché"
+
+msgid "Golden french toast with cinnamon and syrup"
+msgstr "Pain perdu doré à la cannelle et au sirop"
+
+msgid "Mon"
+msgstr "Lun"
+
+msgid "Tue"
+msgstr "Mar"
+
+msgid "Wed"
+msgstr "Mer"
+
+msgid "Thu"
+msgstr "Jeu"
+
+msgid "Fri"
+msgstr "Ven"
+
+msgid "Sat"
+msgstr "Sam"
+
+msgid "Sun"
+msgstr "Dim"
+
+msgid "White fish fillets in corn tortillas with cabbage slaw"
+msgstr "Filets de poisson blanc dans des tortillas de maïs"
+
+msgid "Chicken Stir-Fry"
+msgstr "Sauté de poulet"
+
+msgid "Crispy chicken with mixed vegetables and soy sauce"
+msgstr "Poulet croustillant aux légumes et sauce soja"
+
+msgid "Hearty red lentil soup with carrots and cumin"
+msgstr "Soupe de lentilles rouges aux carottes et cumin"
+
+msgid "Refreshing quinoa salad with feta and lemon dressing"
+msgstr "Salade de quinoa au feta et citron"
+
+msgid "Juicy beef patty with fresh lettuce and tomato"
+msgstr "Steak de bœuf juteux avec laitue et tomate"
+
+msgid "Classic Italian pasta with rich meat sauce"
+msgstr "Pâtes italiennes classiques avec sauce à la viande"
+
+msgid "Fresh greens with grilled chicken breast"
+msgstr "Salade fraîche avec blanc de poulet grillé"
+
+msgid "Healthy pudding with almond milk and honey"
+msgstr "Pudding sain au lait d'amande et miel"
+
+msgid "Thick berry smoothie topped with granola"
+msgstr "Smoothie aux baies avec du granola"
+
+msgid "Healthy low-carb pasta alternative"
+msgstr "Pâtes de courgettes saines et légères"
+
+msgid "Lean turkey slices with fresh veggies in a wrap"
+msgstr "Tranches de dinde et légumes frais en wrap"
+
+msgid "Baked Salmon"
+msgstr "Saumon au four"
+
+msgid "Fresh salmon fillet with lemon and herbs"
+msgstr "Filet de saumon frais au citron et herbes"
+
+msgid "Layered yogurt with berries and granola"
+msgstr "Yaourt aux baies et granola"
+
+msgid "Spicy vegetable curry with coconut milk"
+msgstr "Curry de légumes au lait de coco"
+
+msgid "Healthy Bytes - Nutritious Recipes"
+msgstr "HealthyBytes - Recettes Nutritives"
+
+msgid "Healthy Bytes"
+msgstr "HealthyBytes"
+
+
+
+msgid "Healthy"
+msgstr "Sain"
+
+
+msgid "Vegetarian"
+msgstr "Végétarien"
+
+
+msgid "Quick & Easy"
+msgstr "Rapide et Facile"
+
+
+msgid "High Protein"
+msgstr "Riche en Protéines"
+
+
+msgid "Fresh mixed greens topped with grilled chicken breast, cherry tomatoes, and vinaigrette."
+msgstr "Salade de crudités fraîches garnie de blanc de poulet grillé, de tomates cerises et de vinaigrette."
